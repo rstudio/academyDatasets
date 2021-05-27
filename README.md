@@ -19,7 +19,7 @@ remotes::install_github("rstudio/academyDatasets")
 
 You have a new dataset you would like to add to this collection. Great!
 
-Before you get started, clone (but don't _fork_) this repository onto your computer.
+Before you get started, clone this repository onto your computer.
 Then, open the academyDatasets project in RStudio and create a new branch named after the data you'll be adding.
 When you're done with the process below, you'll push this branch to GitHub and open a pull request for review.
 
