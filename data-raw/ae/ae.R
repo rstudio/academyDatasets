@@ -11,7 +11,7 @@ ae <- readr::read_csv(local_path)
 
 ae_dictionary <- describe_dataset(
   ae,
-  .title   = "SDTM formatted Adverse Event data",
+  .title = "SDTM formatted Adverse Event data",
   USUBJID = "Unique Subject Identifier",
   AESEQ = "Sequence Number",
   AESTDT = "Start date of the adverse event",
