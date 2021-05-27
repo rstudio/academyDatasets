@@ -30,7 +30,7 @@ vaccines <-
     .id = "vaccine"
   ) %>%
   select(!!!variables) %>%
-  arrange(week, jurisdiction, vaccine) %>%
+  arrange(jurisdiction, vaccine, week) %>%
   mutate(week = as_date(week))
 
 # Create machine-readable dataset description (uses academyDataset functions) ----
