@@ -38,7 +38,7 @@ cm_dictionary
 simulated clinical trial. Concomitant medications are medications that
 subjects take during the trial, concomitant with the treatment being
 studied. Concomitant medications are not part of the treatment being
-studied but may be confounding variables, or cause interation effects or
+studied but may be confounding variables, or cause interaction effects or
 adverse events.
 }
 \section{Functions}{
