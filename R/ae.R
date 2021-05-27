@@ -11,3 +11,6 @@
 #'
 #' @format `r rd_describe_format(ae, ae_dictionary)`
 "ae"
+
+#' @describeIn ae The `ae` data dictionary
+"ae_dictionary"
