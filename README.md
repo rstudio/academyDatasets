@@ -121,9 +121,9 @@ If you did not create a data dictionary for your dataset, you'll need to manuall
 ```
 #' @format A THING with N rows and M variables:
 #' \describe{
-#'   \item{\code{VARIABLE_NAME}}{[TYPE] DESCRIPTION.}
-#'   \item{\code{VARIABLE_NAME}}{[TYPE] DESCRIPTION.}
-#'   \item{\code{VARIABLE_NAME}}{[TYPE] DESCRIPTION.}
+#'   \item{\code{VARIABLE_NAME}}{\[TYPE\] DESCRIPTION.}
+#'   \item{\code{VARIABLE_NAME}}{\[TYPE\] DESCRIPTION.}
+#'   \item{\code{VARIABLE_NAME}}{\[TYPE\] DESCRIPTION.}
 #' }
 ```
 
