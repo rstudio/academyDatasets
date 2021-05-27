@@ -3,6 +3,7 @@
 \docType{data}
 \name{ae}
 \alias{ae}
+\alias{ae_dictionary}
 \title{SDTM Adverse Events data}
 \format{
 A spec_tbl_df:
@@ -23,12 +24,16 @@ A spec_tbl_df:
 \item{\code{AEREL}}{[character] The investigator's opinion as to whether or not the adverse event was related to the study treatment.}
 \item{\code{AEOUT}}{[character] Outcome of the adverse event.}
 }
+
+An object of class \code{list} of length 3.
 }
 \source{
 \url{https://rhoinc.github.io/data-library/}
 }
 \usage{
 ae
+
+ae_dictionary
 }
 \description{
 \code{ae} describes adverse event data related to a simulated
@@ -37,5 +42,10 @@ happens while a subject is enrolled in a clinical trial. These occurrences
 must be reported and analyzed to see if they are caused by the treatment
 under study.
 }
+\section{Functions}{
+\itemize{
+\item \code{ae_dictionary}: The \code{ae} data dictionary
+}}
+
 \concept{Rho SDTM datasets}
 \keyword{datasets}
