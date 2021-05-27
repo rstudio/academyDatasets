@@ -1,0 +1,29 @@
+Package: academyDatasets
+Title: Datasets for RStudio Academy
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Garrick",
+             family = "Aden-Buie",
+             role = c("cre", "aut"),
+             email = "garrick@rstudio.com"),
+      person(given = "Desirée",
+             family = "De Leon",
+             role = "aut",
+             email = "desiree@rstudio.com"),
+      person(given = "Garrett",
+             family = "Grolemund",
+             role = "aut",
+             email = "garrett@rstudio.com"))
+Description: A set of datasets for use with RStudio Academy exercises,
+    tutorials, and recipes.
+License: file LICENSE
+Suggests: 
+    docthis (>= 0.1.1)
+Remotes: 
+    mdlincoln/docthis
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
