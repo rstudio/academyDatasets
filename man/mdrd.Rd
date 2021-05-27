@@ -3,6 +3,7 @@
 \docType{data}
 \name{mdrd}
 \alias{mdrd}
+\alias{mdrd_dictionary}
 \title{Modification of Diet in Renal Disease (MDRD)}
 \format{
 A tibble with 255 rows and 10 variables:
@@ -19,12 +20,16 @@ A tibble with 255 rows and 10 variables:
 \item{\code{followup}}{[double] Number of months until patient follow-up.}
 \item{\code{dropout}}{[double] Did the patient drop out of the study? (0 = No, 1 = Yes)}
 }
+
+An object of class \code{list} of length 3.
 }
 \source{
 \url{https://repository.niddk.nih.gov/studies/mdrd/}
 }
 \usage{
 mdrd
+
+mdrd_dictionary
 }
 \description{
 From \href{https://repository.niddk.nih.gov/studies/mdrd/}{NIDDK}:
@@ -56,6 +61,11 @@ dropout included dialysis, kidney transplant, death, and other medical
 reasons.
 }
 }
+\section{Functions}{
+\itemize{
+\item \code{mdrd_dictionary}: The \code{mdrd} data dictionary
+}}
+
 \seealso{
 Other MDRD datasets: 
 \code{\link{mdrd_supplemental}}

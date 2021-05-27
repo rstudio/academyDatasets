@@ -37,6 +37,9 @@
 #' @format `r rd_describe_format(mdrd, mdrd_dictionary)`
 "mdrd"
 
+#' @describeIn mdrd The `mdrd` data dictionary
+"mdrd_dictionary"
+
 
 #' Modification of Diet In Renal Disease - Supplemental Data
 #'
@@ -48,3 +51,6 @@
 #'
 #' @format `r rd_describe_format(mdrd_supplemental, mdrd_supplemental_dictionary)`
 "mdrd_supplemental"
+
+#' @describeIn mdrd_supplemental The `mdrd_supplemental` data dictionary
+"mdrd_supplemental_dictionary"

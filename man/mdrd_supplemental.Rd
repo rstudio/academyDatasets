@@ -3,6 +3,7 @@
 \docType{data}
 \name{mdrd_supplemental}
 \alias{mdrd_supplemental}
+\alias{mdrd_supplemental_dictionary}
 \title{Modification of Diet In Renal Disease - Supplemental Data}
 \format{
 A tibble with 255 rows and 5 variables:
@@ -14,17 +15,26 @@ A tibble with 255 rows and 5 variables:
 \item{\code{height}}{[double] Height (meters)}
 \item{\code{weight}}{[double] Weight (kilograms)}
 }
+
+An object of class \code{list} of length 3.
 }
 \source{
 \url{https://repository.niddk.nih.gov/studies/mdrd/}
 }
 \usage{
 mdrd_supplemental
+
+mdrd_supplemental_dictionary
 }
 \description{
 Supplemental data for the \link{mdrd} dataset. Note: this data is simulated and is
 not from the original MDRD study.
 }
+\section{Functions}{
+\itemize{
+\item \code{mdrd_supplemental_dictionary}: The \code{mdrd_supplemental} data dictionary
+}}
+
 \seealso{
 Other MDRD datasets: 
 \code{\link{mdrd}}
