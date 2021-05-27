@@ -2,6 +2,7 @@
 # academyDatasets
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/rstudio/academyDatasets/workflows/R-CMD-check/badge.svg)](https://github.com/rstudio/academyDatasets/actions)
 <!-- badges: end -->
 
 Datasets for use with RStudio Academy exercises, tutorials, and recipes.
