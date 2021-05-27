@@ -44,14 +44,15 @@ covid_dictionary <- describe_dataset(
   .title = "COVID-19 US Historical Data by State",
   data = "Date on which data was collected by The COVID Tracking Project.",
   state = "Two-letter abbreviation for the state or territory.",
-  tests = "Daily increase in totalTestResults, calculated from the previous day’s value.",
-  cases = "The daily increase in API field positive, which measures Cases (confirmed plus probable) calculated based on the previous day’s value.",
-  hospitalizations = "Daily increase in hospitalizedCumulative, calculated from the previous day’s value.",
-  deaths = "Daily increase in death, calculated from the previous day’s value."
+  tests = "Daily increase in totalTestResults, calculated from the previous day’s value. (Original: totalTestResultsIncrease)",
+  cases = "The daily increase in API field positive, which measures Cases (confirmed plus probable) calculated based on the previous day’s value. (Original: positiveIncrease)",
+  hospitalizations = "Daily increase in hospitalizedCumulative, calculated from the previous day’s value. (Original: hospitalizedIncrease)",
+  deaths = "Daily increase in death, calculated from the previous day’s value. (Original: deathIncrease)"
 )
 
 usethis::use_data(
   covid,
   covid_dictionary,
-  covid_state_pop
+  covid_state_pop,
+  overwrite = TRUE
 )

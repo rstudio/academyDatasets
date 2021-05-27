@@ -11,10 +11,10 @@ A tibble with 20780 rows and 6 variables:
 
 \item{\code{date}}{[double] }
 \item{\code{state}}{[integer] Two-letter abbreviation for the state or territory.}
-\item{\code{tests}}{[double] Daily increase in totalTestResults, calculated from the previous day’s value.}
-\item{\code{cases}}{[double] The daily increase in API field positive, which measures Cases (confirmed plus probable) calculated based on the previous day’s value.}
-\item{\code{hospitalizations}}{[double] Daily increase in hospitalizedCumulative, calculated from the previous day’s value.}
-\item{\code{deaths}}{[double] Daily increase in death, calculated from the previous day’s value.}
+\item{\code{tests}}{[double] Daily increase in totalTestResults, calculated from the previous day’s value. (Original: totalTestResultsIncrease)}
+\item{\code{cases}}{[double] The daily increase in API field positive, which measures Cases (confirmed plus probable) calculated based on the previous day’s value. (Original: positiveIncrease)}
+\item{\code{hospitalizations}}{[double] Daily increase in hospitalizedCumulative, calculated from the previous day’s value. (Original: hospitalizedIncrease)}
+\item{\code{deaths}}{[double] Daily increase in death, calculated from the previous day’s value. (Original: deathIncrease)}
 }
 
 An object of class \code{list} of length 3.
