@@ -17,6 +17,10 @@ Authors@R:
 Description: A set of datasets for use with RStudio Academy exercises,
     tutorials, and recipes.
 License: file LICENSE
+URL: https://github.com/rstudio/academyDatasets
+BugReports: https://github.com/rstudio/academyDatasets/issues
+Depends: 
+    R (>= 2.10)
 Suggests: 
     docthis (>= 0.1.1)
 Remotes: 
@@ -25,5 +29,3 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-Depends: 
-    R (>= 2.10)
