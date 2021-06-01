@@ -6,18 +6,18 @@
 \alias{mdrd_dictionary}
 \title{Modification of Diet in Renal Disease (MDRD)}
 \format{
-A tibble with 255 rows and 10 variables:
+A tibble with 1988 rows and 10 variables:
 \describe{
 
 \item{\code{ptid}}{[double] Patient identifier}
 \item{\code{gfr}}{[double] Glomerular filtration rate in milliliters per minute. A measure of how much blood the kidneys filter per minute. }
 \item{\code{months}}{[double] Number of months after the start of the study that the measurement was taken. }
-\item{\code{dietl_n}}{[double] Was the participant assigned to the low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)}
-\item{\code{dietl_l}}{[double] Was the participant assigned to the low-protein, low-blood prssure diet? (0 = No, 1 = Yes)}
-\item{\code{dietk_n}}{[double] Was the participant assigned to the very low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)}
-\item{\code{dietk_l}}{[double] Was the participant assigned to the very low-protein, low-blood pressure diet? (0 = No, 1 = Yes)}
-\item{\code{log_prot}}{[double] Logarithm of the grams of protein consumed per day.}
-\item{\code{followup}}{[double] Number of months until patient follow-up.}
+\item{\code{dietl_normbp}}{[double] Was the participant assigned to the low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)}
+\item{\code{dietl_lowbp}}{[double] Was the participant assigned to the low-protein, low-blood prssure diet? (0 = No, 1 = Yes)}
+\item{\code{dietk_normbp}}{[double] Was the participant assigned to the very low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)}
+\item{\code{dietk_lowbp}}{[double] Was the participant assigned to the very low-protein, low-blood pressure diet? (0 = No, 1 = Yes)}
+\item{\code{log_protein}}{[double] Logarithm of the grams of protein consumed per day.}
+\item{\code{followupmonths}}{[double] Number of months until patient follow-up.}
 \item{\code{dropout}}{[double] Did the patient drop out of the study? (0 = No, 1 = Yes)}
 }
 
