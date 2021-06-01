@@ -118,11 +118,6 @@ fda_pt_drugs <-
     )
   ) %>%
   select(-age_unit) %>%
-  # remove non-sensible observations
-  filter(
-    weight > 0,
-    !(age < 4 & weight > 30)
-  ) %>%
   # unnest drug variables
   unnest(cols = c(drug, dosage, dosage_unit, indication, drug_start_date, drug_end_date)) %>%
   # remove dates without year month and day
@@ -177,6 +172,13 @@ fda_pt_drugs <-
     reaction = str_to_lower(reaction),
     # remove '^', as in 'chron^s disease'
     reaction = str_replace_all(reaction, "\\^", "")
+  ) %>%
+  # remove non-sensible observations
+  filter(
+    weight > 0,
+    !(age < 4 & weight > 30),
+    receipt_date >= receive_date,
+    drug_end_date >= drug_start_date
   ) %>%
   # removes rows with date parsing failures
   drop_na(ends_with("_date")) %>%
