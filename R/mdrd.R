@@ -43,6 +43,8 @@
 
 #' Modification of Diet In Renal Disease - Supplemental Data
 #'
+#' @description
+#'
 #' Supplemental data for the [mdrd] dataset. Note: this data is simulated and is
 #' not from the original MDRD study.
 #'
