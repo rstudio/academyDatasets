@@ -6,21 +6,20 @@ library(lubridate)
 # load {academyDatasets} for access to helper functions
 pkgload::load_all()
 
+# function to create a date range to filter on
+create_date <- function(min_date, max_date) {
+  sprintf("[%d+TO+%d]", min_date, max_date)
+}
+
 # function to create a vector of data for a given field from openFDA adverse events data
-# by default, narrow search to January 2019
 create_var <- function(
   field,
-  limit = 1000,
   subfield = NULL,
+  limit = 1000,
   skip = 0,
-  min_date = 20190101,
+  min_date = 20190101, # by default, narrow search to January 2019
   max_date = 20190131
 ) {
-
-  # function to create a date range to filter on
-  create_date <- function(min_date, max_date) {
-    sprintf("[%d+TO+%d]", min_date, max_date)
-  }
 
   x <- fda_query("/drug/event.json") %>%
     fda_filter("receivedate", create_date(min_date, max_date)) %>%
@@ -66,14 +65,19 @@ fda_pt_drugs_raw <- tibble(
   sex = map(skips, ~ create_var("patient.patientsex", skip = .x)) %>% flatten_chr(),
   weight = map(skips, ~ create_var("patient.patientweight", skip = .x)) %>% flatten_chr(),
 
-  # drug vars
+  # drug variables
   # could instead use openfda.generic_name or openfda.brand_name, but these can have multiple redundant fields
   drug = map(skips, ~ create_var("patient.drug", "medicinalproduct", skip = .x)) %>% purrr::flatten(),
   dosage = map(skips, ~ create_var("patient.drug", "drugstructuredosagenumb", skip = .x)) %>% purrr::flatten(),
   dosage_unit = map(skips, ~ create_var("patient.drug", "drugstructuredosageunit", skip = .x)) %>% purrr::flatten(),
   indication = map(skips, ~ create_var("patient.drug", "drugindication", skip = .x)) %>% purrr::flatten(),
   drug_start_date = map(skips, ~ create_var("patient.drug", "drugstartdate", skip = .x)) %>% purrr::flatten(),
-  drug_end_date = map(skips, ~ create_var("patient.drug", "drugenddate", skip = .x)) %>% purrr::flatten()
+  drug_end_date = map(skips, ~ create_var("patient.drug", "drugenddate", skip = .x)) %>% purrr::flatten(),
+
+  # reaction variables
+  serious = map(skips, ~ create_var("serious", skip = .x)) %>% flatten_chr(),
+  reaction = map(skips, ~ create_var("patient.reaction", "reactionmeddrapt", skip = .x)) %>% purrr::flatten(),
+  outcome = map(skips, ~ create_var("patient.reaction", "reactionoutcome", skip = .x)) %>% purrr::flatten()
 )
 
 # clean data
@@ -106,6 +110,11 @@ fda_pt_drugs <-
       reporter == "4" ~ "lawyer",
       reporter == "5" ~ "nonhealth",
       TRUE ~ NA_character_
+    ),
+    serious = case_when(
+      serious == "1" ~ TRUE,
+      serious == "2" ~ FALSE,
+      TRUE ~ NA
     )
   ) %>%
   select(-age_unit) %>%
@@ -152,6 +161,23 @@ fda_pt_drugs <-
         )
       )
   ) %>%
+  # unnest reaction variables
+  unnest(cols = c(reaction, outcome)) %>%
+  mutate(
+    # descriptive labels for reaction outcomes
+    outcome = case_when(
+      outcome == "1" ~ "recovered",
+      outcome == "2" ~ "recovering",
+      outcome == "3" ~ "not recovered",
+      outcome == "4" ~ "recovered with sequelae",
+      outcome == "5" ~ "fatal",
+      outcome == "6" ~ "unknown",
+      TRUE ~ NA_character_
+    ),
+    reaction = str_to_lower(reaction),
+    # remove '^', as in 'chron^s disease'
+    reaction = str_replace_all(reaction, "\\^", "")
+  ) %>%
   # removes rows with date parsing failures
   drop_na(ends_with("_date")) %>%
   # drop all other rows with missing values (removes many rows); can change this if desired
@@ -174,7 +200,10 @@ fda_pt_drugs_dictionary <- describe_dataset(
   dosage_unit = "The drug dosasge unit: kilograms (kg), grams (g), milligrams (mg) or micrograms (ug).",
   indication = "Indication for the drug’s use.",
   drug_start_date = "Date the patient began taking the drug.",
-  drug_end_date = "Date the patient stopped taking the drug."
+  drug_end_date = "Date the patient stopped taking the drug.",
+  serious = "A logical value indicating whether or not the adverse event was serious, i.e. resulted in death, a life threatening condition, hospitalization, disability, congenital anomaly, or some other serious condition.",
+  reaction = "Patient reaction, as a term from the Medical Dictionary for Regulatory Activities, encoded in British English.",
+  outcome = "Outcome of the patient reaction at the time of last observation: recovered, recovering, not recovered, recovered with sequelae (consequent health issues), fatal or unknown."
 )
 
 # add data to the package

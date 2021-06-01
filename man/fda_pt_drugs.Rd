@@ -6,7 +6,7 @@
 \alias{fda_pt_drugs_dictionary}
 \title{Patient and drug information for FDA drug adverse events}
 \format{
-A tibble with 1460 rows and 14 variables:
+A tibble with 5775 rows and 17 variables:
 \describe{
 
 \item{\code{report_id}}{[character] The 8-digit Safety Report ID number, also known as the case report number or case ID. Can be used to identify or find a specific adverse event report.}
@@ -23,6 +23,9 @@ A tibble with 1460 rows and 14 variables:
 \item{\code{indication}}{[character] Indication for the drug’s use.}
 \item{\code{drug_start_date}}{[double] Date the patient began taking the drug.}
 \item{\code{drug_end_date}}{[double] Date the patient stopped taking the drug.}
+\item{\code{serious}}{[logical] A logical value indicating whether or not the adverse event was serious, i.e. resulted in death, a life threatening condition, hospitalization, disability, congenital anomaly, or some other serious condition.}
+\item{\code{reaction}}{[character] Patient reaction, as a term from the Medical Dictionary for Regulatory Activities, encoded in British English.}
+\item{\code{outcome}}{[character] Outcome of the patient reaction at the time of last observation: recovered, recovering, not recovered, recovered with sequelae (consequent health issues), fatal or unknown.}
 }
 
 An object of class \code{list} of length 3.
