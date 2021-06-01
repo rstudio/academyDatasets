@@ -15,4 +15,3 @@
 "flu"
 #' @describeIn flu The `flu` data dictionary
 "flu_dictionary"
-

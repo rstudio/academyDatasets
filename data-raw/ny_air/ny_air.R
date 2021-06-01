@@ -1,7 +1,7 @@
 # Prepare the ny_air dataset
 
 library(tidyverse)
-  # load {academyDatasets} for access to helper functions
+# load {academyDatasets} for access to helper functions
 pkgload::load_all()
 
 url_data <-
@@ -14,7 +14,7 @@ variables <-
     pm25_max = pm25_max_pred,
     pm25_median = pm25_med_pred
   )
-#===============================================================================
+# ===============================================================================
 
 ny_air <-
   url_data %>%

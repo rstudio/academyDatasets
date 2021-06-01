@@ -8,12 +8,18 @@ pkgload::load_all()
 
 # function to create a vector of data for a given field from openFDA adverse events data
 # by default, narrow search to January 2019
-create_var <- function(field, limit = 1000, subfield = NULL, skip = 0,
-                       min_date = 20190101, max_date = 20190131){
+create_var <- function(
+  field,
+  limit = 1000,
+  subfield = NULL,
+  skip = 0,
+  min_date = 20190101,
+  max_date = 20190131
+) {
 
   # function to create a date range to filter on
-  create_date <- function(min_date, max_date){
-    sprintf('[%d+TO+%d]', min_date, max_date)
+  create_date <- function(min_date, max_date) {
+    sprintf("[%d+TO+%d]", min_date, max_date)
   }
 
   x <- fda_query("/drug/event.json") %>%
@@ -24,14 +30,18 @@ create_var <- function(field, limit = 1000, subfield = NULL, skip = 0,
     fda_exec()
 
   # if query result is NULL, return all NA's
-  if (is.null(x)) return(rep(NA_character_, limit))
+  if (is.null(x)) {
+    return(rep(NA_character_, limit))
+  }
 
-  if (is.atomic(x)) return(x)
+  if (is.atomic(x)) {
+    return(x)
+  }
 
   # if query result is a list, select the desired subfield and return as a list
-  if (is.list(x)){
+  if (is.list(x)) {
     y <- x %>%
-      map(~pluck(.x, subfield))
+      map(~ pluck(.x, subfield))
 
     return(y)
   }
@@ -44,26 +54,26 @@ skips <- seq(from = 0, to = max_skip, by = limit) # "skip" values to iterate ove
 # create raw data (note: this code takes a long time to run, ~15 min)
 fda_pt_drugs_raw <- tibble(
   # report variables
-  report_id = map(skips, ~create_var("safetyreportid", skip = .x)) %>% flatten_chr(),
-  receive_date = map(skips, ~create_var("receivedate", skip = .x)) %>% flatten_chr(),
-  receipt_date = map(skips, ~create_var("receiptdate", skip = .x)) %>% flatten_chr(),
-  country = map(skips, ~create_var("occurcountry", skip = .x)) %>% flatten_chr(),
-  reporter = map(skips, ~create_var("primarysource.qualification", skip = .x)) %>% flatten_chr(),
+  report_id = map(skips, ~ create_var("safetyreportid", skip = .x)) %>% flatten_chr(),
+  receive_date = map(skips, ~ create_var("receivedate", skip = .x)) %>% flatten_chr(),
+  receipt_date = map(skips, ~ create_var("receiptdate", skip = .x)) %>% flatten_chr(),
+  country = map(skips, ~ create_var("occurcountry", skip = .x)) %>% flatten_chr(),
+  reporter = map(skips, ~ create_var("primarysource.qualification", skip = .x)) %>% flatten_chr(),
 
   # patient variables
-  age = map(skips, ~create_var("patient.patientonsetage", skip = .x)) %>% flatten_chr(),
-  age_unit = map(skips, ~create_var("patient.patientonsetageunit", skip = .x)) %>% flatten_chr(),
-  sex = map(skips, ~create_var("patient.patientsex", skip = .x)) %>% flatten_chr(),
-  weight = map(skips, ~create_var("patient.patientweight", skip = .x)) %>% flatten_chr(),
+  age = map(skips, ~ create_var("patient.patientonsetage", skip = .x)) %>% flatten_chr(),
+  age_unit = map(skips, ~ create_var("patient.patientonsetageunit", skip = .x)) %>% flatten_chr(),
+  sex = map(skips, ~ create_var("patient.patientsex", skip = .x)) %>% flatten_chr(),
+  weight = map(skips, ~ create_var("patient.patientweight", skip = .x)) %>% flatten_chr(),
 
   # drug vars
   # could instead use openfda.generic_name or openfda.brand_name, but these can have multiple redundant fields
-  drug = map(skips, ~create_var("patient.drug", "medicinalproduct", skip = .x)) %>% purrr::flatten(),
-  dosage = map(skips, ~create_var("patient.drug", "drugstructuredosagenumb", skip = .x)) %>% purrr::flatten(),
-  dosage_unit = map(skips, ~create_var("patient.drug", "drugstructuredosageunit", skip = .x)) %>% purrr::flatten(),
-  indication = map(skips, ~create_var("patient.drug", "drugindication", skip = .x)) %>% purrr::flatten(),
-  drug_start_date = map(skips, ~create_var("patient.drug", "drugstartdate", skip = .x)) %>% purrr::flatten(),
-  drug_end_date = map(skips, ~create_var("patient.drug", "drugenddate", skip = .x)) %>% purrr::flatten()
+  drug = map(skips, ~ create_var("patient.drug", "medicinalproduct", skip = .x)) %>% purrr::flatten(),
+  dosage = map(skips, ~ create_var("patient.drug", "drugstructuredosagenumb", skip = .x)) %>% purrr::flatten(),
+  dosage_unit = map(skips, ~ create_var("patient.drug", "drugstructuredosageunit", skip = .x)) %>% purrr::flatten(),
+  indication = map(skips, ~ create_var("patient.drug", "drugindication", skip = .x)) %>% purrr::flatten(),
+  drug_start_date = map(skips, ~ create_var("patient.drug", "drugstartdate", skip = .x)) %>% purrr::flatten(),
+  drug_end_date = map(skips, ~ create_var("patient.drug", "drugenddate", skip = .x)) %>% purrr::flatten()
 )
 
 # clean data
@@ -74,12 +84,12 @@ fda_pt_drugs <-
     age = as.numeric(age),
     # convert all ages to years
     age = case_when(
-      age_unit == "800" ~ age*10, # decade
+      age_unit == "800" ~ age * 10, # decade
       age_unit == "801" ~ age, # year
-      age_unit == "802" ~ age/12, # month
-      age_unit == "803" ~ age/52.143, # week,
-      age_unit == "804" ~ age/365, # day,
-      age_unit == "805" ~ age/8760, # hour
+      age_unit == "802" ~ age / 12, # month
+      age_unit == "803" ~ age / 52.143, # week,
+      age_unit == "804" ~ age / 365, # day,
+      age_unit == "805" ~ age / 8760, # hour
       TRUE ~ NA_real_
     ),
     # round down to nearest year
@@ -100,8 +110,10 @@ fda_pt_drugs <-
   ) %>%
   select(-age_unit) %>%
   # remove non-sensible observations
-  filter(weight > 0,
-         !(age < 4 & weight > 30)) %>%
+  filter(
+    weight > 0,
+    !(age < 4 & weight > 30)
+  ) %>%
   # unnest drug variables
   unnest(cols = c(drug, dosage, dosage_unit, indication, drug_start_date, drug_end_date)) %>%
   # remove dates without year month and day
@@ -122,7 +134,7 @@ fda_pt_drugs <-
     across(c(drug, indication), str_to_lower),
     # clean drug indication names
     indication = str_replace_all(indication, "\\^", ""),
-    #clean drug names
+    # clean drug names
     drug =
       str_replace_all(
         drug,

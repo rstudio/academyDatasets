@@ -15,9 +15,11 @@ flu <-
   flu_raw %>%
   janitor::clean_names() %>%
   janitor::remove_empty(which = "cols") %>%
-  dplyr::mutate(host_species = stringr::str_replace(host_species, pattern = "IRD:", replacement = ""),
-         collection_date = lubridate::parse_date_time(collection_date, orders = c("ymd", "mdy"), truncated = 2),
-         collection_date = lubridate::ymd(collection_date))
+  dplyr::mutate(
+    host_species = stringr::str_replace(host_species, pattern = "IRD:", replacement = ""),
+    collection_date = lubridate::parse_date_time(collection_date, orders = c("ymd", "mdy"), truncated = 2),
+    collection_date = lubridate::ymd(collection_date)
+  )
 
 # rename
 flu <-

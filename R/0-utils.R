@@ -12,10 +12,12 @@
 describe_dataset <- function(x, ..., .title = NULL) {
   var_desc <- list(...)
   desc <- list(
-    dims = if (is.data.frame(x)) list(
-      rows = nrow(x),
-      cols = ncol(x)
-    ),
+    dims = if (is.data.frame(x)) {
+      list(
+        rows = nrow(x),
+        cols = ncol(x)
+      )
+    },
     title = .title %||% deparse(substitute(x)),
     variables = lapply(names(x), function(var) {
       data.frame(

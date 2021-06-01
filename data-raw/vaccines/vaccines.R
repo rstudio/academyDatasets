@@ -8,7 +8,7 @@ pkgload::load_all()
 url_pfizer <- "https://data.cdc.gov/resource/saz5-9hgg.csv?$limit=15000"
 url_moderna <- "https://data.cdc.gov/resource/b7pe-5nws.csv?$limit=15000"
 url_janssen <- "https://data.cdc.gov/resource/w9zu-fywh.csv?$limit=15000"
-  # Variables to select/rename
+# Variables to select/rename
 variables <-
   vars(
     jurisdiction,
@@ -17,7 +17,7 @@ variables <-
     first_dose = `_1st_dose_allocations`,
     second_dose = `_2nd_dose_allocations`
   )
-#===============================================================================
+# ===============================================================================
 
 vaccines <-
   url_pfizer %>%

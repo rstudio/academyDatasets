@@ -13,9 +13,11 @@ local_path <- here::here("data-raw", "hospital_visits", basename(remote_url))
 download.file(remote_url, local_path)
 
 
-unzip(local_path,
-      files = c("csv/encounters.csv", "csv/medications.csv"),
-      exdir = here::here("data-raw", "hospital_visits"))
+unzip(
+  local_path,
+  files = c("csv/encounters.csv", "csv/medications.csv"),
+  exdir = here::here("data-raw", "hospital_visits")
+)
 
 
 # Read and clean relevant datasets
@@ -81,4 +83,3 @@ usethis::use_data(
   medications_dictionary,
   overwrite = TRUE
 )
-
