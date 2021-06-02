@@ -19,7 +19,7 @@ get_data <- function(remote_url) {
 
 sdtm_adverse_events <- get_data(ae)
 sdtm_concomitant_meds <- get_data(cm) %>% select(-CMINDC)
-sdtm_demographics <- get_data(cm)
+sdtm_demographics <- get_data(dm)
 sdtm_lab_results <- get_data(lb)
 sdtm_subject_visits <- get_data(sv)
 sdtm_vital_signs <- get_data(vs)
