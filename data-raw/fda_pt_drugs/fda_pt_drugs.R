@@ -138,7 +138,7 @@ fda_pt_drugs <-
     across(c(drug, indication), str_to_lower),
     # remove '^', as in 'chron^s disease'
     indication = str_replace_all(indication, "\\^", ""),
-    # clean drug names
+    # clean drug names with horribly inefficient regex
     drug =
       str_replace_all(
         drug,
@@ -151,6 +151,7 @@ fda_pt_drugs <-
           "\\,(.*)" = "",
           "[:space:]*\\[(.*)" = "",
           "[:space:]*[:digit:]*[:space:]mg(.*)" = "",
+          "[:space:]*[:digit:]*mg(.*)" = "",
           "\\/(.*)" = "",
           "[:space:][:digit:]*\\.[:digit:]*(.*)" = ""
         )
