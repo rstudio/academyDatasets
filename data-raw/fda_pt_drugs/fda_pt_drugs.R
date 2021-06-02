@@ -7,7 +7,7 @@ library(lubridate)
 pkgload::load_all()
 
 # function to create a date range to filter on
-create_date <- function(min_date, max_date) {
+date_range <- function(min_date, max_date) {
   sprintf("[%d+TO+%d]", min_date, max_date)
 }
 
@@ -22,7 +22,7 @@ create_var <- function(
 ) {
 
   x <- fda_query("/drug/event.json") %>%
-    fda_filter("receivedate", create_date(min_date, max_date)) %>%
+    fda_filter("receivedate", date_range(min_date, max_date)) %>%
     fda_skip(skip) %>%
     fda_search(field) %>%
     fda_limit(limit) %>%
@@ -118,11 +118,6 @@ fda_pt_drugs <-
     )
   ) %>%
   select(-age_unit) %>%
-  # remove non-sensible observations
-  filter(
-    weight > 0,
-    !(age < 4 & weight > 30)
-  ) %>%
   # unnest drug variables
   unnest(cols = c(drug, dosage, dosage_unit, indication, drug_start_date, drug_end_date)) %>%
   # remove dates without year month and day
@@ -141,9 +136,9 @@ fda_pt_drugs <-
     ),
     # convert to lowercase
     across(c(drug, indication), str_to_lower),
-    # clean drug indication names
+    # remove '^', as in 'chron^s disease'
     indication = str_replace_all(indication, "\\^", ""),
-    # clean drug names
+    # clean drug names with horribly inefficient regex
     drug =
       str_replace_all(
         drug,
@@ -156,6 +151,7 @@ fda_pt_drugs <-
           "\\,(.*)" = "",
           "[:space:]*\\[(.*)" = "",
           "[:space:]*[:digit:]*[:space:]mg(.*)" = "",
+          "[:space:]*[:digit:]*mg(.*)" = "",
           "\\/(.*)" = "",
           "[:space:][:digit:]*\\.[:digit:]*(.*)" = ""
         )
@@ -177,6 +173,13 @@ fda_pt_drugs <-
     reaction = str_to_lower(reaction),
     # remove '^', as in 'chron^s disease'
     reaction = str_replace_all(reaction, "\\^", "")
+  ) %>%
+  # remove non-sensible observations
+  filter(
+    weight > 0,
+    !(age < 4 & weight > 30),
+    receipt_date >= receive_date,
+    drug_end_date >= drug_start_date
   ) %>%
   # removes rows with date parsing failures
   drop_na(ends_with("_date")) %>%

@@ -6,7 +6,7 @@
 \alias{fda_pt_drugs_dictionary}
 \title{Patient and drug information for FDA drug adverse events}
 \format{
-A tibble with 5775 rows and 17 variables:
+A tibble with 5765 rows and 17 variables:
 \describe{
 
 \item{\code{report_id}}{[character] The 8-digit Safety Report ID number, also known as the case report number or case ID. Can be used to identify or find a specific adverse event report.}
