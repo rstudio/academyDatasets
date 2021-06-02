@@ -12,18 +12,3 @@
 
 #' @describeIn vaccines The `vaccines` data dictionary
 "vaccines_dictionary"
-
-
-#' Modification of Diet In Renal Disease - Supplemental Data
-#'
-#' Supplemental data for the [mdrd] dataset. Note: this data is simulated and is
-#' not from the original MDRD study.
-#'
-#' @source <https://repository.niddk.nih.gov/studies/mdrd/>
-#' @family MDRD datasets
-#'
-#' @format `r rd_describe_format(mdrd_supplemental, mdrd_supplemental_dictionary)`
-"mdrd_supplemental"
-
-#' @describeIn mdrd_supplemental The `mdrd_supplemental` data dictionary
-"mdrd_supplemental_dictionary"
