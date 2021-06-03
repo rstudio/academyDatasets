@@ -21,6 +21,8 @@ flu1 <-
                                                     replacement = ""))
 
 # remove mismatch from IRD database and downloaded .tsv file
+# IRD (https://www.fludb.org/brc/influenza_sequence_search_protein_display.spg) shows collection date 10/20/2012, but raw .tsv file shows 02/20/2096
+
 flu2 <-
   flu1 %>%
   arrange(desc(collection_date)) %>%
