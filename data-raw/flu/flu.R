@@ -8,23 +8,41 @@ library(dplyr)
 library(lubridate)
 library(stringr)
 
-flu_raw <- readr::read_tsv("40138971692-Results.tsv", na = c("", "-N/A-", "IRD:null"))
+flu_raw <- readr::read_tsv("532859470035-Results 2.tsv", na = c("", "-N/A-", "IRD:null", "unknown"))
+
 
 # clean
-flu <-
+flu1 <-
   flu_raw %>%
   janitor::clean_names() %>%
   janitor::remove_empty(which = "cols") %>%
-  dplyr::mutate(
-    host_species = stringr::str_replace(host_species, pattern = "IRD:", replacement = ""),
-    collection_date = lubridate::parse_date_time(collection_date, orders = c("ymd", "mdy"), truncated = 2),
-    collection_date = lubridate::ymd(collection_date)
-  )
+  dplyr::mutate(host_species = stringr::str_replace(host_species,
+                                                    pattern = "IRD:",
+                                                    replacement = ""))
+
+# remove mismatch from IRD database and downloaded .tsv file
+# IRD (https://www.fludb.org/brc/influenza_sequence_search_protein_display.spg) shows collection date 10/20/2012, but raw .tsv file shows 02/20/2096
+
+flu2 <-
+  flu1 %>%
+  arrange(desc(collection_date)) %>%
+  filter(!(strain_name %in% c("B/Maryland/07/2012") & name == "NS2"))
+
+
+# parse date
+flu3 <-
+  flu2 %>%
+  mutate(collection_date = lubridate::parse_date_time(collection_date,
+                                                      orders = c("ymd", "mdy"),
+                                                      truncated = 2),
+         collection_date = lubridate::ymd(collection_date))
 
 # rename
 flu <-
-  flu %>%
+  flu3 %>%
   dplyr::rename(protein = name)
+
+# explore
 
 flu %>%
   dplyr::count(strain_name)
