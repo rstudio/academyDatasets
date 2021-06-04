@@ -11,10 +11,10 @@ A tibble with 307 rows and 12 variables:
 
 \item{\code{USUBJID}}{[character] Unique Subject Identifier}
 \item{\code{CMSEQ}}{[double] Sequence Number}
-\item{\code{CMSTDT}}{[double] Start date of the concomitant mediaction}
-\item{\code{CMSTDY}}{[double] The number of days the subject had been enrolled in the study when the concomitant mediaction began.}
-\item{\code{CMENDT}}{[double] End date of the concomitant mediaction}
-\item{\code{CMENDY}}{[double] The number of days the subject had been enrolled in the study when the concomitant mediaction ended.}
+\item{\code{CMSTDT}}{[double] Start date of the concomitant medication}
+\item{\code{CMSTDY}}{[double] The number of days the subject had been enrolled in the study when the concomitant medication began.}
+\item{\code{CMENDT}}{[double] End date of the concomitant medication}
+\item{\code{CMENDY}}{[double] The number of days the subject had been enrolled in the study when the concomitant medication ended.}
 \item{\code{CMTRT}}{[character] Reported name of the concomitant medication, i.e concomitant treatment}
 \item{\code{PREFTERM}}{[character] The nonproprietary, i.e. generic, name of the concomitant medication}
 \item{\code{ATCTEXT2}}{[character] Anatomical Therapeutic Chemical (ATC) of the concomitant medication}
