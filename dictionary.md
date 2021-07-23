@@ -33,7 +33,7 @@ academyDatasets Data
 
     ── Data Summary ────────────────────────
                                Values
-    Name                       data  
+    Name                       covid 
     Number of rows             20780 
     Number of columns          6     
     _______________________          
@@ -82,17 +82,17 @@ academyDatasets Data
 | reasondescription   | character | Description of the reason code.                                                                                                         |
 
     ── Data Summary ────────────────────────
-                               Values
-    Name                       data  
-    Number of rows             53346 
-    Number of columns          15    
-    _______________________          
-    Column type frequency:           
-      character                8     
-      numeric                  5     
-      POSIXct                  2     
-    ________________________         
-    Group variables            None  
+                               Values    
+    Name                       encounters
+    Number of rows             53346     
+    Number of columns          15        
+    _______________________              
+    Column type frequency:               
+      character                8         
+      numeric                  5         
+      POSIXct                  2         
+    ________________________             
+    Group variables            None      
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable     n_missing complete_rate   min   max empty n_unique whitespace
@@ -129,16 +129,16 @@ academyDatasets Data
 | manufacturer | double | Number of reports that were submitted through a drug manufacturer.        |
 
     ── Data Summary ────────────────────────
-                               Values
-    Name                       data  
-    Number of rows             5968  
-    Number of columns          3     
-    _______________________          
-    Column type frequency:           
-      Date                     1     
-      numeric                  2     
-    ________________________         
-    Group variables            None  
+                               Values           
+    Name                       fda_adverse_daily
+    Number of rows             5968             
+    Number of columns          3                
+    _______________________                     
+    Column type frequency:                      
+      Date                     1                
+      numeric                  2                
+    ________________________                    
+    Group variables            None             
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
@@ -174,18 +174,18 @@ academyDatasets Data
 | outcome         | character | Outcome of the patient reaction at the time of last observation: recovered, recovering, not recovered, recovered with sequelae (consequent health issues), fatal or unknown.                                     |
 
     ── Data Summary ────────────────────────
-                               Values
-    Name                       data  
-    Number of rows             5765  
-    Number of columns          17    
-    _______________________          
-    Column type frequency:           
-      character                9     
-      Date                     4     
-      logical                  1     
-      numeric                  3     
-    ________________________         
-    Group variables            None  
+                               Values      
+    Name                       fda_pt_drugs
+    Number of rows             5765        
+    Number of columns          17          
+    _______________________                
+    Column type frequency:                 
+      character                9           
+      Date                     4           
+      logical                  1           
+      numeric                  3           
+    ________________________               
+    Group variables            None        
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
@@ -241,7 +241,7 @@ academyDatasets Data
 
     ── Data Summary ────────────────────────
                                Values
-    Name                       data  
+    Name                       flu   
     Number of rows             130560
     Number of columns          16    
     _______________________          
@@ -296,7 +296,7 @@ academyDatasets Data
 
     ── Data Summary ────────────────────────
                                Values
-    Name                       data  
+    Name                       mdrd  
     Number of rows             1988  
     Number of columns          10    
     _______________________          
@@ -331,16 +331,16 @@ academyDatasets Data
 | weight | double    | Weight (kilograms) |
 
     ── Data Summary ────────────────────────
-                               Values
-    Name                       data  
-    Number of rows             255   
-    Number of columns          5     
-    _______________________          
-    Column type frequency:           
-      character                1     
-      numeric                  4     
-    ________________________         
-    Group variables            None  
+                               Values           
+    Name                       mdrd_supplemental
+    Number of rows             255              
+    Number of columns          5                
+    _______________________                     
+    Column type frequency:                      
+      character                1                
+      numeric                  4                
+    ________________________                    
+    Group variables            None             
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
@@ -374,17 +374,17 @@ academyDatasets Data
 | reasondescription | character | Description of the reason code.                                              |
 
     ── Data Summary ────────────────────────
-                               Values
-    Name                       data  
-    Number of rows             42989 
-    Number of columns          13    
-    _______________________          
-    Column type frequency:           
-      character                5     
-      numeric                  6     
-      POSIXct                  2     
-    ________________________         
-    Group variables            None  
+                               Values     
+    Name                       medications
+    Number of rows             42989      
+    Number of columns          13         
+    _______________________               
+    Column type frequency:                
+      character                5          
+      numeric                  6          
+      POSIXct                  2          
+    ________________________              
+    Group variables            None       
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable     n_missing complete_rate   min   max empty n_unique whitespace
@@ -421,7 +421,7 @@ academyDatasets Data
 
     ── Data Summary ────────────────────────
                                Values
-    Name                       data  
+    Name                       ny_air
     Number of rows             22692 
     Number of columns          4     
     _______________________          
@@ -463,17 +463,17 @@ academyDatasets Data
 | AEOUT    | character | Outcome of the adverse event.                                                                          |
 
     ── Data Summary ────────────────────────
-                               Values
-    Name                       data  
-    Number of rows             357   
-    Number of columns          14    
-    _______________________          
-    Column type frequency:           
-      character                9     
-      Date                     2     
-      numeric                  3     
-    ________________________         
-    Group variables            None  
+                               Values             
+    Name                       sdtm_adverse_events
+    Number of rows             357                
+    Number of columns          14                 
+    _______________________                       
+    Column type frequency:                        
+      character                9                  
+      Date                     2                  
+      numeric                  3                  
+    ________________________                      
+    Group variables            None               
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
@@ -518,17 +518,17 @@ academyDatasets Data
 | CMROUTE  | character | Route of administration of the concomitant medication                                                |
 
     ── Data Summary ────────────────────────
-                               Values
-    Name                       data  
-    Number of rows             307   
-    Number of columns          12    
-    _______________________          
-    Column type frequency:           
-      character                6     
-      Date                     2     
-      numeric                  4     
-    ________________________         
-    Group variables            None  
+                               Values               
+    Name                       sdtm_concomitant_meds
+    Number of rows             307                  
+    Number of columns          12                   
+    _______________________                         
+    Column type frequency:                          
+      character                6                    
+      Date                     2                    
+      numeric                  4                    
+    ________________________                        
+    Group variables            None                 
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
@@ -573,17 +573,17 @@ academyDatasets Data
 | SAFFN    | double    | Numeric coding of safety population flag. `Y` = Yes and `N` = No                                                                                                                                                                 |
 
     ── Data Summary ────────────────────────
-                               Values
-    Name                       data  
-    Number of rows             150   
-    Number of columns          14    
-    _______________________          
-    Column type frequency:           
-      character                9     
-      Date                     2     
-      numeric                  3     
-    ________________________         
-    Group variables            None  
+                               Values           
+    Name                       sdtm_demographics
+    Number of rows             150              
+    Number of columns          14               
+    _______________________                     
+    Column type frequency:                      
+      character                9                
+      Date                     2                
+      numeric                  3                
+    ________________________                    
+    Group variables            None             
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
@@ -627,17 +627,17 @@ academyDatasets Data
 | LBSTNRHI | double    | Upper (high) limit of normal range for lab test result |
 
     ── Data Summary ────────────────────────
-                               Values
-    Name                       data  
-    Number of rows             13708 
-    Number of columns          11    
-    _______________________          
-    Column type frequency:           
-      character                5     
-      Date                     1     
-      numeric                  5     
-    ________________________         
-    Group variables            None  
+                               Values          
+    Name                       sdtm_lab_results
+    Number of rows             13708           
+    Number of columns          11              
+    _______________________                    
+    Column type frequency:                     
+      character                5               
+      Date                     1               
+      numeric                  5               
+    ________________________                   
+    Group variables            None            
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
@@ -673,17 +673,17 @@ academyDatasets Data
 | SVSTATUS | character | Status of subject visit: Completed, Terminated, Missed, Expected, Overdue, Failed |
 
     ── Data Summary ────────────────────────
-                               Values
-    Name                       data  
-    Number of rows             1202  
-    Number of columns          6     
-    _______________________          
-    Column type frequency:           
-      character                3     
-      Date                     1     
-      numeric                  2     
-    ________________________         
-    Group variables            None  
+                               Values             
+    Name                       sdtm_subject_visits
+    Number of rows             1202               
+    Number of columns          6                  
+    _______________________                       
+    Column type frequency:                        
+      character                3                  
+      Date                     1                  
+      numeric                  2                  
+    ________________________                      
+    Group variables            None               
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
@@ -719,17 +719,17 @@ academyDatasets Data
 | VSSTNRHI | double    | Upper (high) limit of normal range for result of vital signs test |
 
     ── Data Summary ────────────────────────
-                               Values
-    Name                       data  
-    Number of rows             3170  
-    Number of columns          11    
-    _______________________          
-    Column type frequency:           
-      character                5     
-      Date                     1     
-      numeric                  5     
-    ________________________         
-    Group variables            None  
+                               Values          
+    Name                       sdtm_vital_signs
+    Number of rows             3170            
+    Number of columns          11              
+    _______________________                    
+    Column type frequency:                     
+      character                5               
+      Date                     1               
+      numeric                  5               
+    ________________________                   
+    Group variables            None            
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
@@ -764,17 +764,17 @@ academyDatasets Data
 | second_dose  | double    | Number of second doses allocated |
 
     ── Data Summary ────────────────────────
-                               Values
-    Name                       data  
-    Number of rows             3591  
-    Number of columns          5     
-    _______________________          
-    Column type frequency:           
-      character                2     
-      Date                     1     
-      numeric                  2     
-    ________________________         
-    Group variables            None  
+                               Values  
+    Name                       vaccines
+    Number of rows             3591    
+    Number of columns          5       
+    _______________________            
+    Column type frequency:             
+      character                2       
+      Date                     1       
+      numeric                  2       
+    ________________________           
+    Group variables            None    
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace

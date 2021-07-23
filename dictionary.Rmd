@@ -26,7 +26,6 @@ cat(toc)
 for (set in names(datasets)) {
   dictionary <- datasets[[set]]
   data_name <- sub("_dictionary", "", set)
-  data <- eval(parse(text = data_name))
   
   cat("\n\n##", clean_title(dictionary$title))
   cat(
@@ -39,7 +38,7 @@ for (set in names(datasets)) {
   cat(knitr::kable(dictionary$variables, col.names = c("Column", "Type", "Description")), sep = "\n")
   
   cat("\n\n```\n")
-  print(skimr::skim(data))
+  print(eval(parse(text = paste0("skimr::skim(", data_name, ")"))))
   cat("\n```")
 }
 ```
