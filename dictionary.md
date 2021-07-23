@@ -11,7 +11,7 @@ academyDatasets Data
 -   [`medications`](#patient-medication)
 -   [`ny_air`](#daily-predicted-new-york-air-quality)
 -   [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
--   [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-mediaction)
+-   [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
 -   [`sdtm_demographics`](#sdtm-formatted-demographic)
 -   [`sdtm_lab_results`](#sdtm-laboratory-test-results)
 -   [`sdtm_subject_visits`](#sdtm-subject-visits)
@@ -498,7 +498,7 @@ academyDatasets Data
     2 AESTDY                0             1 175.   103.       1    87   175   261   364 ▇▇▇▇▆
     3 AEENDY                0             1 265.    84.1     19   203   286   337   365 ▁▂▃▅▇
 
-## SDTM formatted Concomitant Mediaction
+## SDTM formatted Concomitant Medication
 
 `sdtm_concomitant_meds` has 12 columns and 307 rows.
 
@@ -506,10 +506,10 @@ academyDatasets Data
 |:---------|:----------|:-----------------------------------------------------------------------------------------------------|
 | USUBJID  | character | Unique Subject Identifier                                                                            |
 | CMSEQ    | double    | Sequence Number                                                                                      |
-| CMSTDT   | double    | Start date of the concomitant mediaction                                                             |
-| CMSTDY   | double    | The number of days the subject had been enrolled in the study when the concomitant mediaction began. |
-| CMENDT   | double    | End date of the concomitant mediaction                                                               |
-| CMENDY   | double    | The number of days the subject had been enrolled in the study when the concomitant mediaction ended. |
+| CMSTDT   | double    | Start date of the concomitant medication                                                             |
+| CMSTDY   | double    | The number of days the subject had been enrolled in the study when the concomitant medication began. |
+| CMENDT   | double    | End date of the concomitant medication                                                               |
+| CMENDY   | double    | The number of days the subject had been enrolled in the study when the concomitant medication ended. |
 | CMTRT    | character | Reported name of the concomitant medication, i.e concomitant treatment                               |
 | PREFTERM | character | The nonproprietary, i.e. generic, name of the concomitant medication                                 |
 | ATCTEXT2 | character | Anatomical Therapeutic Chemical (ATC) of the concomitant medication                                  |
