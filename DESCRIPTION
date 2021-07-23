@@ -22,7 +22,9 @@ BugReports: https://github.com/rstudio/academyDatasets/issues
 Depends: 
     R (>= 2.10)
 Suggests: 
-    docthis (>= 0.1.1)
+    docthis (>= 0.1.1),
+    knitr,
+    skimr
 Remotes: 
     mdlincoln/docthis
 Encoding: UTF-8

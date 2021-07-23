@@ -155,6 +155,12 @@ Finally, run a check on the academyDatasets package to make sure everything load
 devtools::check()
 ```
 
+### Update the Data Dictionary
+
+Build the `academyDatasets` package with <kbd>Cmd/Ctrl</kdb> + <kbd>Shift</kbd> + <kbd>B</kbd> or `devtools::install()`.
+
+Then render the [data dictionary][dictionary.md] by knitting [`dictionary.Rmd`](dictionary.Rmd).
+
 ### Submit a new PR
 
 The final step is to create a PR submit this dataset to the academyDatasets pacakge. You can use [usethis](https://usethis.r-lib.org) again to help with this:
