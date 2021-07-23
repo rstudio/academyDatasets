@@ -52,13 +52,13 @@ usethis::use_data(
 
 sdtm_concomitant_meds_dictionary <- describe_dataset(
   sdtm_concomitant_meds,
-  .title = "SDTM formatted Concomitant Mediaction data",
+  .title = "SDTM formatted Concomitant Medication data",
   USUBJID = "Unique Subject Identifier",
   CMSEQ = "Sequence Number",
-  CMSTDT = "Start date of the concomitant mediaction",
-  CMSTDY = "The number of days the subject had been enrolled in the study when the concomitant mediaction began.",
-  CMENDT = "End date of the concomitant mediaction",
-  CMENDY = "The number of days the subject had been enrolled in the study when the concomitant mediaction ended.",
+  CMSTDT = "Start date of the concomitant medication",
+  CMSTDY = "The number of days the subject had been enrolled in the study when the concomitant medication began.",
+  CMENDT = "End date of the concomitant medication",
+  CMENDY = "The number of days the subject had been enrolled in the study when the concomitant medication ended.",
   CMTRT = "Reported name of the concomitant medication, i.e concomitant treatment",
   PREFTERM = "The nonproprietary, i.e. generic, name of the concomitant medication",
   ATCTEXT2 = "Anatomical Therapeutic Chemical (ATC) of the concomitant medication",
@@ -140,7 +140,7 @@ usethis::use_data(
 
 sdtm_vital_signs_dictionary <- describe_dataset(
   sdtm_vital_signs,
-  .title = "SDTM Subject Visits data",
+  .title = "SDTM Vital Signs data",
   USUBJID = "Unique Subject Identifier",
   VISIT = "Protocol defined text description of the visit",
   VISITNUM = "Visit number",

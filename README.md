@@ -5,7 +5,7 @@
 [![R-CMD-check](https://github.com/rstudio/academyDatasets/workflows/R-CMD-check/badge.svg)](https://github.com/rstudio/academyDatasets/actions)
 <!-- badges: end -->
 
-Datasets for use with RStudio Academy exercises, tutorials, and recipes.
+Datasets for use with RStudio Academy exercises, tutorials, and recipes. View a summary of the datasets [using the data dictionary](dictionary.md).
 
 ## Installation
 
@@ -154,6 +154,12 @@ Finally, run a check on the academyDatasets package to make sure everything load
 ```r
 devtools::check()
 ```
+
+### Update the Data Dictionary
+
+Build the `academyDatasets` package with <kbd>Cmd/Ctrl</kdb> + <kbd>Shift</kbd> + <kbd>B</kbd> or `devtools::install()`.
+
+Then render the [data dictionary][dictionary.md] by knitting [`dictionary.Rmd`](dictionary.Rmd).
 
 ### Submit a new PR
 

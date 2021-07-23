@@ -1,0 +1,44 @@
+---
+title: "academyDatasets Data"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+library(academyDatasets)
+options(width = 140)
+
+clean_title <- function(x) trimws(sub("[Dd]ata\\.?$", "", x))
+title2id <- function(x) gsub("[^[:alnum:]_-]", "-", tolower(clean_title(x)))
+
+datasets <- ls("package:academyDatasets", pattern = "_dictionary")
+names(datasets) <- datasets
+datasets <- lapply(datasets, function(x) eval(parse(text = x)))
+titles <- vapply(datasets, `[[`, character(1), "title")
+data_names <- sub("_dictionary", "", names(datasets))
+```
+
+```{r toc, results="asis", echo=FALSE}
+toc <- paste0("- [`", data_names, "`](#", title2id(titles), ")", collapse = "\n")
+cat(toc)
+```
+
+```{r describe-data, results="asis", echo=FALSE}
+for (set in names(datasets)) {
+  dictionary <- datasets[[set]]
+  data_name <- sub("_dictionary", "", set)
+  
+  cat("\n\n##", clean_title(dictionary$title))
+  cat(
+    "\n\n`", data_name, 
+    "` has ", dictionary$dims$cols, " columns and ",
+    format(dictionary$dims$rows, big.mark = ","),
+    " rows.\n\n",
+    sep = ""
+  )
+  cat(knitr::kable(dictionary$variables, col.names = c("Column", "Type", "Description")), sep = "\n")
+  
+  cat("\n\n```\n")
+  print(eval(parse(text = paste0("skimr::skim(", data_name, ")"))))
+  cat("\n```")
+}
+```
