@@ -140,7 +140,7 @@ usethis::use_data(
 
 sdtm_vital_signs_dictionary <- describe_dataset(
   sdtm_vital_signs,
-  .title = "SDTM Subject Visits data",
+  .title = "SDTM Vital Signs data",
   USUBJID = "Unique Subject Identifier",
   VISIT = "Protocol defined text description of the visit",
   VISITNUM = "Visit number",
