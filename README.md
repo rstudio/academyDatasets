@@ -5,7 +5,7 @@
 [![R-CMD-check](https://github.com/rstudio/academyDatasets/workflows/R-CMD-check/badge.svg)](https://github.com/rstudio/academyDatasets/actions)
 <!-- badges: end -->
 
-Datasets for use with RStudio Academy exercises, tutorials, and recipes.
+Datasets for use with RStudio Academy exercises, tutorials, and recipes. View a summary of the datasets [using the data dictionary](dictionary.md).
 
 ## Installation
 
