@@ -13,7 +13,7 @@ A tibble with 1988 rows and 10 variables:
 \item{\code{gfr}}{[double] Glomerular filtration rate in milliliters per minute. A measure of how much blood the kidneys filter per minute. }
 \item{\code{months}}{[double] Number of months after the start of the study that the measurement was taken. }
 \item{\code{dietl_normbp}}{[double] Was the participant assigned to the low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)}
-\item{\code{dietl_lowbp}}{[double] Was the participant assigned to the low-protein, low-blood prssure diet? (0 = No, 1 = Yes)}
+\item{\code{dietl_lowbp}}{[double] Was the participant assigned to the low-protein, low-blood pressure diet? (0 = No, 1 = Yes)}
 \item{\code{dietk_normbp}}{[double] Was the participant assigned to the very low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)}
 \item{\code{dietk_lowbp}}{[double] Was the participant assigned to the very low-protein, low-blood pressure diet? (0 = No, 1 = Yes)}
 \item{\code{log_protein}}{[double] Logarithm of the grams of protein consumed per day.}
