@@ -286,11 +286,11 @@ academyDatasets Data
 | ptid           | double | Patient identifier                                                                                               |
 | gfr            | double | Glomerular filtration rate in milliliters per minute. A measure of how much blood the kidneys filter per minute. |
 | months         | double | Number of months after the start of the study that the measurement was taken.                                    |
-| dietl_normbp   | double | Was the participant assigned to the low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)                   |
-| dietl_lowbp    | double | Was the participant assigned to the low-protein, low-blood prssure diet? (0 = No, 1 = Yes)                       |
-| dietk_normbp   | double | Was the participant assigned to the very low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)              |
-| dietk_lowbp    | double | Was the participant assigned to the very low-protein, low-blood pressure diet? (0 = No, 1 = Yes)                 |
-| log_protein    | double | Logarithm of the grams of protein consumed per day.                                                              |
+| dietl\_normbp  | double | Was the participant assigned to the low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)                   |
+| dietl\_lowbp   | double | Was the participant assigned to the low-protein, low-blood pressure diet? (0 = No, 1 = Yes)                      |
+| dietk\_normbp  | double | Was the participant assigned to the very low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)              |
+| dietk\_lowbp   | double | Was the participant assigned to the very low-protein, low-blood pressure diet? (0 = No, 1 = Yes)                 |
+| log\_protein   | double | Logarithm of the grams of protein consumed per day.                                                              |
 | followupmonths | double | Number of months until patient follow-up.                                                                        |
 | dropout        | double | Did the patient drop out of the study? (0 = No, 1 = Yes)                                                         |
 
