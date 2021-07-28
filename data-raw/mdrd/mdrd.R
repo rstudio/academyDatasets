@@ -47,7 +47,7 @@ mdrd_dictionary <- describe_dataset(
   gfr            = "Glomerular filtration rate in milliliters per minute. A measure of how much blood the kidneys filter per minute. ",
   months         = "Number of months after the start of the study that the measurement was taken. ",
   dietl_normbp   = "Was the participant assigned to the low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)",
-  dietl_lowbp    = "Was the participant assigned to the low-protein, low-blood prssure diet? (0 = No, 1 = Yes)",
+  dietl_lowbp    = "Was the participant assigned to the low-protein, low-blood pressure diet? (0 = No, 1 = Yes)",
   dietk_normbp   = "Was the participant assigned to the very low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)",
   dietk_lowbp    = "Was the participant assigned to the very low-protein, low-blood pressure diet? (0 = No, 1 = Yes)",
   log_protein    = "Logarithm of the grams of protein consumed per day.",
