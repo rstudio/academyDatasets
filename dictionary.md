@@ -9,6 +9,8 @@ academyDatasets Data
 -   [`mdrd`](#modification-of-diet-in-renal-disease)
 -   [`mdrd_supplemental`](#modification-of-diet-in-renal-disease---supplemental)
 -   [`medications`](#patient-medication)
+-   [`nhanes_dermatology`](#national-health-and-nutrition-examination-survey--dermatology--2017-2018)
+-   [`nhanes_sleep`](#national-health-and-nutrition-examination-survey--sleep-disorders--2017-2018)
 -   [`ny_air`](#daily-predicted-new-york-air-quality)
 -   [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
 -   [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
@@ -63,23 +65,23 @@ academyDatasets Data
 
 `encounters` has 15 columns and 53,346 rows.
 
-| Column              | Type      | Description                                                                                                                             |
-|:--------------------|:----------|:----------------------------------------------------------------------------------------------------------------------------------------|
-| id                  | character | Primary Key. Unique Identifier of the encounter.                                                                                        |
-| start               | double    | The date and time the encounter started.                                                                                                |
-| stop                | double    | The date and time the encounter concluded.                                                                                              |
-| patient             | character | Foreign key to the Patient.                                                                                                             |
-| organization        | character | Foreign key to the Organization.                                                                                                        |
-| provider            | character | Foreign key to the Provider.                                                                                                            |
-| payer               | character | Foreign key to the Payer.                                                                                                               |
-| encounterclass      | character | The class of the encounter, such as ambulatory, emergency, inpatient, wellness, or urgentcare                                           |
-| code                | double    | Encounter code from SNOMED-CT                                                                                                           |
-| description         | character | Description of the type of encounter.                                                                                                   |
-| base_encounter_cost | double    | The base cost of the encounter, not including any line item costs related to medications, immunizations, procedures, or other services. |
-| total_claim_cost    | double    | The total cost of the encounter, including all line items.                                                                              |
-| payer_coverage      | double    | The amount of cost covered by the Payer.                                                                                                |
-| reasoncode          | double    | Diagnosis code from SNOMED-CT, only if this encounter targeted a specific condition.                                                    |
-| reasondescription   | character | Description of the reason code.                                                                                                         |
+| Column                | Type      | Description                                                                                                                             |
+|:----------------------|:----------|:----------------------------------------------------------------------------------------------------------------------------------------|
+| id                    | character | Primary Key. Unique Identifier of the encounter.                                                                                        |
+| start                 | double    | The date and time the encounter started.                                                                                                |
+| stop                  | double    | The date and time the encounter concluded.                                                                                              |
+| patient               | character | Foreign key to the Patient.                                                                                                             |
+| organization          | character | Foreign key to the Organization.                                                                                                        |
+| provider              | character | Foreign key to the Provider.                                                                                                            |
+| payer                 | character | Foreign key to the Payer.                                                                                                               |
+| encounterclass        | character | The class of the encounter, such as ambulatory, emergency, inpatient, wellness, or urgentcare                                           |
+| code                  | double    | Encounter code from SNOMED-CT                                                                                                           |
+| description           | character | Description of the type of encounter.                                                                                                   |
+| base\_encounter\_cost | double    | The base cost of the encounter, not including any line item costs related to medications, immunizations, procedures, or other services. |
+| total\_claim\_cost    | double    | The total cost of the encounter, including all line items.                                                                              |
+| payer\_coverage       | double    | The amount of cost covered by the Payer.                                                                                                |
+| reasoncode            | double    | Diagnosis code from SNOMED-CT, only if this encounter targeted a specific condition.                                                    |
+| reasondescription     | character | Description of the reason code.                                                                                                         |
 
     ── Data Summary ────────────────────────
                                Values    
@@ -122,11 +124,11 @@ academyDatasets Data
 
 `fda_adverse_daily` has 3 columns and 5,968 rows.
 
-| Column       | Type   | Description                                                               |
-|:-------------|:-------|:--------------------------------------------------------------------------|
-| receive_date | double | Date that the report was first received by FDA.                           |
-| public       | double | Number of reports that were submitted directly by a member of the public. |
-| manufacturer | double | Number of reports that were submitted through a drug manufacturer.        |
+| Column        | Type   | Description                                                               |
+|:--------------|:-------|:--------------------------------------------------------------------------|
+| receive\_date | double | Date that the report was first received by FDA.                           |
+| public        | double | Number of reports that were submitted directly by a member of the public. |
+| manufacturer  | double | Number of reports that were submitted through a drug manufacturer.        |
 
     ── Data Summary ────────────────────────
                                Values           
@@ -153,25 +155,25 @@ academyDatasets Data
 
 `fda_pt_drugs` has 17 columns and 5,765 rows.
 
-| Column          | Type      | Description                                                                                                                                                                                                      |
-|:----------------|:----------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| report_id       | character | The 8-digit Safety Report ID number, also known as the case report number or case ID. Can be used to identify or find a specific adverse event report.                                                           |
-| receive_date    | double    | Date that the report was first received by FDA.                                                                                                                                                                  |
-| receipt_date    | double    | Date that the most recent information in the report was received by FDA.                                                                                                                                         |
-| country         | character | The name of the country where the adverse event occurred.                                                                                                                                                        |
-| reporter        | character | Category of individual who submitted the report: physician, pharmacist, other health professional, laywer or consumer/non-health professional.                                                                   |
-| age             | double    | Age of the patient when the adverse event first occured.                                                                                                                                                         |
-| sex             | character | The sex of the patient.                                                                                                                                                                                          |
-| weight          | double    | The patient weight, in kilograms (kg).                                                                                                                                                                           |
-| drug            | character | Drug name. This may be the valid trade name of the product (e.g. “advil” or “aleve”) or the generic name (e.g. “ibuprofen”).                                                                                     |
-| dosage          | double    | The number portion of a dosage; when combined with `dosage_unit` the complete dosage information is represented.                                                                                                 |
-| dosage_unit     | character | The drug dosasge unit: kilograms (kg), grams (g), milligrams (mg) or micrograms (ug).                                                                                                                            |
-| indication      | character | Indication for the drug’s use.                                                                                                                                                                                   |
-| drug_start_date | double    | Date the patient began taking the drug.                                                                                                                                                                          |
-| drug_end_date   | double    | Date the patient stopped taking the drug.                                                                                                                                                                        |
-| serious         | logical   | A logical value indicating whether or not the adverse event was serious, i.e. resulted in death, a life threatening condition, hospitalization, disability, congenital anomaly, or some other serious condition. |
-| reaction        | character | Patient reaction, as a term from the Medical Dictionary for Regulatory Activities, encoded in British English.                                                                                                   |
-| outcome         | character | Outcome of the patient reaction at the time of last observation: recovered, recovering, not recovered, recovered with sequelae (consequent health issues), fatal or unknown.                                     |
+| Column            | Type      | Description                                                                                                                                                                                                      |
+|:------------------|:----------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| report\_id        | character | The 8-digit Safety Report ID number, also known as the case report number or case ID. Can be used to identify or find a specific adverse event report.                                                           |
+| receive\_date     | double    | Date that the report was first received by FDA.                                                                                                                                                                  |
+| receipt\_date     | double    | Date that the most recent information in the report was received by FDA.                                                                                                                                         |
+| country           | character | The name of the country where the adverse event occurred.                                                                                                                                                        |
+| reporter          | character | Category of individual who submitted the report: physician, pharmacist, other health professional, laywer or consumer/non-health professional.                                                                   |
+| age               | double    | Age of the patient when the adverse event first occured.                                                                                                                                                         |
+| sex               | character | The sex of the patient.                                                                                                                                                                                          |
+| weight            | double    | The patient weight, in kilograms (kg).                                                                                                                                                                           |
+| drug              | character | Drug name. This may be the valid trade name of the product (e.g. “advil” or “aleve”) or the generic name (e.g. “ibuprofen”).                                                                                     |
+| dosage            | double    | The number portion of a dosage; when combined with `dosage_unit` the complete dosage information is represented.                                                                                                 |
+| dosage\_unit      | character | The drug dosasge unit: kilograms (kg), grams (g), milligrams (mg) or micrograms (ug).                                                                                                                            |
+| indication        | character | Indication for the drug’s use.                                                                                                                                                                                   |
+| drug\_start\_date | double    | Date the patient began taking the drug.                                                                                                                                                                          |
+| drug\_end\_date   | double    | Date the patient stopped taking the drug.                                                                                                                                                                        |
+| serious           | logical   | A logical value indicating whether or not the adverse event was serious, i.e. resulted in death, a life threatening condition, hospitalization, disability, congenital anomaly, or some other serious condition. |
+| reaction          | character | Patient reaction, as a term from the Medical Dictionary for Regulatory Activities, encoded in British English.                                                                                                   |
+| outcome           | character | Outcome of the patient reaction at the time of last observation: recovered, recovering, not recovered, recovered with sequelae (consequent health issues), fatal or unknown.                                     |
 
     ── Data Summary ────────────────────────
                                Values      
@@ -220,24 +222,24 @@ academyDatasets Data
 
 `flu` has 16 columns and 130,560 rows.
 
-| Column              | Type      | Description                                                                                                                                                                                  |
-|:--------------------|:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| protein             | character | Abbreviation of viral protein                                                                                                                                                                |
-| sequence_accession  | character | Unique identifier given to the protein sequence record to allow for tracking of different versions of that sequence.                                                                         |
-| complete_genome     | character | Is the viral strain’s complete genome known?                                                                                                                                                 |
-| complete_sequence   | character | Is the complete sequence of this viral protein known?                                                                                                                                        |
-| segment             | double    | One of eight single-stranded RNA segments that encodes the viral protein                                                                                                                     |
-| segment_length      | double    | Number of RNA nucleotides in segment                                                                                                                                                         |
-| collection_date     | double    | Date of sample collection                                                                                                                                                                    |
-| host_species        | character | Species that the viral strain infects                                                                                                                                                        |
-| country             | character | Country of strain origin                                                                                                                                                                     |
-| state_province      | character | State or province of origin if applicable                                                                                                                                                    |
-| geographic_grouping | character | Geographic origin of viral strain                                                                                                                                                            |
-| flu_season          | character | For geographic regions in the northern hemisphere, the two digit year for the fall and winter season when the strain was recorded.                                                           |
-| strain_name         | character | Name of viral strain                                                                                                                                                                         |
-| sequence            | character | Protein sequence in amino acid                                                                                                                                                               |
-| submission_date     | double    | Date of entry submission                                                                                                                                                                     |
-| passage_history     | character | An indicator of what cell line was used for culturing the virus. Nomenclature for passage history is notoriously unstandardized. See <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6599686/> |
+| Column               | Type      | Description                                                                                                                                                                                  |
+|:---------------------|:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| protein              | character | Abbreviation of viral protein                                                                                                                                                                |
+| sequence\_accession  | character | Unique identifier given to the protein sequence record to allow for tracking of different versions of that sequence.                                                                         |
+| complete\_genome     | character | Is the viral strain’s complete genome known?                                                                                                                                                 |
+| complete\_sequence   | character | Is the complete sequence of this viral protein known?                                                                                                                                        |
+| segment              | double    | One of eight single-stranded RNA segments that encodes the viral protein                                                                                                                     |
+| segment\_length      | double    | Number of RNA nucleotides in segment                                                                                                                                                         |
+| collection\_date     | double    | Date of sample collection                                                                                                                                                                    |
+| host\_species        | character | Species that the viral strain infects                                                                                                                                                        |
+| country              | character | Country of strain origin                                                                                                                                                                     |
+| state\_province      | character | State or province of origin if applicable                                                                                                                                                    |
+| geographic\_grouping | character | Geographic origin of viral strain                                                                                                                                                            |
+| flu\_season          | character | For geographic regions in the northern hemisphere, the two digit year for the fall and winter season when the strain was recorded.                                                           |
+| strain\_name         | character | Name of viral strain                                                                                                                                                                         |
+| sequence             | character | Protein sequence in amino acid                                                                                                                                                               |
+| submission\_date     | double    | Date of entry submission                                                                                                                                                                     |
+| passage\_history     | character | An indicator of what cell line was used for culturing the virus. Nomenclature for passage history is notoriously unstandardized. See <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6599686/> |
 
     ── Data Summary ────────────────────────
                                Values
@@ -366,8 +368,8 @@ academyDatasets Data
 | encounter         | character | Foreign key to the Encounter where the medication was prescribed.            |
 | code              | double    | Medication code from RxNorm.                                                 |
 | description       | character | Description of the medication.                                               |
-| base_cost         | double    | The line item cost of the medication.                                        |
-| payer_coverage    | double    | The amount covered or reimbursed by the Payer.                               |
+| base\_cost        | double    | The line item cost of the medication.                                        |
+| payer\_coverage   | double    | The amount covered or reimbursed by the Payer.                               |
 | dispenses         | double    | The number of times the prescription was filled.                             |
 | totalcost         | double    | The total cost of the prescription, including all dispenses.                 |
 | reasoncode        | double    | Diagnosis code from SNOMED-CT specifying why this medication was prescribed. |
@@ -408,16 +410,112 @@ academyDatasets Data
     1 start                 0         1     1913-06-17 04:54:18 2020-04-28 18:58:37 2005-03-19 21:31:22    25996
     2 stop               1895         0.956 1913-06-24 04:54:18 2020-04-28 18:58:37 2005-05-27 20:51:21    24778
 
+## National Health and Nutrition Examination Survey, Dermatology, 2017-2018
+
+`nhanes_dermatology` has 8 columns and 3,419 rows.
+
+| Column                  | Type    | Description                                                                                                                                                                           |
+|:------------------------|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| seq\_no                 | double  | Respondent sequence number                                                                                                                                                            |
+| sun\_reaction           | integer | If after several months of not being in the sun, you then went out in the sun without sunscreen or protective clothing for a half hour, which one of these would happen to your skin? |
+| shade                   | integer | When you go outside on a very sunny day, for more than one hour, how often do you stay in the shade?                                                                                  |
+| long\_sleeves           | integer | When you go outside on a very sunny day, for more than one hour, how often do you wear a long sleeved shirt?                                                                          |
+| sunscreen               | integer | When you go outside on a very sunny day, for more than one hour, how often do you use sunscreen?                                                                                      |
+| sunburns                | double  | How many times in the past year have you had a sunburn?                                                                                                                               |
+| time\_outdoors\_workday | double  | During the past 30 days, how much time did you usually spend outdoors between 9 in the morning and 5 in the afternoon on the days that you worked or went to school?                  |
+| time\_outdoors\_weekend | double  | During the past 30 days, how much time did you usually spend outdoors between 9 in the morning and 5 in the afternoon on the days when you were not working or going to school?       |
+
+    ── Data Summary ────────────────────────
+                               Values            
+    Name                       nhanes_dermatology
+    Number of rows             3419              
+    Number of columns          8                 
+    _______________________                      
+    Column type frequency:                       
+      factor                   4                 
+      numeric                  4                 
+    ________________________                     
+    Group variables            None              
+
+    ── Variable type: factor ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate ordered n_unique top_counts                             
+    1 sun_reaction          1         1.00  FALSE          7 Not: 1474, Tur: 819, Mil: 747, A s: 268
+    2 shade                 1         1.00  FALSE          7 Som: 1459, Mos: 897, Rar: 521, Alw: 323
+    3 long_sleeves         14         0.996 FALSE          6 Nev: 1159, Som: 916, Rar: 815, Mos: 303
+    4 sunscreen            14         0.996 FALSE          5 Nev: 1363, Som: 706, Rar: 623, Mos: 399
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable         n_missing complete_rate      mean      sd    p0   p25   p50    p75   p100 hist 
+    1 seq_no                        0         1     98316.    2677.   93711 96023 98303 100626 102956 ▇▇▇▇▇
+    2 sunburns                     11         0.997     0.747    1.87     0     0     0      1     20 ▇▁▁▁▁
+    3 time_outdoors_workday       373         0.891   116.     139.       0    14    60    180    480 ▇▂▁▁▁
+    4 time_outdoors_weekend        27         0.992   149.     125.       0    60   120    240    480 ▇▇▂▂▁
+
+## National Health and Nutrition Examination Survey, Sleep Disorders, 2017-2018
+
+`nhanes_sleep` has 11 columns and 6,161 rows.
+
+| Column                 | Type    | Description                                                                                    |
+|:-----------------------|:--------|:-----------------------------------------------------------------------------------------------|
+| seq\_no                | double  | Respondent sequence number                                                                     |
+| sleep\_time\_workday   | double  | What time do you usually fall asleep on weekdays or workdays?                                  |
+| wake\_time\_workday    | double  | What time do you usually wake up on weekdays or workdays?                                      |
+| sleep\_length\_workday | double  | Number of hours usually sleep on weekdays or workdays.                                         |
+| sleep\_time\_weekend   | double  | What time do you usually fall asleep on weekends or non-workdays?                              |
+| wake\_time\_weekend    | double  | What time do you usually wake up on weekends or non-workdays?                                  |
+| sleep\_length\_weekend | double  | Number of hours usually sleep on weekends or non-workdays.                                     |
+| snore                  | integer | In the past 12 months, how often did you snore while you were sleeping?                        |
+| stop\_breathing        | integer | In the past 12 months, how often did you snort, gasp, or stop breathing while you were asleep? |
+| told\_doctor           | logical | Have you ever told a doctor or other health professional that you have trouble sleeping?       |
+| overly\_sleepy         | integer | In the past month, how often did you feel excessively or overly sleepy during the day?         |
+
+    ── Data Summary ────────────────────────
+                               Values      
+    Name                       nhanes_sleep
+    Number of rows             6161        
+    Number of columns          11          
+    _______________________                
+    Column type frequency:                 
+      difftime                 4           
+      factor                   3           
+      logical                  1           
+      numeric                  3           
+    ________________________               
+    Group variables            None        
+
+    ── Variable type: difftime ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable      n_missing complete_rate min    max        median     n_unique
+    1 sleep_time_workday        74         0.988 0 secs 85500 secs 79200 secs       57
+    2 wake_time_workday         61         0.990 0 secs 84600 secs 23400 secs      101
+    3 sleep_time_weekend        71         0.988 0 secs 85800 secs 75600 secs       58
+    4 wake_time_weekend         59         0.990 0 secs 82800 secs 28800 secs       65
+
+    ── Variable type: factor ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable  n_missing complete_rate ordered n_unique top_counts                                
+    1 snore                  0             1 FALSE          6 Nev: 1688, Fre: 1577, Rar: 1370, Occ: 1068
+    2 stop_breathing         0             1 FALSE          6 Nev: 4474, Rar: 699, Occ: 361, Don: 344   
+    3 overly_sleepy          0             1 FALSE          6 Som: 2059, Rar: 1468, Oft: 1066, Nev: 1028
+
+    ── Variable type: logical ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean count               
+    1 told_doctor           5         0.999 0.263 FAL: 4535, TRU: 1621
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable        n_missing complete_rate     mean      sd    p0   p25   p50      p75   p100 hist 
+    1 seq_no                       0         1     98284.   2681.   93705 95959 98267 100608   102956 ▇▇▇▇▇
+    2 sleep_length_workday        48         0.992     7.66    1.67     2     7     8      8.5     14 ▁▃▇▂▁
+    3 sleep_length_weekend        57         0.991     8.38    1.78     2     7     8      9.5     14 ▁▂▇▃▁
+
 ## Daily predicted New York air quality
 
 `ny_air` has 4 columns and 22,692 rows.
 
-| Column      | Type   | Description                                    |
-|:------------|:-------|:-----------------------------------------------|
-| date        | double | Date                                           |
-| county      | double | County                                         |
-| pm25_max    | double | Maximum predicted value of PM2.5 concentration |
-| pm25_median | double | Median predicted value of PM2.5 concentration  |
+| Column       | Type   | Description                                    |
+|:-------------|:-------|:-----------------------------------------------|
+| date         | double | Date                                           |
+| county       | double | County                                         |
+| pm25\_max    | double | Maximum predicted value of PM2.5 concentration |
+| pm25\_median | double | Median predicted value of PM2.5 concentration  |
 
     ── Data Summary ────────────────────────
                                Values
@@ -760,8 +858,8 @@ academyDatasets Data
 | jurisdiction | character | State or territory               |
 | vaccine      | character | Vaccine type                     |
 | week         | double    | Week the vaccines were allocated |
-| first_dose   | double    | Number of first doses allocated  |
-| second_dose  | double    | Number of second doses allocated |
+| first\_dose  | double    | Number of first doses allocated  |
+| second\_dose | double    | Number of second doses allocated |
 
     ── Data Summary ────────────────────────
                                Values  

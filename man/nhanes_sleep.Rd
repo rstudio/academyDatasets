@@ -6,17 +6,20 @@
 \alias{nhanes_sleep_dictionary}
 \title{National Health and Nutrition Examination Survey, Sleep Disorders, 2017-2018}
 \format{
-A tibble with 3419 rows and 8 variables:
+A tibble with 6161 rows and 11 variables:
 \describe{
 
 \item{\code{seq_no}}{[double] Respondent sequence number}
-\item{\code{sun_reaction}}{[integer] }
-\item{\code{shade}}{[integer] }
-\item{\code{long_sleeves}}{[integer] }
-\item{\code{sunscreen}}{[integer] }
-\item{\code{sunburns}}{[double] }
-\item{\code{time_outdoors_workday}}{[double] }
-\item{\code{time_outdoors_weekend}}{[double] }
+\item{\code{sleep_time_workday}}{[double] What time do you usually fall asleep on weekdays or workdays?}
+\item{\code{wake_time_workday}}{[double] What time do you usually wake up on weekdays or workdays?}
+\item{\code{sleep_length_workday}}{[double] Number of hours usually sleep on weekdays or workdays.}
+\item{\code{sleep_time_weekend}}{[double] What time do you usually fall asleep on weekends or non-workdays?}
+\item{\code{wake_time_weekend}}{[double] What time do you usually wake up on weekends or non-workdays?}
+\item{\code{sleep_length_weekend}}{[double] Number of hours usually sleep on weekends or non-workdays.}
+\item{\code{snore}}{[integer] In the past 12 months, how often did you snore while you were sleeping?}
+\item{\code{stop_breathing}}{[integer] In the past 12 months, how often did you snort, gasp, or stop breathing while you were asleep?}
+\item{\code{told_doctor}}{[logical] Have you ever told a doctor or other health professional that you have trouble sleeping?}
+\item{\code{overly_sleepy}}{[integer] In the past month, how often did you feel excessively or overly sleepy during the day?}
 }
 
 An object of class \code{list} of length 3.
