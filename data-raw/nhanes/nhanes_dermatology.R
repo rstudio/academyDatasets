@@ -1,4 +1,4 @@
-# Prepare the MDRD data set ----
+# Prepare the nhanes_dermatology data set ----
 
 # load {academyDatasets} for access to helper functions
 pkgload::load_all()
