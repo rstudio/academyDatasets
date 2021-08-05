@@ -3,10 +3,10 @@
 # load {academyDatasets} for access to helper functions
 pkgload::load_all()
 library(dplyr)
-library(fauxnaif)
+library(fauxnaif) # Non-tidyverse
 library(haven)
 library(hms)
-library(incase)
+library(incase) # Non-tidyverse
 library(readr)
 
 # Import the data from a canonical source ----
@@ -58,7 +58,7 @@ write_csv(nhanes_sleep, here("nhanes_sleep.csv"))
 
 # Create machine-readable dataset description (uses academyDataset functions) ----
 nhanes_sleep_dictionary <- describe_dataset(
-  nhanes_dermatology,
+  nhanes_sleep,
   .title               = "National Health and Nutrition Examination Survey, Sleep Disorders, 2017-2018",
   seq_no               = "Respondent sequence number",
   sleep_time_workday   = "What time do you usually fall asleep on weekdays or workdays?",
