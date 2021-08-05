@@ -90,4 +90,4 @@ usethis::use_data(
   nhanes_dermatology_dictionary,
   overwrite = TRUE
 )
-# document the data set with: usethis::use_r("nhanes_dermatology")
+# document the data set with: usethis::use_r("nhanes")
