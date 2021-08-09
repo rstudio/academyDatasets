@@ -3,10 +3,10 @@
 # load {academyDatasets} for access to helper functions
 pkgload::load_all()
 library(dplyr)
-library(fauxnaif) # Non-tidyverse
+library(fauxnaif) # install.packages("fauxnaif")
 library(haven)
 library(hms)
-library(incase) # Non-tidyverse
+library(incase) # install.packages("incase")
 library(readr)
 
 # Import the data from a canonical source ----
