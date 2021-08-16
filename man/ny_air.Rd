@@ -6,11 +6,12 @@
 \alias{ny_air_dictionary}
 \title{Daily predicted New York air quality}
 \format{
-A tibble with 22692 rows and 4 variables:
+A tibble with 22692 rows and 5 variables:
 \describe{
 
 \item{\code{date}}{[double] Date}
-\item{\code{county}}{[double] County}
+\item{\code{county}}{[character] County FIPS}
+\item{\code{county_name}}{[character] County name}
 \item{\code{pm25_max}}{[double] Maximum predicted value of PM2.5 concentration}
 \item{\code{pm25_median}}{[double] Median predicted value of PM2.5 concentration}
 }
