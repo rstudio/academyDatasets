@@ -22,6 +22,7 @@ BugReports: https://github.com/rstudio/academyDatasets/issues
 Depends: 
     R (>= 2.10)
 Imports: 
+    tsibble,
     vctrs
 Suggests: 
     docthis (>= 0.1.1),
