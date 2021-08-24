@@ -9,20 +9,20 @@
 A spec_tbl_df:
 \describe{
 
-\item{\code{USUBJID}}{[character] Unique Subject Identifier}
-\item{\code{AESEQ}}{[double] Sequence Number}
-\item{\code{AESTDT}}{[double] Start date of the adverse event}
-\item{\code{AESTDY}}{[double] The number of days the subject had been enrolled in the study when the adverse event began.}
-\item{\code{AEENDT}}{[double] End date of the adverse event}
-\item{\code{AEENDY}}{[double] The number of days the subject had been enrolled in the study when the adverse event ended.}
-\item{\code{AETERM}}{[character] The reported term for the adverse event, i.e. how the reporter described the adverse event.}
-\item{\code{AEDECOD}}{[character] The official term for the adverse event, i.e. the dictionary derived description of the adverse event.}
-\item{\code{AEBODSYS}}{[character] Body system or organ class involved in the adverse event.}
-\item{\code{AESER}}{[character] Was the adverse event serious? \code{Y} = Yes, \code{N} = No.}
-\item{\code{AEONGO}}{[character] Is the adverse event ongoing? \code{Y} = Yes, \code{N} = No.}
-\item{\code{AESEV}}{[character] Severity of the adverse event.}
-\item{\code{AEREL}}{[character] The investigator's opinion as to whether or not the adverse event was related to the study treatment.}
-\item{\code{AEOUT}}{[character] Outcome of the adverse event.}
+\item{\code{USUBJID}}{[chr] Unique Subject Identifier}
+\item{\code{AESEQ}}{[dbl] Sequence Number}
+\item{\code{AESTDT}}{[date] Start date of the adverse event}
+\item{\code{AESTDY}}{[dbl] The number of days the subject had been enrolled in the study when the adverse event began.}
+\item{\code{AEENDT}}{[date] End date of the adverse event}
+\item{\code{AEENDY}}{[dbl] The number of days the subject had been enrolled in the study when the adverse event ended.}
+\item{\code{AETERM}}{[chr] The reported term for the adverse event, i.e. how the reporter described the adverse event.}
+\item{\code{AEDECOD}}{[chr] The official term for the adverse event, i.e. the dictionary derived description of the adverse event.}
+\item{\code{AEBODSYS}}{[chr] Body system or organ class involved in the adverse event.}
+\item{\code{AESER}}{[chr] Was the adverse event serious? \code{Y} = Yes, \code{N} = No.}
+\item{\code{AEONGO}}{[chr] Is the adverse event ongoing? \code{Y} = Yes, \code{N} = No.}
+\item{\code{AESEV}}{[chr] Severity of the adverse event.}
+\item{\code{AEREL}}{[chr] The investigator's opinion as to whether or not the adverse event was related to the study treatment.}
+\item{\code{AEOUT}}{[chr] Outcome of the adverse event.}
 }
 
 An object of class \code{list} of length 3.

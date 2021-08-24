@@ -9,11 +9,11 @@
 A tibble with 3591 rows and 5 variables:
 \describe{
 
-\item{\code{jurisdiction}}{[character] State or territory}
-\item{\code{vaccine}}{[character] Vaccine type}
-\item{\code{week}}{[double] Week the vaccines were allocated}
-\item{\code{first_dose}}{[double] Number of first doses allocated}
-\item{\code{second_dose}}{[double] Number of second doses allocated}
+\item{\code{jurisdiction}}{[chr] State or territory}
+\item{\code{vaccine}}{[chr] Vaccine type}
+\item{\code{week}}{[date] Week the vaccines were allocated}
+\item{\code{first_dose}}{[dbl] Number of first doses allocated}
+\item{\code{second_dose}}{[dbl] Number of second doses allocated}
 }
 
 An object of class \code{list} of length 3.

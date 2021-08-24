@@ -9,17 +9,17 @@
 A spec_tbl_df:
 \describe{
 
-\item{\code{USUBJID}}{[character] Unique Subject Identifier}
-\item{\code{VISIT}}{[character] Protocol defined text description of the visit}
-\item{\code{VISITNUM}}{[double] Visit number}
-\item{\code{LBDT}}{[double] Date of specimen collection}
-\item{\code{LBDY}}{[double] Study day of specimen collection}
-\item{\code{LBCAT}}{[character] Category of the lab test performed}
-\item{\code{LBTEST}}{[character] Name of the lab test performed}
-\item{\code{LBSTRESU}}{[character] Standard units for lab test result (LBSTRESN)}
-\item{\code{LBSTRESN}}{[double] Lab test result in standard units}
-\item{\code{LBSTNRLO}}{[double] Lower limit of normal range lab test result}
-\item{\code{LBSTNRHI}}{[double] Upper (high) limit of normal range for lab test result}
+\item{\code{USUBJID}}{[chr] Unique Subject Identifier}
+\item{\code{VISIT}}{[chr] Protocol defined text description of the visit}
+\item{\code{VISITNUM}}{[dbl] Visit number}
+\item{\code{LBDT}}{[date] Date of specimen collection}
+\item{\code{LBDY}}{[dbl] Study day of specimen collection}
+\item{\code{LBCAT}}{[chr] Category of the lab test performed}
+\item{\code{LBTEST}}{[chr] Name of the lab test performed}
+\item{\code{LBSTRESU}}{[chr] Standard units for lab test result (LBSTRESN)}
+\item{\code{LBSTRESN}}{[dbl] Lab test result in standard units}
+\item{\code{LBSTNRLO}}{[dbl] Lower limit of normal range lab test result}
+\item{\code{LBSTNRHI}}{[dbl] Upper (high) limit of normal range for lab test result}
 }
 
 An object of class \code{list} of length 3.

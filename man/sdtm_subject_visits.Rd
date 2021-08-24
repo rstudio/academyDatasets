@@ -9,12 +9,12 @@
 A spec_tbl_df:
 \describe{
 
-\item{\code{USUBJID}}{[character] Unique Subject Identifier}
-\item{\code{VISIT}}{[character] Protocol defined text description of the visit}
-\item{\code{VISITNUM}}{[double] Visit number}
-\item{\code{SVDT}}{[double] Subject visit date}
-\item{\code{SVDY}}{[double] Study day of subject visit}
-\item{\code{SVSTATUS}}{[character] Status of subject visit: Completed, Terminated, Missed, Expected, Overdue, Failed}
+\item{\code{USUBJID}}{[chr] Unique Subject Identifier}
+\item{\code{VISIT}}{[chr] Protocol defined text description of the visit}
+\item{\code{VISITNUM}}{[dbl] Visit number}
+\item{\code{SVDT}}{[date] Subject visit date}
+\item{\code{SVDY}}{[dbl] Study day of subject visit}
+\item{\code{SVSTATUS}}{[chr] Status of subject visit: Completed, Terminated, Missed, Expected, Overdue, Failed}
 }
 
 An object of class \code{list} of length 3.

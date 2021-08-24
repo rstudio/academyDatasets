@@ -9,20 +9,20 @@
 A spec_tbl_df:
 \describe{
 
-\item{\code{USUBJID}}{[character] Unique Subject Identifier}
-\item{\code{SITE}}{[character] Name of study site}
-\item{\code{SITEID}}{[character] Study Site Identifier}
-\item{\code{AGE}}{[double] Age of subject}
-\item{\code{SEX}}{[character] Sex of subject}
-\item{\code{RACE}}{[character] Race of subject}
-\item{\code{ARM}}{[character] Treatment arm that subject is assigned to}
-\item{\code{ARMCD}}{[character] Code for treatment arm that subject is assigned to}
-\item{\code{SBJTSTAT}}{[character] Subject status in study}
-\item{\code{RFSTDTC}}{[double] Reference start date. Usually the day the subject begins treatment.}
-\item{\code{RFENDTC}}{[double] Reference end date. Usually the day the subject takes their last treatment.}
-\item{\code{RFENDY}}{[double] The number of days after the RFSTDTC that the RFENDTC occurred, i.e. the number of days the subject spent in the study/in treatment}
-\item{\code{SAFFL}}{[character] Safety population flag. Did the subject actually receive a treatment (including placebo) and should therefore be included in the population of subjects studied to determine the safety of the treatment? \code{Y} = Yes and \code{N} = No}
-\item{\code{SAFFN}}{[double] Numeric coding of safety population flag. \code{Y} = Yes and \code{N} = No}
+\item{\code{USUBJID}}{[chr] Unique Subject Identifier}
+\item{\code{SITE}}{[chr] Name of study site}
+\item{\code{SITEID}}{[chr] Study Site Identifier}
+\item{\code{AGE}}{[dbl] Age of subject}
+\item{\code{SEX}}{[chr] Sex of subject}
+\item{\code{RACE}}{[chr] Race of subject}
+\item{\code{ARM}}{[chr] Treatment arm that subject is assigned to}
+\item{\code{ARMCD}}{[chr] Code for treatment arm that subject is assigned to}
+\item{\code{SBJTSTAT}}{[chr] Subject status in study}
+\item{\code{RFSTDTC}}{[date] Reference start date. Usually the day the subject begins treatment.}
+\item{\code{RFENDTC}}{[date] Reference end date. Usually the day the subject takes their last treatment.}
+\item{\code{RFENDY}}{[dbl] The number of days after the RFSTDTC that the RFENDTC occurred, i.e. the number of days the subject spent in the study/in treatment}
+\item{\code{SAFFL}}{[chr] Safety population flag. Did the subject actually receive a treatment (including placebo) and should therefore be included in the population of subjects studied to determine the safety of the treatment? \code{Y} = Yes and \code{N} = No}
+\item{\code{SAFFN}}{[dbl] Numeric coding of safety population flag. \code{Y} = Yes and \code{N} = No}
 }
 
 An object of class \code{list} of length 3.

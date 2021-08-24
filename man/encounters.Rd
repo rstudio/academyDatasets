@@ -9,21 +9,21 @@
 A spec_tbl_df:
 \describe{
 
-\item{\code{id}}{[character] Primary Key. Unique Identifier of the encounter.}
-\item{\code{start}}{[double] The date and time the encounter started.}
-\item{\code{stop}}{[double] The date and time the encounter concluded.}
-\item{\code{patient}}{[character] Foreign key to the Patient.}
-\item{\code{organization}}{[character] Foreign key to the Organization.}
-\item{\code{provider}}{[character] Foreign key to the Provider.}
-\item{\code{payer}}{[character] Foreign key to the Payer.}
-\item{\code{encounterclass}}{[character] The class of the encounter, such as ambulatory, emergency, inpatient, wellness, or urgentcare}
-\item{\code{code}}{[double] Encounter code from SNOMED-CT}
-\item{\code{description}}{[character] Description of the type of encounter.}
-\item{\code{base_encounter_cost}}{[double] The base cost of the encounter, not including any line item costs related to medications, immunizations, procedures, or other services.}
-\item{\code{total_claim_cost}}{[double] The total cost of the encounter, including all line items.}
-\item{\code{payer_coverage}}{[double] The amount of cost covered by the Payer.}
-\item{\code{reasoncode}}{[double] Diagnosis code from SNOMED-CT, only if this encounter targeted a specific condition.}
-\item{\code{reasondescription}}{[character] Description of the reason code.}
+\item{\code{id}}{[chr] Primary Key. Unique Identifier of the encounter.}
+\item{\code{start}}{[dttm] The date and time the encounter started.}
+\item{\code{stop}}{[dttm] The date and time the encounter concluded.}
+\item{\code{patient}}{[chr] Foreign key to the Patient.}
+\item{\code{organization}}{[chr] Foreign key to the Organization.}
+\item{\code{provider}}{[chr] Foreign key to the Provider.}
+\item{\code{payer}}{[chr] Foreign key to the Payer.}
+\item{\code{encounterclass}}{[chr] The class of the encounter, such as ambulatory, emergency, inpatient, wellness, or urgentcare}
+\item{\code{code}}{[dbl] Encounter code from SNOMED-CT}
+\item{\code{description}}{[chr] Description of the type of encounter.}
+\item{\code{base_encounter_cost}}{[dbl] The base cost of the encounter, not including any line item costs related to medications, immunizations, procedures, or other services.}
+\item{\code{total_claim_cost}}{[dbl] The total cost of the encounter, including all line items.}
+\item{\code{payer_coverage}}{[dbl] The amount of cost covered by the Payer.}
+\item{\code{reasoncode}}{[dbl] Diagnosis code from SNOMED-CT, only if this encounter targeted a specific condition.}
+\item{\code{reasondescription}}{[chr] Description of the reason code.}
 }
 
 An object of class \code{list} of length 3.
