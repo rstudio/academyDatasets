@@ -21,12 +21,11 @@ URL: https://github.com/rstudio/academyDatasets
 BugReports: https://github.com/rstudio/academyDatasets/issues
 Depends: 
     R (>= 2.10)
-Imports: 
-    vctrs
 Suggests: 
     docthis (>= 0.1.1),
     knitr,
-    skimr
+    skimr,
+    vctrs
 Remotes: 
     mdlincoln/docthis
 Encoding: UTF-8
