@@ -9,17 +9,17 @@
 A spec_tbl_df:
 \describe{
 
-\item{\code{USUBJID}}{[character] Unique Subject Identifier}
-\item{\code{VISIT}}{[character] Protocol defined text description of the visit}
-\item{\code{VISITNUM}}{[double] Visit number}
-\item{\code{VSDT}}{[double] Date vital signs were collected}
-\item{\code{VSDY}}{[double] Day of study when vital signs were collected}
-\item{\code{VSCAT}}{[character] Category of vital signs test}
-\item{\code{VSTEST}}{[character] Name of vital signs test}
-\item{\code{VSSTRESU}}{[character] Standard units of vital signs test result}
-\item{\code{VSSTRESN}}{[double] Result of vital signs test in standard units}
-\item{\code{VSSTNRLO}}{[double] Lower limit of normal range for result of vital signs test}
-\item{\code{VSSTNRHI}}{[double] Upper (high) limit of normal range for result of vital signs test}
+\item{\code{USUBJID}}{[chr] Unique Subject Identifier}
+\item{\code{VISIT}}{[chr] Protocol defined text description of the visit}
+\item{\code{VISITNUM}}{[dbl] Visit number}
+\item{\code{VSDT}}{[date] Date vital signs were collected}
+\item{\code{VSDY}}{[dbl] Day of study when vital signs were collected}
+\item{\code{VSCAT}}{[chr] Category of vital signs test}
+\item{\code{VSTEST}}{[chr] Name of vital signs test}
+\item{\code{VSSTRESU}}{[chr] Standard units of vital signs test result}
+\item{\code{VSSTRESN}}{[dbl] Result of vital signs test in standard units}
+\item{\code{VSSTNRLO}}{[dbl] Lower limit of normal range for result of vital signs test}
+\item{\code{VSSTNRHI}}{[dbl] Upper (high) limit of normal range for result of vital signs test}
 }
 
 An object of class \code{list} of length 3.

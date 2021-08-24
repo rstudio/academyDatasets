@@ -22,7 +22,7 @@ describe_dataset <- function(x, ..., .title = NULL) {
     variables = lapply(names(x), function(var) {
       data.frame(
         variable = var,
-        type = typeof(x[[var]]),
+        type = vctrs::vec_ptype_abbr(x[[var]]),
         description = var_desc[[var]] %||% NA_character_,
         stringsAsFactors = FALSE
       )

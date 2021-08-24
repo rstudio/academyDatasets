@@ -9,19 +9,19 @@
 A spec_tbl_df:
 \describe{
 
-\item{\code{start}}{[double] The date and time the medication was prescribed.}
-\item{\code{stop}}{[double] The date and time the prescription ended, if applicable.}
-\item{\code{patient}}{[character] Foreign key to the Patient.}
-\item{\code{payer}}{[character] Foreign key to the Payer.}
-\item{\code{encounter}}{[character] Foreign key to the Encounter where the medication was prescribed.}
-\item{\code{code}}{[double] Medication code from RxNorm.}
-\item{\code{description}}{[character] Description of the medication.}
-\item{\code{base_cost}}{[double] The line item cost of the medication.}
-\item{\code{payer_coverage}}{[double] The amount covered or reimbursed by the Payer.}
-\item{\code{dispenses}}{[double] The number of times the prescription was filled.}
-\item{\code{totalcost}}{[double] The total cost of the prescription, including all dispenses.}
-\item{\code{reasoncode}}{[double] Diagnosis code from SNOMED-CT specifying why this medication was prescribed.}
-\item{\code{reasondescription}}{[character] Description of the reason code.}
+\item{\code{start}}{[dttm] The date and time the medication was prescribed.}
+\item{\code{stop}}{[dttm] The date and time the prescription ended, if applicable.}
+\item{\code{patient}}{[chr] Foreign key to the Patient.}
+\item{\code{payer}}{[chr] Foreign key to the Payer.}
+\item{\code{encounter}}{[chr] Foreign key to the Encounter where the medication was prescribed.}
+\item{\code{code}}{[dbl] Medication code from RxNorm.}
+\item{\code{description}}{[chr] Description of the medication.}
+\item{\code{base_cost}}{[dbl] The line item cost of the medication.}
+\item{\code{payer_coverage}}{[dbl] The amount covered or reimbursed by the Payer.}
+\item{\code{dispenses}}{[dbl] The number of times the prescription was filled.}
+\item{\code{totalcost}}{[dbl] The total cost of the prescription, including all dispenses.}
+\item{\code{reasoncode}}{[dbl] Diagnosis code from SNOMED-CT specifying why this medication was prescribed.}
+\item{\code{reasondescription}}{[chr] Description of the reason code.}
 }
 
 An object of class \code{list} of length 3.

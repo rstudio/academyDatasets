@@ -9,23 +9,23 @@
 A tibble with 5765 rows and 17 variables:
 \describe{
 
-\item{\code{report_id}}{[character] The 8-digit Safety Report ID number, also known as the case report number or case ID. Can be used to identify or find a specific adverse event report.}
-\item{\code{receive_date}}{[double] Date that the report was first received by FDA.}
-\item{\code{receipt_date}}{[double] Date that the most recent information in the report was received by FDA.}
-\item{\code{country}}{[character] The name of the country where the adverse event occurred.}
-\item{\code{reporter}}{[character] Category of individual who submitted the report: physician, pharmacist, other health professional, laywer or consumer/non-health professional.}
-\item{\code{age}}{[double] Age of the patient when the adverse event first occured.}
-\item{\code{sex}}{[character] The sex of the patient.}
-\item{\code{weight}}{[double] The patient weight, in kilograms (kg).}
-\item{\code{drug}}{[character] Drug name. This may be the valid trade name of the product (e.g. "advil" or "aleve") or the generic name (e.g. "ibuprofen").}
-\item{\code{dosage}}{[double] The number portion of a dosage; when combined with \code{dosage_unit} the complete dosage information is represented.}
-\item{\code{dosage_unit}}{[character] The drug dosasge unit: kilograms (kg), grams (g), milligrams (mg) or micrograms (ug).}
-\item{\code{indication}}{[character] Indication for the drug’s use.}
-\item{\code{drug_start_date}}{[double] Date the patient began taking the drug.}
-\item{\code{drug_end_date}}{[double] Date the patient stopped taking the drug.}
-\item{\code{serious}}{[logical] A logical value indicating whether or not the adverse event was serious, i.e. resulted in death, a life threatening condition, hospitalization, disability, congenital anomaly, or some other serious condition.}
-\item{\code{reaction}}{[character] Patient reaction, as a term from the Medical Dictionary for Regulatory Activities, encoded in British English.}
-\item{\code{outcome}}{[character] Outcome of the patient reaction at the time of last observation: recovered, recovering, not recovered, recovered with sequelae (consequent health issues), fatal or unknown.}
+\item{\code{report_id}}{[chr] The 8-digit Safety Report ID number, also known as the case report number or case ID. Can be used to identify or find a specific adverse event report.}
+\item{\code{receive_date}}{[date] Date that the report was first received by FDA.}
+\item{\code{receipt_date}}{[date] Date that the most recent information in the report was received by FDA.}
+\item{\code{country}}{[chr] The name of the country where the adverse event occurred.}
+\item{\code{reporter}}{[chr] Category of individual who submitted the report: physician, pharmacist, other health professional, laywer or consumer/non-health professional.}
+\item{\code{age}}{[dbl] Age of the patient when the adverse event first occured.}
+\item{\code{sex}}{[chr] The sex of the patient.}
+\item{\code{weight}}{[dbl] The patient weight, in kilograms (kg).}
+\item{\code{drug}}{[chr] Drug name. This may be the valid trade name of the product (e.g. "advil" or "aleve") or the generic name (e.g. "ibuprofen").}
+\item{\code{dosage}}{[dbl] The number portion of a dosage; when combined with \code{dosage_unit} the complete dosage information is represented.}
+\item{\code{dosage_unit}}{[chr] The drug dosasge unit: kilograms (kg), grams (g), milligrams (mg) or micrograms (ug).}
+\item{\code{indication}}{[chr] Indication for the drug’s use.}
+\item{\code{drug_start_date}}{[date] Date the patient began taking the drug.}
+\item{\code{drug_end_date}}{[date] Date the patient stopped taking the drug.}
+\item{\code{serious}}{[lgl] A logical value indicating whether or not the adverse event was serious, i.e. resulted in death, a life threatening condition, hospitalization, disability, congenital anomaly, or some other serious condition.}
+\item{\code{reaction}}{[chr] Patient reaction, as a term from the Medical Dictionary for Regulatory Activities, encoded in British English.}
+\item{\code{outcome}}{[chr] Outcome of the patient reaction at the time of last observation: recovered, recovering, not recovered, recovered with sequelae (consequent health issues), fatal or unknown.}
 }
 
 An object of class \code{list} of length 3.

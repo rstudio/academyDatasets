@@ -9,9 +9,9 @@
 A tibble with 5968 rows and 3 variables:
 \describe{
 
-\item{\code{receive_date}}{[double] Date that the report was first received by FDA.}
-\item{\code{public}}{[double] Number of reports that were submitted directly by a member of the public.}
-\item{\code{manufacturer}}{[double] Number of reports that were submitted through a drug manufacturer.}
+\item{\code{receive_date}}{[date] Date that the report was first received by FDA.}
+\item{\code{public}}{[dbl] Number of reports that were submitted directly by a member of the public.}
+\item{\code{manufacturer}}{[dbl] Number of reports that were submitted through a drug manufacturer.}
 }
 
 An object of class \code{list} of length 3.

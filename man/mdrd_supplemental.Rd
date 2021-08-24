@@ -9,11 +9,11 @@
 A tibble with 255 rows and 5 variables:
 \describe{
 
-\item{\code{ptid}}{[double] Patient identifier}
-\item{\code{sex}}{[character] Sex}
-\item{\code{age}}{[double] Age (years)}
-\item{\code{height}}{[double] Height (meters)}
-\item{\code{weight}}{[double] Weight (kilograms)}
+\item{\code{ptid}}{[dbl] Patient identifier}
+\item{\code{sex}}{[chr] Sex}
+\item{\code{age}}{[dbl] Age (years)}
+\item{\code{height}}{[dbl] Height (meters)}
+\item{\code{weight}}{[dbl] Weight (kilograms)}
 }
 
 An object of class \code{list} of length 3.

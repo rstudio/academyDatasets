@@ -9,10 +9,10 @@
 A tibble with 22692 rows and 4 variables:
 \describe{
 
-\item{\code{date}}{[double] Date}
-\item{\code{county}}{[double] County}
-\item{\code{pm25_max}}{[double] Maximum predicted value of PM2.5 concentration}
-\item{\code{pm25_median}}{[double] Median predicted value of PM2.5 concentration}
+\item{\code{date}}{[date] Date}
+\item{\code{county}}{[dbl] County}
+\item{\code{pm25_max}}{[dbl] Maximum predicted value of PM2.5 concentration}
+\item{\code{pm25_median}}{[dbl] Median predicted value of PM2.5 concentration}
 }
 
 An object of class \code{list} of length 3.
