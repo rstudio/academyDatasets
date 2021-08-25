@@ -10,7 +10,12 @@
 #'
 #' @format `r rd_describe_format(sunspots, sunspots_dictionary)`
 "sunspots"
-
+#'
+#' @examples
+#' # Convert to `tsibble`
+#' tsibble::as_tsibble(sunspots, key = NULL, index = date)
+#'
 #' @describeIn sunspots The `sunspots` data dictionary
 "sunspots_dictionary"
+
 

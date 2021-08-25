@@ -9,8 +9,8 @@
 A tibble with 73924 rows and 2 variables:
 \describe{
 
-\item{\code{date}}{[integer] Date of observation}
-\item{\code{sunspots}}{[double] Observed number of sunspots}
+\item{\code{date}}{[date] Date of observation}
+\item{\code{sunspots}}{[dbl] Observed number of sunspots}
 }
 
 An object of class \code{list} of length 3.
@@ -33,4 +33,9 @@ May 31, 2020.
 \item \code{sunspots_dictionary}: The \code{sunspots} data dictionary
 }}
 
+\examples{
+# Convert to `tsibble`
+tsibble::as_tsibble(sunspots, key = NULL, index = date)
+
+}
 \keyword{datasets}

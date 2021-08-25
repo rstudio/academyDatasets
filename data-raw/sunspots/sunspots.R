@@ -3,17 +3,12 @@
 library(tidyverse)
 pkgload::load_all()
 
-url_zip <- "https://zenodo.org/record/4654773/files/sunspot_dataset_with_missing_values.zip?download=1"
-temp <- "data-raw/sunspot/temp.zip"
-file_tsf <- "data-raw/sunspot/sunspot_dataset_with_missing_values.tsf"
+url_sunspots <- "https://zenodo.org/record/4654773/files/sunspot_dataset_with_missing_values.zip?download=1"
 #===============================================================================
 
-download.file(url_zip, destfile = temp)
-unzip(zipfile = temp, exdir = fs::path_dir(temp))
-file.remove(temp)
-
 sunspots <-
-  read_tsf(file_tsf) %>%
+  archive::archive_read(url_zip) %>%
+  read_tsf(key = "series_name") %>%
   pluck(1) %>%
   as_tibble() %>%
   select(date = start_timestamp, sunspots = series_value)
