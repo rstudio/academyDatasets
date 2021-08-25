@@ -46,8 +46,10 @@ not reflect true tourism trends for these cities.
 
 \examples{
 # Convert to `tsibble`
+library(dplyr)
+library(tsibble)
 tourism \%>\%
-  dplyr::mutate(month = tsibble::yearmonth(month)) \%>\%
-  tsibble::as_tsibble(key = c("city", "country"), index = month)
+  mutate(month = yearmonth(month)) \%>\%
+  as_tsibble(key = c("city", "country"), index = month)
 }
 \keyword{datasets}

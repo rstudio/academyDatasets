@@ -25,6 +25,7 @@ Imports:
     vctrs
 Suggests: 
     docthis (>= 0.1.1),
+    dplyr,
     knitr,
     skimr
 Remotes: 
