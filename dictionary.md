@@ -21,26 +21,41 @@ academyDatasets Data
 -   [`sdtm_vital_signs`](#sdtm-vital-signs)
 -   [`vaccines`](#covid-19-vaccine-allocation)
 
-## Daily bitcoin prices with possible influencers
+## Daily Bitcoin prices with possible influencers
 
-`bitcoin` has 3 columns and 82,458 rows.
+`bitcoin` has 19 columns and 4,581 rows.
 
-| Column    | Type | Description                                    |
-|:----------|:-----|:-----------------------------------------------|
-| timestamp | date | Day                                            |
-| series    | fct  | Series name                                    |
-| value     | dbl  | Value of the series during the specified month |
+| Column                     | Type | Description                                               |
+|:---------------------------|:-----|:----------------------------------------------------------|
+| timestamp                  | date | Day                                                       |
+| price                      | dbl  | Price in US dollars (USD)                                 |
+| difficulty                 | dbl  | Mining difficulty                                         |
+| sent\_addresses            | dbl  | Number of addresses that sent Bitcoin                     |
+| send\_usd                  | dbl  | Amount of Bitcoin sent, in USD                            |
+| market\_cap                | dbl  | Market value of all existing Bitcoin in USD               |
+| confirmation\_time         | dbl  | Time to record a transaction in block chain               |
+| transactions               | dbl  | Number of blockchain transactions                         |
+| median\_transaction\_size  | dbl  | Median transaction size                                   |
+| mining\_profitability      | dbl  | Profit in USD/Day for 1 THash/s                           |
+| fee\_reward                | dbl  | Average fee percentage in total block reward              |
+| top\_100\_percent          | dbl  | Percent of Bitcoin owned by the top 100 richest addresses |
+| median\_transaction\_value | dbl  | Median transaction value in USD                           |
+| av\_transaction\_value     | dbl  | Average transaction value in USD                          |
+| block\_size                | dbl  | Average (mined?) Bitcoin block size in kilobytes          |
+| hashrate                   | dbl  | Bitcoin hashrate in Ehash/s                               |
+| active\_addresses          | dbl  | Number of unique (from or to) addresses per day           |
+| google\_trends             | dbl  | Google trends interest score for Bitcoin                  |
+| tweets                     | dbl  | Tweets per day with the tag \#Bitcoin                     |
 
     ── Data Summary ────────────────────────
                                Values 
     Name                       bitcoin
-    Number of rows             82458  
-    Number of columns          3      
+    Number of rows             4581   
+    Number of columns          19     
     _______________________           
     Column type frequency:            
       Date                     1      
-      factor                   1      
-      numeric                  1      
+      numeric                  18     
     ________________________          
     Group variables            None   
 
@@ -48,13 +63,26 @@ academyDatasets Data
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 timestamp             0             1 2009-01-03 2021-07-19 2015-04-12     4581
 
-    ── Variable type: factor ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate ordered n_unique top_counts                                
-    1 series                0             1 FALSE         18 act: 4581, av_: 4581, blo: 4581, con: 4581
-
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate    mean      sd            p0   p25   p50     p75    p100 hist 
-    1 value              8088         0.902 1.53e18 1.27e19 0.00000000148  13.7  6480 641624. 1.98e20 ▇▁▁▁▁
+       skim_variable            n_missing complete_rate    mean      sd      p0      p25      p50      p75    p100 hist 
+     1 price                          560         0.878 5.09e 3 1.03e 4 4.95e-2 8.64e+ 1 5.84e+ 2 6.92e+ 3 6.34e 4 ▇▁▁▁▁
+     2 difficulty                       6         0.999 3.45e12 6.27e12 1   e+0 1.61e+ 6 4.76e+10 4.31e+12 2.50e13 ▇▁▁▁▁
+     3 sent_addresses                   8         0.998 2.10e 5 1.90e 5 1   e+0 1.41e+ 4 1.69e+ 5 3.82e+ 5 7.30e 5 ▇▂▅▂▁
+     4 send_usd                       561         0.878 3.85e 9 7.57e 9 5.54e+2 6.70e+ 7 7.49e+ 8 4.68e+ 9 7.34e10 ▇▁▁▁▁
+     5 market_cap                     561         0.878 9.15e10 1.91e11 1.70e+5 9.68e+ 8 7.72e+ 9 1.21e+11 1.19e12 ▇▁▁▁▁
+     6 confirmation_time                8         0.998 1.04e 1 8.35e 0 2.08e+0 8.73e+ 0 9.54e+ 0 1.05e+ 1 3.6 e 2 ▇▁▁▁▁
+     7 transactions                   261         0.943 1.52e 5 1.26e 5 1   e+0 3.16e+ 4 1.25e+ 5 2.71e+ 5 4.90e 5 ▇▂▅▃▁
+     8 median_transaction_size       1205         0.737 1.15e 0 3.04e 0 4.86e-7 4.07e- 2 1.01e- 1 6.57e- 1 3.41e 1 ▇▁▁▁▁
+     9 mining_profitability           561         0.878 5.94e 3 2.73e 4 6.37e-2 3.32e- 1 2.07e+ 0 2.29e+ 3 4.81e 5 ▇▁▁▁▁
+    10 fee_reward                     641         0.860 3.25e 0 5.10e 0 1.48e-9 3.31e- 1 1.04e+ 0 3.83e+ 0 4.36e 1 ▇▁▁▁▁
+    11 top_100_percent                 12         0.997 1.88e 1 5.95e 0 5.22e+0 1.55e+ 1 1.91e+ 1 2.08e+ 1 1   e 2 ▇▂▁▁▁
+    12 median_transaction_value       561         0.878 2.71e 2 4.21e 2 2.74e-3 6.96e+ 1 1.37e+ 2 3.32e+ 2 5.42e 3 ▇▁▁▁▁
+    13 av_transaction_value           561         0.878 3.15e 4 6.97e 4 6.62e-1 1.66e+ 3 5.74e+ 3 2.71e+ 4 8.12e 5 ▇▁▁▁▁
+    14 block_size                       6         0.999 4.37e 5 3.69e 5 1.34e+2 2.48e+ 4 3.95e+ 5 8.17e+ 5 9.98e 5 ▇▂▂▃▅
+    15 hashrate                         7         0.998 2.49e19 4.50e19 4.62e+5 1.18e+13 3.43e+17 3.41e+19 1.98e20 ▇▁▁▁▁
+    16 active_addresses                28         0.994 3.26e 5 3.09e 5 4   e+0 2.04e+ 4 2.26e+ 5 5.84e+ 5 1.20e 6 ▇▂▃▂▁
+    17 google_trends                  563         0.877 3.27e 1 5.22e 1 4.95e-4 4.96e+ 0 1.05e+ 1 4.09e+ 1 6.17e 2 ▇▁▁▁▁
+    18 tweets                        1978         0.568 3.77e 4 2.93e 4 7.3 e+3 2.11e+ 4 2.73e+ 4 3.99e+ 4 3.64e 5 ▇▁▁▁▁
 
 ## COVID-19 US Historical Data by State
 

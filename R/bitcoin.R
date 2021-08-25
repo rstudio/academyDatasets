@@ -12,6 +12,11 @@
 #' @source <https://forecastingdata.org/>
 #'
 #' @format `r rd_describe_format(bitcoin, bitcoin_dictionary)`
+#' @examples
+#' # Convert to `tsibble`
+#' library(tsibble)
+#' bitcoin %>%
+#'   tsibble::as_tsibble()
 "bitcoin"
 
 #' @describeIn bitcoin The `bitcoin` data dictionary

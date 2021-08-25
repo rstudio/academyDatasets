@@ -6,12 +6,28 @@
 \alias{bitcoin_dictionary}
 \title{bitcoin}
 \format{
-A tbl_ts:
+A tibble with 4581 rows and 19 variables:
 \describe{
 
 \item{\code{timestamp}}{[date] Day}
-\item{\code{series}}{[fct] Series name}
-\item{\code{value}}{[dbl] Value of the series during the specified month}
+\item{\code{price}}{[dbl] Price in US dollars (USD)}
+\item{\code{difficulty}}{[dbl] Mining difficulty}
+\item{\code{sent_addresses}}{[dbl] Number of addresses that sent Bitcoin}
+\item{\code{send_usd}}{[dbl] Amount of Bitcoin sent, in USD}
+\item{\code{market_cap}}{[dbl] Market value of all existing Bitcoin in USD}
+\item{\code{confirmation_time}}{[dbl] Time to record a transaction in block chain}
+\item{\code{transactions}}{[dbl] Number of blockchain transactions}
+\item{\code{median_transaction_size}}{[dbl] Median transaction size}
+\item{\code{mining_profitability}}{[dbl] Profit in USD/Day for 1 THash/s}
+\item{\code{fee_reward}}{[dbl] Average fee percentage in total block reward}
+\item{\code{top_100_percent}}{[dbl] Percent of Bitcoin owned by the top 100 richest addresses}
+\item{\code{median_transaction_value}}{[dbl] Median transaction value in USD}
+\item{\code{av_transaction_value}}{[dbl] Average transaction value in USD}
+\item{\code{block_size}}{[dbl] Average (mined?) Bitcoin block size in kilobytes}
+\item{\code{hashrate}}{[dbl] Bitcoin hashrate in Ehash/s}
+\item{\code{active_addresses}}{[dbl] Number of unique (from or to) addresses per day}
+\item{\code{google_trends}}{[dbl] Google trends interest score for Bitcoin}
+\item{\code{tweets}}{[dbl] Tweets per day with the tag #Bitcoin}
 }
 
 An object of class \code{list} of length 3.
@@ -38,4 +54,10 @@ BitInfoCharts, 2021. Cryptocurrency statistics. URL \url{https://bitinfocharts.c
 \item \code{bitcoin_dictionary}: The \code{bitcoin} data dictionary
 }}
 
+\examples{
+# Convert to `tsibble`
+library(tsibble)
+bitcoin \%>\%
+  tsibble::as_tsibble()
+}
 \keyword{datasets}
