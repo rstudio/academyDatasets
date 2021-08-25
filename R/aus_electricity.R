@@ -11,6 +11,7 @@
 #'
 #' @examples
 #' # Convert to `tsibble`
+#' library(tsibble)
 #' aus_electricity %>%
 #'   tsibble::as_tsibble(key = state, index = date)
 #'
