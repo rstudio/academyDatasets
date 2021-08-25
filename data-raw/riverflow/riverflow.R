@@ -9,7 +9,6 @@ url <- "https://zenodo.org/record/4656058/files/saugeenday_dataset.zip"
 riverflow <- archive::archive_read(url) %>%
   read_tsf(key = "series_name") %>%
   pluck(1) %>%
-  as_tibble() %>%
   select(date = start_timestamp, flow_rate = series_value)
 
 riverflow_dictionary <- describe_dataset(

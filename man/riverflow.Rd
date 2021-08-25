@@ -6,7 +6,7 @@
 \alias{riverflow_dictionary}
 \title{Daily flow rate of the Saugeen River}
 \format{
-A tibble with 23741 rows and 2 variables:
+A tbl_ts:
 \describe{
 
 \item{\code{date}}{[date] Date of observation}
