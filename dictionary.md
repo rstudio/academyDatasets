@@ -1,6 +1,7 @@
 academyDatasets Data
 ================
 
+-   [`bitcoin`](#daily-bitcoin-prices-with-possible-influencers)
 -   [`covid`](#covid-19-us-historical-data-by-state)
 -   [`encounters`](#patient-encounter)
 -   [`fda_adverse_daily`](#daily-counts-of-fda-drug-adverse-event-reports)
@@ -20,18 +21,53 @@ academyDatasets Data
 -   [`sdtm_vital_signs`](#sdtm-vital-signs)
 -   [`vaccines`](#covid-19-vaccine-allocation)
 
+## Daily bitcoin prices with possible influencers
+
+`bitcoin` has 3 columns and 82,458 rows.
+
+| Column    | Type | Description                                    |
+|:----------|:-----|:-----------------------------------------------|
+| timestamp | date | Day                                            |
+| series    | fct  | Series name                                    |
+| value     | dbl  | Value of the series during the specified month |
+
+    ── Data Summary ────────────────────────
+                               Values 
+    Name                       bitcoin
+    Number of rows             82458  
+    Number of columns          3      
+    _______________________           
+    Column type frequency:            
+      Date                     1      
+      factor                   1      
+      numeric                  1      
+    ________________________          
+    Group variables            None   
+
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 timestamp             0             1 2009-01-03 2021-07-19 2015-04-12     4581
+
+    ── Variable type: factor ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate ordered n_unique top_counts                                
+    1 series                0             1 FALSE         18 act: 4581, av_: 4581, blo: 4581, con: 4581
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate    mean      sd            p0   p25   p50     p75    p100 hist 
+    1 value              8088         0.902 1.53e18 1.27e19 0.00000000148  13.7  6480 641624. 1.98e20 ▇▁▁▁▁
+
 ## COVID-19 US Historical Data by State
 
 `covid` has 6 columns and 20,780 rows.
 
-| Column           | Type    | Description                                                                                                                                                         |
-|:-----------------|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| date             | double  | NA                                                                                                                                                                  |
-| state            | integer | Two-letter abbreviation for the state or territory.                                                                                                                 |
-| tests            | double  | Daily increase in totalTestResults, calculated from the previous day’s value. (Original: totalTestResultsIncrease)                                                  |
-| cases            | double  | The daily increase in API field positive, which measures Cases (confirmed plus probable) calculated based on the previous day’s value. (Original: positiveIncrease) |
-| hospitalizations | double  | Daily increase in hospitalizedCumulative, calculated from the previous day’s value. (Original: hospitalizedIncrease)                                                |
-| deaths           | double  | Daily increase in death, calculated from the previous day’s value. (Original: deathIncrease)                                                                        |
+| Column           | Type | Description                                                                                                                                                         |
+|:-----------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| date             | date | Date on which data was collected by The COVID Tracking Project.                                                                                                     |
+| state            | fct  | Two-letter abbreviation for the state or territory.                                                                                                                 |
+| tests            | dbl  | Daily increase in totalTestResults, calculated from the previous day’s value. (Original: totalTestResultsIncrease)                                                  |
+| cases            | dbl  | The daily increase in API field positive, which measures Cases (confirmed plus probable) calculated based on the previous day’s value. (Original: positiveIncrease) |
+| hospitalizations | dbl  | Daily increase in hospitalizedCumulative, calculated from the previous day’s value. (Original: hospitalizedIncrease)                                                |
+| deaths           | dbl  | Daily increase in death, calculated from the previous day’s value. (Original: deathIncrease)                                                                        |
 
     ── Data Summary ────────────────────────
                                Values
@@ -65,23 +101,23 @@ academyDatasets Data
 
 `encounters` has 15 columns and 53,346 rows.
 
-| Column                | Type      | Description                                                                                                                             |
-|:----------------------|:----------|:----------------------------------------------------------------------------------------------------------------------------------------|
-| id                    | character | Primary Key. Unique Identifier of the encounter.                                                                                        |
-| start                 | double    | The date and time the encounter started.                                                                                                |
-| stop                  | double    | The date and time the encounter concluded.                                                                                              |
-| patient               | character | Foreign key to the Patient.                                                                                                             |
-| organization          | character | Foreign key to the Organization.                                                                                                        |
-| provider              | character | Foreign key to the Provider.                                                                                                            |
-| payer                 | character | Foreign key to the Payer.                                                                                                               |
-| encounterclass        | character | The class of the encounter, such as ambulatory, emergency, inpatient, wellness, or urgentcare                                           |
-| code                  | double    | Encounter code from SNOMED-CT                                                                                                           |
-| description           | character | Description of the type of encounter.                                                                                                   |
-| base\_encounter\_cost | double    | The base cost of the encounter, not including any line item costs related to medications, immunizations, procedures, or other services. |
-| total\_claim\_cost    | double    | The total cost of the encounter, including all line items.                                                                              |
-| payer\_coverage       | double    | The amount of cost covered by the Payer.                                                                                                |
-| reasoncode            | double    | Diagnosis code from SNOMED-CT, only if this encounter targeted a specific condition.                                                    |
-| reasondescription     | character | Description of the reason code.                                                                                                         |
+| Column                | Type | Description                                                                                                                             |
+|:----------------------|:-----|:----------------------------------------------------------------------------------------------------------------------------------------|
+| id                    | chr  | Primary Key. Unique Identifier of the encounter.                                                                                        |
+| start                 | dttm | The date and time the encounter started.                                                                                                |
+| stop                  | dttm | The date and time the encounter concluded.                                                                                              |
+| patient               | chr  | Foreign key to the Patient.                                                                                                             |
+| organization          | chr  | Foreign key to the Organization.                                                                                                        |
+| provider              | chr  | Foreign key to the Provider.                                                                                                            |
+| payer                 | chr  | Foreign key to the Payer.                                                                                                               |
+| encounterclass        | chr  | The class of the encounter, such as ambulatory, emergency, inpatient, wellness, or urgentcare                                           |
+| code                  | dbl  | Encounter code from SNOMED-CT                                                                                                           |
+| description           | chr  | Description of the type of encounter.                                                                                                   |
+| base\_encounter\_cost | dbl  | The base cost of the encounter, not including any line item costs related to medications, immunizations, procedures, or other services. |
+| total\_claim\_cost    | dbl  | The total cost of the encounter, including all line items.                                                                              |
+| payer\_coverage       | dbl  | The amount of cost covered by the Payer.                                                                                                |
+| reasoncode            | dbl  | Diagnosis code from SNOMED-CT, only if this encounter targeted a specific condition.                                                    |
+| reasondescription     | chr  | Description of the reason code.                                                                                                         |
 
     ── Data Summary ────────────────────────
                                Values    
@@ -124,11 +160,11 @@ academyDatasets Data
 
 `fda_adverse_daily` has 3 columns and 5,968 rows.
 
-| Column        | Type   | Description                                                               |
-|:--------------|:-------|:--------------------------------------------------------------------------|
-| receive\_date | double | Date that the report was first received by FDA.                           |
-| public        | double | Number of reports that were submitted directly by a member of the public. |
-| manufacturer  | double | Number of reports that were submitted through a drug manufacturer.        |
+| Column        | Type | Description                                                               |
+|:--------------|:-----|:--------------------------------------------------------------------------|
+| receive\_date | date | Date that the report was first received by FDA.                           |
+| public        | dbl  | Number of reports that were submitted directly by a member of the public. |
+| manufacturer  | dbl  | Number of reports that were submitted through a drug manufacturer.        |
 
     ── Data Summary ────────────────────────
                                Values           
@@ -155,25 +191,25 @@ academyDatasets Data
 
 `fda_pt_drugs` has 17 columns and 5,765 rows.
 
-| Column            | Type      | Description                                                                                                                                                                                                      |
-|:------------------|:----------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| report\_id        | character | The 8-digit Safety Report ID number, also known as the case report number or case ID. Can be used to identify or find a specific adverse event report.                                                           |
-| receive\_date     | double    | Date that the report was first received by FDA.                                                                                                                                                                  |
-| receipt\_date     | double    | Date that the most recent information in the report was received by FDA.                                                                                                                                         |
-| country           | character | The name of the country where the adverse event occurred.                                                                                                                                                        |
-| reporter          | character | Category of individual who submitted the report: physician, pharmacist, other health professional, laywer or consumer/non-health professional.                                                                   |
-| age               | double    | Age of the patient when the adverse event first occured.                                                                                                                                                         |
-| sex               | character | The sex of the patient.                                                                                                                                                                                          |
-| weight            | double    | The patient weight, in kilograms (kg).                                                                                                                                                                           |
-| drug              | character | Drug name. This may be the valid trade name of the product (e.g. “advil” or “aleve”) or the generic name (e.g. “ibuprofen”).                                                                                     |
-| dosage            | double    | The number portion of a dosage; when combined with `dosage_unit` the complete dosage information is represented.                                                                                                 |
-| dosage\_unit      | character | The drug dosasge unit: kilograms (kg), grams (g), milligrams (mg) or micrograms (ug).                                                                                                                            |
-| indication        | character | Indication for the drug’s use.                                                                                                                                                                                   |
-| drug\_start\_date | double    | Date the patient began taking the drug.                                                                                                                                                                          |
-| drug\_end\_date   | double    | Date the patient stopped taking the drug.                                                                                                                                                                        |
-| serious           | logical   | A logical value indicating whether or not the adverse event was serious, i.e. resulted in death, a life threatening condition, hospitalization, disability, congenital anomaly, or some other serious condition. |
-| reaction          | character | Patient reaction, as a term from the Medical Dictionary for Regulatory Activities, encoded in British English.                                                                                                   |
-| outcome           | character | Outcome of the patient reaction at the time of last observation: recovered, recovering, not recovered, recovered with sequelae (consequent health issues), fatal or unknown.                                     |
+| Column            | Type | Description                                                                                                                                                                                                      |
+|:------------------|:-----|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| report\_id        | chr  | The 8-digit Safety Report ID number, also known as the case report number or case ID. Can be used to identify or find a specific adverse event report.                                                           |
+| receive\_date     | date | Date that the report was first received by FDA.                                                                                                                                                                  |
+| receipt\_date     | date | Date that the most recent information in the report was received by FDA.                                                                                                                                         |
+| country           | chr  | The name of the country where the adverse event occurred.                                                                                                                                                        |
+| reporter          | chr  | Category of individual who submitted the report: physician, pharmacist, other health professional, laywer or consumer/non-health professional.                                                                   |
+| age               | dbl  | Age of the patient when the adverse event first occured.                                                                                                                                                         |
+| sex               | chr  | The sex of the patient.                                                                                                                                                                                          |
+| weight            | dbl  | The patient weight, in kilograms (kg).                                                                                                                                                                           |
+| drug              | chr  | Drug name. This may be the valid trade name of the product (e.g. “advil” or “aleve”) or the generic name (e.g. “ibuprofen”).                                                                                     |
+| dosage            | dbl  | The number portion of a dosage; when combined with `dosage_unit` the complete dosage information is represented.                                                                                                 |
+| dosage\_unit      | chr  | The drug dosasge unit: kilograms (kg), grams (g), milligrams (mg) or micrograms (ug).                                                                                                                            |
+| indication        | chr  | Indication for the drug’s use.                                                                                                                                                                                   |
+| drug\_start\_date | date | Date the patient began taking the drug.                                                                                                                                                                          |
+| drug\_end\_date   | date | Date the patient stopped taking the drug.                                                                                                                                                                        |
+| serious           | lgl  | A logical value indicating whether or not the adverse event was serious, i.e. resulted in death, a life threatening condition, hospitalization, disability, congenital anomaly, or some other serious condition. |
+| reaction          | chr  | Patient reaction, as a term from the Medical Dictionary for Regulatory Activities, encoded in British English.                                                                                                   |
+| outcome           | chr  | Outcome of the patient reaction at the time of last observation: recovered, recovering, not recovered, recovered with sequelae (consequent health issues), fatal or unknown.                                     |
 
     ── Data Summary ────────────────────────
                                Values      
@@ -222,24 +258,24 @@ academyDatasets Data
 
 `flu` has 16 columns and 130,560 rows.
 
-| Column               | Type      | Description                                                                                                                                                                                  |
-|:---------------------|:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| protein              | character | Abbreviation of viral protein                                                                                                                                                                |
-| sequence\_accession  | character | Unique identifier given to the protein sequence record to allow for tracking of different versions of that sequence.                                                                         |
-| complete\_genome     | character | Is the viral strain’s complete genome known?                                                                                                                                                 |
-| complete\_sequence   | character | Is the complete sequence of this viral protein known?                                                                                                                                        |
-| segment              | double    | One of eight single-stranded RNA segments that encodes the viral protein                                                                                                                     |
-| segment\_length      | double    | Number of RNA nucleotides in segment                                                                                                                                                         |
-| collection\_date     | double    | Date of sample collection                                                                                                                                                                    |
-| host\_species        | character | Species that the viral strain infects                                                                                                                                                        |
-| country              | character | Country of strain origin                                                                                                                                                                     |
-| state\_province      | character | State or province of origin if applicable                                                                                                                                                    |
-| geographic\_grouping | character | Geographic origin of viral strain                                                                                                                                                            |
-| flu\_season          | character | For geographic regions in the northern hemisphere, the two digit year for the fall and winter season when the strain was recorded.                                                           |
-| strain\_name         | character | Name of viral strain                                                                                                                                                                         |
-| sequence             | character | Protein sequence in amino acid                                                                                                                                                               |
-| submission\_date     | double    | Date of entry submission                                                                                                                                                                     |
-| passage\_history     | character | An indicator of what cell line was used for culturing the virus. Nomenclature for passage history is notoriously unstandardized. See <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6599686/> |
+| Column               | Type | Description                                                                                                                                                                                  |
+|:---------------------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| protein              | chr  | Abbreviation of viral protein                                                                                                                                                                |
+| sequence\_accession  | chr  | Unique identifier given to the protein sequence record to allow for tracking of different versions of that sequence.                                                                         |
+| complete\_genome     | chr  | Is the viral strain’s complete genome known?                                                                                                                                                 |
+| complete\_sequence   | chr  | Is the complete sequence of this viral protein known?                                                                                                                                        |
+| segment              | dbl  | One of eight single-stranded RNA segments that encodes the viral protein                                                                                                                     |
+| segment\_length      | dbl  | Number of RNA nucleotides in segment                                                                                                                                                         |
+| collection\_date     | date | Date of sample collection                                                                                                                                                                    |
+| host\_species        | chr  | Species that the viral strain infects                                                                                                                                                        |
+| country              | chr  | Country of strain origin                                                                                                                                                                     |
+| state\_province      | chr  | State or province of origin if applicable                                                                                                                                                    |
+| geographic\_grouping | chr  | Geographic origin of viral strain                                                                                                                                                            |
+| flu\_season          | chr  | For geographic regions in the northern hemisphere, the two digit year for the fall and winter season when the strain was recorded.                                                           |
+| strain\_name         | chr  | Name of viral strain                                                                                                                                                                         |
+| sequence             | chr  | Protein sequence in amino acid                                                                                                                                                               |
+| submission\_date     | date | Date of entry submission                                                                                                                                                                     |
+| passage\_history     | chr  | An indicator of what cell line was used for culturing the virus. Nomenclature for passage history is notoriously unstandardized. See <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6599686/> |
 
     ── Data Summary ────────────────────────
                                Values
@@ -283,18 +319,18 @@ academyDatasets Data
 
 `mdrd` has 10 columns and 1,988 rows.
 
-| Column         | Type   | Description                                                                                                      |
-|:---------------|:-------|:-----------------------------------------------------------------------------------------------------------------|
-| ptid           | double | Patient identifier                                                                                               |
-| gfr            | double | Glomerular filtration rate in milliliters per minute. A measure of how much blood the kidneys filter per minute. |
-| months         | double | Number of months after the start of the study that the measurement was taken.                                    |
-| dietl\_normbp  | double | Was the participant assigned to the low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)                   |
-| dietl\_lowbp   | double | Was the participant assigned to the low-protein, low-blood pressure diet? (0 = No, 1 = Yes)                      |
-| dietk\_normbp  | double | Was the participant assigned to the very low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)              |
-| dietk\_lowbp   | double | Was the participant assigned to the very low-protein, low-blood pressure diet? (0 = No, 1 = Yes)                 |
-| log\_protein   | double | Logarithm of the grams of protein consumed per day.                                                              |
-| followupmonths | double | Number of months until patient follow-up.                                                                        |
-| dropout        | double | Did the patient drop out of the study? (0 = No, 1 = Yes)                                                         |
+| Column         | Type | Description                                                                                                      |
+|:---------------|:-----|:-----------------------------------------------------------------------------------------------------------------|
+| ptid           | dbl  | Patient identifier                                                                                               |
+| gfr            | dbl  | Glomerular filtration rate in milliliters per minute. A measure of how much blood the kidneys filter per minute. |
+| months         | dbl  | Number of months after the start of the study that the measurement was taken.                                    |
+| dietl\_normbp  | dbl  | Was the participant assigned to the low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)                   |
+| dietl\_lowbp   | dbl  | Was the participant assigned to the low-protein, low-blood pressure diet? (0 = No, 1 = Yes)                      |
+| dietk\_normbp  | dbl  | Was the participant assigned to the very low-protein, normal-blood pressure diet? (0 = No, 1 = Yes)              |
+| dietk\_lowbp   | dbl  | Was the participant assigned to the very low-protein, low-blood pressure diet? (0 = No, 1 = Yes)                 |
+| log\_protein   | dbl  | Logarithm of the grams of protein consumed per day.                                                              |
+| followupmonths | dbl  | Number of months until patient follow-up.                                                                        |
+| dropout        | dbl  | Did the patient drop out of the study? (0 = No, 1 = Yes)                                                         |
 
     ── Data Summary ────────────────────────
                                Values
@@ -324,13 +360,13 @@ academyDatasets Data
 
 `mdrd_supplemental` has 5 columns and 255 rows.
 
-| Column | Type      | Description        |
-|:-------|:----------|:-------------------|
-| ptid   | double    | Patient identifier |
-| sex    | character | Sex                |
-| age    | double    | Age (years)        |
-| height | double    | Height (meters)    |
-| weight | double    | Weight (kilograms) |
+| Column | Type | Description        |
+|:-------|:-----|:-------------------|
+| ptid   | dbl  | Patient identifier |
+| sex    | chr  | Sex                |
+| age    | dbl  | Age (years)        |
+| height | dbl  | Height (meters)    |
+| weight | dbl  | Weight (kilograms) |
 
     ── Data Summary ────────────────────────
                                Values           
@@ -359,21 +395,21 @@ academyDatasets Data
 
 `medications` has 13 columns and 42,989 rows.
 
-| Column            | Type      | Description                                                                  |
-|:------------------|:----------|:-----------------------------------------------------------------------------|
-| start             | double    | The date and time the medication was prescribed.                             |
-| stop              | double    | The date and time the prescription ended, if applicable.                     |
-| patient           | character | Foreign key to the Patient.                                                  |
-| payer             | character | Foreign key to the Payer.                                                    |
-| encounter         | character | Foreign key to the Encounter where the medication was prescribed.            |
-| code              | double    | Medication code from RxNorm.                                                 |
-| description       | character | Description of the medication.                                               |
-| base\_cost        | double    | The line item cost of the medication.                                        |
-| payer\_coverage   | double    | The amount covered or reimbursed by the Payer.                               |
-| dispenses         | double    | The number of times the prescription was filled.                             |
-| totalcost         | double    | The total cost of the prescription, including all dispenses.                 |
-| reasoncode        | double    | Diagnosis code from SNOMED-CT specifying why this medication was prescribed. |
-| reasondescription | character | Description of the reason code.                                              |
+| Column            | Type | Description                                                                  |
+|:------------------|:-----|:-----------------------------------------------------------------------------|
+| start             | dttm | The date and time the medication was prescribed.                             |
+| stop              | dttm | The date and time the prescription ended, if applicable.                     |
+| patient           | chr  | Foreign key to the Patient.                                                  |
+| payer             | chr  | Foreign key to the Payer.                                                    |
+| encounter         | chr  | Foreign key to the Encounter where the medication was prescribed.            |
+| code              | dbl  | Medication code from RxNorm.                                                 |
+| description       | chr  | Description of the medication.                                               |
+| base\_cost        | dbl  | The line item cost of the medication.                                        |
+| payer\_coverage   | dbl  | The amount covered or reimbursed by the Payer.                               |
+| dispenses         | dbl  | The number of times the prescription was filled.                             |
+| totalcost         | dbl  | The total cost of the prescription, including all dispenses.                 |
+| reasoncode        | dbl  | Diagnosis code from SNOMED-CT specifying why this medication was prescribed. |
+| reasondescription | chr  | Description of the reason code.                                              |
 
     ── Data Summary ────────────────────────
                                Values     
@@ -414,16 +450,16 @@ academyDatasets Data
 
 `nhanes_dermatology` has 8 columns and 3,419 rows.
 
-| Column                  | Type    | Description                                                                                                                                                                           |
-|:------------------------|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| seq\_no                 | double  | Respondent sequence number                                                                                                                                                            |
-| sun\_reaction           | integer | If after several months of not being in the sun, you then went out in the sun without sunscreen or protective clothing for a half hour, which one of these would happen to your skin? |
-| shade                   | integer | When you go outside on a very sunny day, for more than one hour, how often do you stay in the shade?                                                                                  |
-| long\_sleeves           | integer | When you go outside on a very sunny day, for more than one hour, how often do you wear a long sleeved shirt?                                                                          |
-| sunscreen               | integer | When you go outside on a very sunny day, for more than one hour, how often do you use sunscreen?                                                                                      |
-| sunburns                | double  | How many times in the past year have you had a sunburn?                                                                                                                               |
-| time\_outdoors\_workday | double  | During the past 30 days, how much time did you usually spend outdoors between 9 in the morning and 5 in the afternoon on the days that you worked or went to school?                  |
-| time\_outdoors\_weekend | double  | During the past 30 days, how much time did you usually spend outdoors between 9 in the morning and 5 in the afternoon on the days when you were not working or going to school?       |
+| Column                  | Type | Description                                                                                                                                                                           |
+|:------------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| seq\_no                 | dbl  | Respondent sequence number                                                                                                                                                            |
+| sun\_reaction           | fct  | If after several months of not being in the sun, you then went out in the sun without sunscreen or protective clothing for a half hour, which one of these would happen to your skin? |
+| shade                   | fct  | When you go outside on a very sunny day, for more than one hour, how often do you stay in the shade?                                                                                  |
+| long\_sleeves           | fct  | When you go outside on a very sunny day, for more than one hour, how often do you wear a long sleeved shirt?                                                                          |
+| sunscreen               | fct  | When you go outside on a very sunny day, for more than one hour, how often do you use sunscreen?                                                                                      |
+| sunburns                | dbl  | How many times in the past year have you had a sunburn?                                                                                                                               |
+| time\_outdoors\_workday | dbl  | During the past 30 days, how much time did you usually spend outdoors between 9 in the morning and 5 in the afternoon on the days that you worked or went to school?                  |
+| time\_outdoors\_weekend | dbl  | During the past 30 days, how much time did you usually spend outdoors between 9 in the morning and 5 in the afternoon on the days when you were not working or going to school?       |
 
     ── Data Summary ────────────────────────
                                Values            
@@ -455,19 +491,19 @@ academyDatasets Data
 
 `nhanes_sleep` has 11 columns and 6,161 rows.
 
-| Column                 | Type    | Description                                                                                    |
-|:-----------------------|:--------|:-----------------------------------------------------------------------------------------------|
-| seq\_no                | double  | Respondent sequence number                                                                     |
-| sleep\_time\_workday   | double  | What time do you usually fall asleep on weekdays or workdays?                                  |
-| wake\_time\_workday    | double  | What time do you usually wake up on weekdays or workdays?                                      |
-| sleep\_length\_workday | double  | Number of hours usually sleep on weekdays or workdays.                                         |
-| sleep\_time\_weekend   | double  | What time do you usually fall asleep on weekends or non-workdays?                              |
-| wake\_time\_weekend    | double  | What time do you usually wake up on weekends or non-workdays?                                  |
-| sleep\_length\_weekend | double  | Number of hours usually sleep on weekends or non-workdays.                                     |
-| snore                  | integer | In the past 12 months, how often did you snore while you were sleeping?                        |
-| stop\_breathing        | integer | In the past 12 months, how often did you snort, gasp, or stop breathing while you were asleep? |
-| told\_doctor           | logical | Have you ever told a doctor or other health professional that you have trouble sleeping?       |
-| overly\_sleepy         | integer | In the past month, how often did you feel excessively or overly sleepy during the day?         |
+| Column                 | Type | Description                                                                                    |
+|:-----------------------|:-----|:-----------------------------------------------------------------------------------------------|
+| seq\_no                | dbl  | Respondent sequence number                                                                     |
+| sleep\_time\_workday   | time | What time do you usually fall asleep on weekdays or workdays?                                  |
+| wake\_time\_workday    | time | What time do you usually wake up on weekdays or workdays?                                      |
+| sleep\_length\_workday | dbl  | Number of hours usually sleep on weekdays or workdays.                                         |
+| sleep\_time\_weekend   | time | What time do you usually fall asleep on weekends or non-workdays?                              |
+| wake\_time\_weekend    | time | What time do you usually wake up on weekends or non-workdays?                                  |
+| sleep\_length\_weekend | dbl  | Number of hours usually sleep on weekends or non-workdays.                                     |
+| snore                  | fct  | In the past 12 months, how often did you snore while you were sleeping?                        |
+| stop\_breathing        | fct  | In the past 12 months, how often did you snort, gasp, or stop breathing while you were asleep? |
+| told\_doctor           | lgl  | Have you ever told a doctor or other health professional that you have trouble sleeping?       |
+| overly\_sleepy         | fct  | In the past month, how often did you feel excessively or overly sleepy during the day?         |
 
     ── Data Summary ────────────────────────
                                Values      
@@ -510,12 +546,12 @@ academyDatasets Data
 
 `ny_air` has 4 columns and 22,692 rows.
 
-| Column       | Type   | Description                                    |
-|:-------------|:-------|:-----------------------------------------------|
-| date         | double | Date                                           |
-| county       | double | County                                         |
-| pm25\_max    | double | Maximum predicted value of PM2.5 concentration |
-| pm25\_median | double | Median predicted value of PM2.5 concentration  |
+| Column       | Type | Description                                    |
+|:-------------|:-----|:-----------------------------------------------|
+| date         | date | Date                                           |
+| county       | dbl  | County                                         |
+| pm25\_max    | dbl  | Maximum predicted value of PM2.5 concentration |
+| pm25\_median | dbl  | Median predicted value of PM2.5 concentration  |
 
     ── Data Summary ────────────────────────
                                Values
@@ -543,22 +579,22 @@ academyDatasets Data
 
 `sdtm_adverse_events` has 14 columns and 357 rows.
 
-| Column   | Type      | Description                                                                                            |
-|:---------|:----------|:-------------------------------------------------------------------------------------------------------|
-| USUBJID  | character | Unique Subject Identifier                                                                              |
-| AESEQ    | double    | Sequence Number                                                                                        |
-| AESTDT   | double    | Start date of the adverse event                                                                        |
-| AESTDY   | double    | The number of days the subject had been enrolled in the study when the adverse event began.            |
-| AEENDT   | double    | End date of the adverse event                                                                          |
-| AEENDY   | double    | The number of days the subject had been enrolled in the study when the adverse event ended.            |
-| AETERM   | character | The reported term for the adverse event, i.e. how the reporter described the adverse event.            |
-| AEDECOD  | character | The official term for the adverse event, i.e. the dictionary derived description of the adverse event. |
-| AEBODSYS | character | Body system or organ class involved in the adverse event.                                              |
-| AESER    | character | Was the adverse event serious? `Y` = Yes, `N` = No.                                                    |
-| AEONGO   | character | Is the adverse event ongoing? `Y` = Yes, `N` = No.                                                     |
-| AESEV    | character | Severity of the adverse event.                                                                         |
-| AEREL    | character | The investigator’s opinion as to whether or not the adverse event was related to the study treatment.  |
-| AEOUT    | character | Outcome of the adverse event.                                                                          |
+| Column   | Type | Description                                                                                            |
+|:---------|:-----|:-------------------------------------------------------------------------------------------------------|
+| USUBJID  | chr  | Unique Subject Identifier                                                                              |
+| AESEQ    | dbl  | Sequence Number                                                                                        |
+| AESTDT   | date | Start date of the adverse event                                                                        |
+| AESTDY   | dbl  | The number of days the subject had been enrolled in the study when the adverse event began.            |
+| AEENDT   | date | End date of the adverse event                                                                          |
+| AEENDY   | dbl  | The number of days the subject had been enrolled in the study when the adverse event ended.            |
+| AETERM   | chr  | The reported term for the adverse event, i.e. how the reporter described the adverse event.            |
+| AEDECOD  | chr  | The official term for the adverse event, i.e. the dictionary derived description of the adverse event. |
+| AEBODSYS | chr  | Body system or organ class involved in the adverse event.                                              |
+| AESER    | chr  | Was the adverse event serious? `Y` = Yes, `N` = No.                                                    |
+| AEONGO   | chr  | Is the adverse event ongoing? `Y` = Yes, `N` = No.                                                     |
+| AESEV    | chr  | Severity of the adverse event.                                                                         |
+| AEREL    | chr  | The investigator’s opinion as to whether or not the adverse event was related to the study treatment.  |
+| AEOUT    | chr  | Outcome of the adverse event.                                                                          |
 
     ── Data Summary ────────────────────────
                                Values             
@@ -600,20 +636,20 @@ academyDatasets Data
 
 `sdtm_concomitant_meds` has 12 columns and 307 rows.
 
-| Column   | Type      | Description                                                                                          |
-|:---------|:----------|:-----------------------------------------------------------------------------------------------------|
-| USUBJID  | character | Unique Subject Identifier                                                                            |
-| CMSEQ    | double    | Sequence Number                                                                                      |
-| CMSTDT   | double    | Start date of the concomitant medication                                                             |
-| CMSTDY   | double    | The number of days the subject had been enrolled in the study when the concomitant medication began. |
-| CMENDT   | double    | End date of the concomitant medication                                                               |
-| CMENDY   | double    | The number of days the subject had been enrolled in the study when the concomitant medication ended. |
-| CMTRT    | character | Reported name of the concomitant medication, i.e concomitant treatment                               |
-| PREFTERM | character | The nonproprietary, i.e. generic, name of the concomitant medication                                 |
-| ATCTEXT2 | character | Anatomical Therapeutic Chemical (ATC) of the concomitant medication                                  |
-| CMONGO   | character | Is the concomitant medication ongoing? `Y` = Yes, `N` = No                                           |
-| CMDOSE   | double    | Amount of concomitant medication taken per administration (dose)                                     |
-| CMROUTE  | character | Route of administration of the concomitant medication                                                |
+| Column   | Type | Description                                                                                          |
+|:---------|:-----|:-----------------------------------------------------------------------------------------------------|
+| USUBJID  | chr  | Unique Subject Identifier                                                                            |
+| CMSEQ    | dbl  | Sequence Number                                                                                      |
+| CMSTDT   | date | Start date of the concomitant medication                                                             |
+| CMSTDY   | dbl  | The number of days the subject had been enrolled in the study when the concomitant medication began. |
+| CMENDT   | date | End date of the concomitant medication                                                               |
+| CMENDY   | dbl  | The number of days the subject had been enrolled in the study when the concomitant medication ended. |
+| CMTRT    | chr  | Reported name of the concomitant medication, i.e concomitant treatment                               |
+| PREFTERM | chr  | The nonproprietary, i.e. generic, name of the concomitant medication                                 |
+| ATCTEXT2 | chr  | Anatomical Therapeutic Chemical (ATC) of the concomitant medication                                  |
+| CMONGO   | chr  | Is the concomitant medication ongoing? `Y` = Yes, `N` = No                                           |
+| CMDOSE   | dbl  | Amount of concomitant medication taken per administration (dose)                                     |
+| CMROUTE  | chr  | Route of administration of the concomitant medication                                                |
 
     ── Data Summary ────────────────────────
                                Values               
@@ -653,22 +689,22 @@ academyDatasets Data
 
 `sdtm_demographics` has 14 columns and 150 rows.
 
-| Column   | Type      | Description                                                                                                                                                                                                                      |
-|:---------|:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| USUBJID  | character | Unique Subject Identifier                                                                                                                                                                                                        |
-| SITE     | character | Name of study site                                                                                                                                                                                                               |
-| SITEID   | character | Study Site Identifier                                                                                                                                                                                                            |
-| AGE      | double    | Age of subject                                                                                                                                                                                                                   |
-| SEX      | character | Sex of subject                                                                                                                                                                                                                   |
-| RACE     | character | Race of subject                                                                                                                                                                                                                  |
-| ARM      | character | Treatment arm that subject is assigned to                                                                                                                                                                                        |
-| ARMCD    | character | Code for treatment arm that subject is assigned to                                                                                                                                                                               |
-| SBJTSTAT | character | Subject status in study                                                                                                                                                                                                          |
-| RFSTDTC  | double    | Reference start date. Usually the day the subject begins treatment.                                                                                                                                                              |
-| RFENDTC  | double    | Reference end date. Usually the day the subject takes their last treatment.                                                                                                                                                      |
-| RFENDY   | double    | The number of days after the RFSTDTC that the RFENDTC occurred, i.e. the number of days the subject spent in the study/in treatment                                                                                              |
-| SAFFL    | character | Safety population flag. Did the subject actually receive a treatment (including placebo) and should therefore be included in the population of subjects studied to determine the safety of the treatment? `Y` = Yes and `N` = No |
-| SAFFN    | double    | Numeric coding of safety population flag. `Y` = Yes and `N` = No                                                                                                                                                                 |
+| Column   | Type | Description                                                                                                                                                                                                                      |
+|:---------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| USUBJID  | chr  | Unique Subject Identifier                                                                                                                                                                                                        |
+| SITE     | chr  | Name of study site                                                                                                                                                                                                               |
+| SITEID   | chr  | Study Site Identifier                                                                                                                                                                                                            |
+| AGE      | dbl  | Age of subject                                                                                                                                                                                                                   |
+| SEX      | chr  | Sex of subject                                                                                                                                                                                                                   |
+| RACE     | chr  | Race of subject                                                                                                                                                                                                                  |
+| ARM      | chr  | Treatment arm that subject is assigned to                                                                                                                                                                                        |
+| ARMCD    | chr  | Code for treatment arm that subject is assigned to                                                                                                                                                                               |
+| SBJTSTAT | chr  | Subject status in study                                                                                                                                                                                                          |
+| RFSTDTC  | date | Reference start date. Usually the day the subject begins treatment.                                                                                                                                                              |
+| RFENDTC  | date | Reference end date. Usually the day the subject takes their last treatment.                                                                                                                                                      |
+| RFENDY   | dbl  | The number of days after the RFSTDTC that the RFENDTC occurred, i.e. the number of days the subject spent in the study/in treatment                                                                                              |
+| SAFFL    | chr  | Safety population flag. Did the subject actually receive a treatment (including placebo) and should therefore be included in the population of subjects studied to determine the safety of the treatment? `Y` = Yes and `N` = No |
+| SAFFN    | dbl  | Numeric coding of safety population flag. `Y` = Yes and `N` = No                                                                                                                                                                 |
 
     ── Data Summary ────────────────────────
                                Values           
@@ -710,19 +746,19 @@ academyDatasets Data
 
 `sdtm_lab_results` has 11 columns and 13,708 rows.
 
-| Column   | Type      | Description                                            |
-|:---------|:----------|:-------------------------------------------------------|
-| USUBJID  | character | Unique Subject Identifier                              |
-| VISIT    | character | Protocol defined text description of the visit         |
-| VISITNUM | double    | Visit number                                           |
-| LBDT     | double    | Date of specimen collection                            |
-| LBDY     | double    | Study day of specimen collection                       |
-| LBCAT    | character | Category of the lab test performed                     |
-| LBTEST   | character | Name of the lab test performed                         |
-| LBSTRESU | character | Standard units for lab test result (LBSTRESN)          |
-| LBSTRESN | double    | Lab test result in standard units                      |
-| LBSTNRLO | double    | Lower limit of normal range lab test result            |
-| LBSTNRHI | double    | Upper (high) limit of normal range for lab test result |
+| Column   | Type | Description                                            |
+|:---------|:-----|:-------------------------------------------------------|
+| USUBJID  | chr  | Unique Subject Identifier                              |
+| VISIT    | chr  | Protocol defined text description of the visit         |
+| VISITNUM | dbl  | Visit number                                           |
+| LBDT     | date | Date of specimen collection                            |
+| LBDY     | dbl  | Study day of specimen collection                       |
+| LBCAT    | chr  | Category of the lab test performed                     |
+| LBTEST   | chr  | Name of the lab test performed                         |
+| LBSTRESU | chr  | Standard units for lab test result (LBSTRESN)          |
+| LBSTRESN | dbl  | Lab test result in standard units                      |
+| LBSTNRLO | dbl  | Lower limit of normal range lab test result            |
+| LBSTNRHI | dbl  | Upper (high) limit of normal range for lab test result |
 
     ── Data Summary ────────────────────────
                                Values          
@@ -761,14 +797,14 @@ academyDatasets Data
 
 `sdtm_subject_visits` has 6 columns and 1,202 rows.
 
-| Column   | Type      | Description                                                                       |
-|:---------|:----------|:----------------------------------------------------------------------------------|
-| USUBJID  | character | Unique Subject Identifier                                                         |
-| VISIT    | character | Protocol defined text description of the visit                                    |
-| VISITNUM | double    | Visit number                                                                      |
-| SVDT     | double    | Subject visit date                                                                |
-| SVDY     | double    | Study day of subject visit                                                        |
-| SVSTATUS | character | Status of subject visit: Completed, Terminated, Missed, Expected, Overdue, Failed |
+| Column   | Type | Description                                                                       |
+|:---------|:-----|:----------------------------------------------------------------------------------|
+| USUBJID  | chr  | Unique Subject Identifier                                                         |
+| VISIT    | chr  | Protocol defined text description of the visit                                    |
+| VISITNUM | dbl  | Visit number                                                                      |
+| SVDT     | date | Subject visit date                                                                |
+| SVDY     | dbl  | Study day of subject visit                                                        |
+| SVSTATUS | chr  | Status of subject visit: Completed, Terminated, Missed, Expected, Overdue, Failed |
 
     ── Data Summary ────────────────────────
                                Values             
@@ -802,19 +838,19 @@ academyDatasets Data
 
 `sdtm_vital_signs` has 11 columns and 3,170 rows.
 
-| Column   | Type      | Description                                                       |
-|:---------|:----------|:------------------------------------------------------------------|
-| USUBJID  | character | Unique Subject Identifier                                         |
-| VISIT    | character | Protocol defined text description of the visit                    |
-| VISITNUM | double    | Visit number                                                      |
-| VSDT     | double    | Date vital signs were collected                                   |
-| VSDY     | double    | Day of study when vital signs were collected                      |
-| VSCAT    | character | Category of vital signs test                                      |
-| VSTEST   | character | Name of vital signs test                                          |
-| VSSTRESU | character | Standard units of vital signs test result                         |
-| VSSTRESN | double    | Result of vital signs test in standard units                      |
-| VSSTNRLO | double    | Lower limit of normal range for result of vital signs test        |
-| VSSTNRHI | double    | Upper (high) limit of normal range for result of vital signs test |
+| Column   | Type | Description                                                       |
+|:---------|:-----|:------------------------------------------------------------------|
+| USUBJID  | chr  | Unique Subject Identifier                                         |
+| VISIT    | chr  | Protocol defined text description of the visit                    |
+| VISITNUM | dbl  | Visit number                                                      |
+| VSDT     | date | Date vital signs were collected                                   |
+| VSDY     | dbl  | Day of study when vital signs were collected                      |
+| VSCAT    | chr  | Category of vital signs test                                      |
+| VSTEST   | chr  | Name of vital signs test                                          |
+| VSSTRESU | chr  | Standard units of vital signs test result                         |
+| VSSTRESN | dbl  | Result of vital signs test in standard units                      |
+| VSSTNRLO | dbl  | Lower limit of normal range for result of vital signs test        |
+| VSSTNRHI | dbl  | Upper (high) limit of normal range for result of vital signs test |
 
     ── Data Summary ────────────────────────
                                Values          
@@ -853,13 +889,13 @@ academyDatasets Data
 
 `vaccines` has 5 columns and 3,591 rows.
 
-| Column       | Type      | Description                      |
-|:-------------|:----------|:---------------------------------|
-| jurisdiction | character | State or territory               |
-| vaccine      | character | Vaccine type                     |
-| week         | double    | Week the vaccines were allocated |
-| first\_dose  | double    | Number of first doses allocated  |
-| second\_dose | double    | Number of second doses allocated |
+| Column       | Type | Description                      |
+|:-------------|:-----|:---------------------------------|
+| jurisdiction | chr  | State or territory               |
+| vaccine      | chr  | Vaccine type                     |
+| week         | date | Week the vaccines were allocated |
+| first\_dose  | dbl  | Number of first doses allocated  |
+| second\_dose | dbl  | Number of second doses allocated |
 
     ── Data Summary ────────────────────────
                                Values  
