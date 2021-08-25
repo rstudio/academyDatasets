@@ -26,6 +26,7 @@ Suggests:
     knitr,
     skimr,
     tsibble,
+    utils,
     vctrs
 Remotes: 
     mdlincoln/docthis
