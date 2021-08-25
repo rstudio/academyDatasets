@@ -13,6 +13,13 @@
 #'
 #' @format `r rd_describe_format(us_births, us_births_dictionary)`
 "us_births"
+#' @examples
+#' # Convert to `tsibble`
+#' library(tsibble)
+#' us_births %>%
+#'   tsibble::as_tsibble()
 
 #' @describeIn us_births The `us_births` data dictionary
 "us_births_dictionary"
+
+

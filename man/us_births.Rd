@@ -6,7 +6,7 @@
 \alias{us_births_dictionary}
 \title{us_births}
 \format{
-A tbl_ts:
+A tibble with 7305 rows and 2 variables:
 \describe{
 
 \item{\code{timestamp}}{[date] Day}
@@ -37,4 +37,10 @@ mosaicData: project mosaic data sets. R package version 0.18.0.
 \item \code{us_births_dictionary}: The \code{us_births} data dictionary
 }}
 
+\examples{
+# Convert to `tsibble`
+library(tsibble)
+us_births \%>\%
+  tsibble::as_tsibble()
+}
 \keyword{datasets}
