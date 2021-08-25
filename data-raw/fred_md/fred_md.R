@@ -4,20 +4,23 @@ library(tidyverse)
 # load {academyDatasets} for access to helper functions
 pkgload::load_all()
 
-url_fred_md <- "https://zenodo.org/record/4654833/files/fred_md_dataset.zip?download=1"
+url_fred_md <- "https://files.stlouisfed.org/files/htdocs/fred-md/monthly/current.csv"
 #===============================================================================
 
 fred_md <-
-  archive::archive_read(url_fred_md) %>%
-  read_tsf() %>%
-  pluck(1) %>%
-  as_tibble() %>%
-  select(
-    timestamp = start_timestamp,
-    series_name,
-    series_value
-  )
+  read_csv(url_fred_md) %>%
+  slice(-1)
 
+fred_md %>%
+  mutate(sasdate = parse_date(sasdate, format = "%m/%d/%Y")) %>%
+  select(
+    date = sasdate,
+    RPI,
+    HWI,
+    UNRATE,
+    HOUST,
+
+  )
 
 fred_md_dictionary <- describe_dataset(
   fred_md,
