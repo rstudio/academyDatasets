@@ -105,7 +105,7 @@ read_tsf <- function(
     if(length(full_info) != length(col_names)+1)
       stop("Missing attributes/values in series.")
 
-    series <- strsplit(tail(full_info, 1), ",")[[1]]
+    series <- strsplit(utils::tail(full_info, 1), ",")[[1]]
     series[which(series == "?")] <- NA
     series <- as.numeric(series)
 
@@ -115,7 +115,7 @@ read_tsf <- function(
     values <- c(values, series)
     row_count <- row_count + length(series)
 
-    attributes <- head(full_info, length(full_info)-1)
+    attributes <- utils::head(full_info, length(full_info)-1)
 
     for(col in seq_along(col_names)){
 
@@ -178,12 +178,12 @@ read_tsf <- function(
         if(is.null(index_var))
           cat("Index is not provided. No valid index found in data. Returning a dataframe.")
         else
-          data <- tsibble:::build_tsibble(x = data, key = key, index = index_var, ordered = F)
+          data <- tsibble::build_tsibble(x = data, key = key, index = index_var, ordered = F)
       }else{
         if(!(index %in% col_names))
           stop("Invalid index Cannot convert data into tsibble format.")
         else
-          data <- tsibble:::build_tsibble(x = data, key = key, index = index, ordered = F)
+          data <- tsibble::build_tsibble(x = data, key = key, index = index, ordered = F)
       }
     }
   }else{
