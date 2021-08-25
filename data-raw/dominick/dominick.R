@@ -16,7 +16,7 @@ read_dominick <- function(upc_url, movement_url) {
     select(upc, product = descrip, size) %>%
     mutate(product = gsub("[^A-Z ]", "", product))
 
-  movement <- archive::archive_read(movement_url) %>%
+  archive::archive_read(movement_url) %>%
     read_csv() %>%
     rename_with(tolower) %>%
     filter(as.logical(ok), price != 0) %>%
@@ -35,12 +35,7 @@ read_dominick <- function(upc_url, movement_url) {
       move   = sum(move)
     ) %>%
     ungroup()
-
-  as_tsibble(movement, key = c(store, product, size, price), index = week) %>%
-    arrange(store, product, size, week, price)
 }
-
-# Datasets ----
 
 ## Oatmeal ----
 dominick_oatmeal <- read_dominick(
@@ -51,7 +46,7 @@ dominick_oatmeal <- read_dominick(
 dominick_oatmeal_dictionary <- describe_dataset(
   dominick_oatmeal,
   .title = "Dominick's Finer Foods oatmeal sales data",
-  week = "Week",
+  week = "Start date of the week",
   store = "Store number",
   product = "Abbreviated product name",
   size = "Product size",
@@ -73,7 +68,7 @@ dominick_soap <- read_dominick(
 dominick_soap_dictionary <- describe_dataset(
   dominick_soap,
   .title = "Dominick's Finer Foods bath soap sales data",
-  week = "Week",
+  week = "Start date of the week",
   store = "Store number",
   product = "Abbreviated product name",
   size = "Product size",

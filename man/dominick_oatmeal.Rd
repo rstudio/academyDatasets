@@ -7,13 +7,13 @@
 \alias{dominick_soap_dictionary}
 \title{Dominick's Finer Foods oatmeal sales data}
 \format{
-A tbl_ts:
+A tibble with 974069 rows and 7 variables:
 \describe{
 
-\item{\code{week}}{[date] Week}
+\item{\code{week}}{[date] Start date of the week}
 \item{\code{store}}{[int] Store number}
 \item{\code{product}}{[chr] Abbreviated product name}
-\item{\code{size}}{[dbl] Product size}
+\item{\code{size}}{[chr] Product size}
 \item{\code{price}}{[dbl] Price per unit in dollars}
 \item{\code{profit}}{[dbl] Profit per unit in dollars}
 \item{\code{move}}{[int] Number of units sold during the week}

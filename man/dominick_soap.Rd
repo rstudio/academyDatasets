@@ -5,10 +5,10 @@
 \alias{dominick_soap}
 \title{Dominick's Finer Foods bath soap sales data}
 \format{
-A tbl_ts:
+A tibble with 415833 rows and 7 variables:
 \describe{
 
-\item{\code{week}}{[date] Week}
+\item{\code{week}}{[date] Start date of the week}
 \item{\code{store}}{[int] Store number}
 \item{\code{product}}{[chr] Abbreviated product name}
 \item{\code{size}}{[chr] Product size}
