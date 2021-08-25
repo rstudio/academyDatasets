@@ -10,5 +10,11 @@
 #' @format `r rd_describe_format(riverflow, riverflow_dictionary)`
 "riverflow"
 
+#' @examples
+#' # Convert to `tsibble`
+#' library(tsibble)
+#' riverflow %>%
+#'   tsibble::as_tsibble()
+
 #' @describeIn riverflow The `riverflow` data dictionary
 "riverflow_dictionary"

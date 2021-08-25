@@ -33,4 +33,10 @@ to 12/31/1979.
 \item \code{riverflow_dictionary}: The \code{riverflow} data dictionary
 }}
 
+\examples{
+# Convert to `tsibble`
+library(tsibble)
+riverflow \%>\%
+  tsibble::as_tsibble()
+}
 \keyword{datasets}
