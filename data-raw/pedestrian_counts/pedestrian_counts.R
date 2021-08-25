@@ -18,17 +18,17 @@ pedestrian_counts <-
   pluck(1) %>%
   as_tibble() %>%
   select(
-    timestamp = start_timestamp,
-    series_name,
-    series_value
+    date = start_timestamp,
+    sensor_id = series_name,
+    ped_count = series_value
   )
 
 pedestrian_counts_dictionary <- describe_dataset(
   pedestrian_counts,
-  .title = "Melbourne Pedestrian Counts",
-  timestamp = "Date-time of sensor reading",
-  series_name = "Sensor ID",
-  series_value = "Hourly count of pedestrians"
+  .title = "Melbourne pedestrian count data",
+  date = "Date-time of sensor reading",
+  sensor_id = "Sensor ID",
+  ped_count = "Hourly count of pedestrians"
 )
 
 usethis::use_data(

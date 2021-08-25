@@ -4,14 +4,14 @@
 \name{pedestrian_counts}
 \alias{pedestrian_counts}
 \alias{pedestrian_counts_dictionary}
-\title{Melbourne Pedestrian Counts}
+\title{Melbourne pedestrian count data}
 \format{
 A tibble with 3132346 rows and 3 variables:
 \describe{
 
-\item{\code{timestamp}}{[dttm] Date-time of sensor reading}
-\item{\code{series_name}}{[chr] Sensor ID}
-\item{\code{series_value}}{[dbl] Hourly count of pedestrians}
+\item{\code{date}}{[dttm] Date-time of sensor reading}
+\item{\code{sensor_id}}{[chr] Sensor ID}
+\item{\code{ped_count}}{[dbl] Hourly count of pedestrians}
 }
 
 An object of class \code{list} of length 3.
@@ -25,12 +25,19 @@ pedestrian_counts
 pedestrian_counts_dictionary
 }
 \description{
-Hourly pedestrian counts captured from 66 sensors in Melbourne city
-starting from May 2009.
+This dataset records hourly pedestrian counts captured from 66 sensors in
+Melbourne city, starting from May 2009.
 }
 \section{Functions}{
 \itemize{
 \item \code{pedestrian_counts_dictionary}: The \code{pedestrian_counts} data dictionary
 }}
 
+\examples{
+# Convert to `tsibble`
+library(tsibble)
+pedestrian_counts \%>\%
+  tsibble::as_tsibble(key = sensor_id, index = date)
+
+}
 \keyword{datasets}
