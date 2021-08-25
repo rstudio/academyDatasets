@@ -17,6 +17,12 @@
 #' @family Dominick's datasets
 #'
 #' @format `r rd_describe_format(dominick_oatmeal, dominick_oatmeal_dictionary)`
+#'
+#' @examples
+#' # Convert to `tsibble`
+#' library(tsibble)
+#' dominick_oatmeal %>%
+#'   as_tsibble(key = c("store", "product", "size", "price"), index = week)
 "dominick_oatmeal"
 
 #' @describeIn dominick_oatmeal The `dominick_oatmeal` data dictionary
@@ -41,7 +47,13 @@
 #' @family Dominick's datasets
 #'
 #' @format `r rd_describe_format(dominick_soap, dominick_soap_dictionary)`
+#'
+#' @examples
+#' # Convert to `tsibble`
+#' library(tsibble)
+#' dominick_soap %>%
+#'   as_tsibble(key = c("store", "product", "size", "price"), index = week)
 "dominick_soap"
 
-#' @describeIn dominick_oatmeal The `dominick_soap` data dictionary
+#' @describeIn dominick_soap The `dominick_soap` data dictionary
 "dominick_soap_dictionary"

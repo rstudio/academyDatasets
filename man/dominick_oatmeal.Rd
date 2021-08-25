@@ -4,7 +4,6 @@
 \name{dominick_oatmeal}
 \alias{dominick_oatmeal}
 \alias{dominick_oatmeal_dictionary}
-\alias{dominick_soap_dictionary}
 \title{Dominick's Finer Foods oatmeal sales data}
 \format{
 A tibble with 974069 rows and 7 variables:
@@ -20,8 +19,6 @@ A tibble with 974069 rows and 7 variables:
 }
 
 An object of class \code{list} of length 3.
-
-An object of class \code{list} of length 3.
 }
 \source{
 \url{https://www.chicagobooth.edu/research/kilts/datasets/dominicks}
@@ -30,8 +27,6 @@ An object of class \code{list} of length 3.
 dominick_oatmeal
 
 dominick_oatmeal_dictionary
-
-dominick_soap_dictionary
 }
 \description{
 From the \href{https://www.chicagobooth.edu/research/kilts/datasets/dominicks}{Chicago Booth Kilts Center for Marketing}:
@@ -48,10 +43,14 @@ retail margins.
 \section{Functions}{
 \itemize{
 \item \code{dominick_oatmeal_dictionary}: The \code{dominick_oatmeal} data dictionary
-
-\item \code{dominick_soap_dictionary}: The \code{dominick_soap} data dictionary
 }}
 
+\examples{
+# Convert to `tsibble`
+library(tsibble)
+dominick_oatmeal \%>\%
+  as_tsibble(key = c("store", "product", "size", "price"), index = week)
+}
 \seealso{
 Other Dominick's datasets: 
 \code{\link{dominick_soap}}

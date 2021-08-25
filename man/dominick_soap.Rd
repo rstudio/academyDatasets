@@ -3,6 +3,7 @@
 \docType{data}
 \name{dominick_soap}
 \alias{dominick_soap}
+\alias{dominick_soap_dictionary}
 \title{Dominick's Finer Foods bath soap sales data}
 \format{
 A tibble with 415833 rows and 7 variables:
@@ -16,12 +17,16 @@ A tibble with 415833 rows and 7 variables:
 \item{\code{profit}}{[dbl] Profit per unit in dollars}
 \item{\code{move}}{[int] Number of units sold during the week}
 }
+
+An object of class \code{list} of length 3.
 }
 \source{
 \url{https://www.chicagobooth.edu/research/kilts/datasets/dominicks}
 }
 \usage{
 dominick_soap
+
+dominick_soap_dictionary
 }
 \description{
 From the \href{https://www.chicagobooth.edu/research/kilts/datasets/dominicks}{Chicago Booth Kilts Center for Marketing}:
@@ -34,6 +39,17 @@ research cooperation, approximately nine years of store-level data on the
 sales of more than 3,500 UPCs is available in this dataset. This data is
 unique for the breadth of its coverage and for the information available on
 retail margins.
+}
+\section{Functions}{
+\itemize{
+\item \code{dominick_soap_dictionary}: The \code{dominick_soap} data dictionary
+}}
+
+\examples{
+# Convert to `tsibble`
+library(tsibble)
+dominick_soap \%>\%
+  as_tsibble(key = c("store", "product", "size", "price"), index = week)
 }
 \seealso{
 Other Dominick's datasets: 
