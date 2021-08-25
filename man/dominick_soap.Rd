@@ -39,6 +39,12 @@ research cooperation, approximately nine years of store-level data on the
 sales of more than 3,500 UPCs is available in this dataset. This data is
 unique for the breadth of its coverage and for the information available on
 retail margins.
+
+The data contain a description of each UPC in a category and sales
+information at the store level for each UPC in a category. The information is
+stored on a weekly basis.
+
+Note: This is historical data and the products are not for sale.
 }
 \section{Functions}{
 \itemize{
@@ -53,7 +59,8 @@ dominick_soap \%>\%
 }
 \seealso{
 Other Dominick's datasets: 
-\code{\link{dominick_oatmeal}}
+\code{\link{dominick_oatmeal}},
+\code{\link{dominick}}
 }
 \concept{Dominick's datasets}
 \keyword{datasets}
