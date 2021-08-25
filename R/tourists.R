@@ -15,16 +15,16 @@
 #' not reflect true tourism trends for these cities.
 #' @source <https://zenodo.org/record/4656096>
 #'
-#' @format `r rd_describe_format(tourism, tourism_dictionary)`
+#' @format `r rd_describe_format(tourists, tourists_dictionary)`
 #'
 #' @examples
 #' # Convert to `tsibble`
 #' library(dplyr)
 #' library(tsibble)
-#' tourism %>%
+#' tourists %>%
 #'   mutate(month = yearmonth(month)) %>%
 #'   as_tsibble(key = c("city", "country"), index = month)
-"tourism"
+"tourists"
 
-#' @describeIn tourism The `tourism` data dictionary
-"tourism_dictionary"
+#' @describeIn tourists The `tourists` data dictionary
+"tourists_dictionary"

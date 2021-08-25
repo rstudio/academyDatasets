@@ -39,14 +39,14 @@ cities <- archive::archive_read(cities_url, 2) %>%
     id = row_number()
   )
 
-tourism_url <-
+tourists_url <-
   "https://zenodo.org/record/4656096/files/tourism_monthly_dataset.zip"
 
-tourism_raw <- archive::archive_read(tourism_url) %>%
+tourists_raw <- archive::archive_read(tourists_url) %>%
   read_tsf(key = "series_name") %>%
   pluck(1)
 
-tourism <- tourism_raw %>%
+tourists <- tourists_raw %>%
   rename(
     month = start_timestamp, series = series_name, tourists = series_value
   ) %>%
@@ -64,8 +64,8 @@ tourism <- tourism_raw %>%
   arrange(series) %>%
   select(month, city, country, tourists)
 
-tourism_dictionary <- describe_dataset(
-  tourism,
+tourists_dictionary <- describe_dataset(
+  tourists,
   .title = "366 monthly time series used in the Kaggle Tourism forecasting competition",
   month = "Start date of the month",
   city = "Fabricated city",
@@ -73,4 +73,4 @@ tourism_dictionary <- describe_dataset(
   tourists = "Number of tourists who visited the location in the specified month"
 )
 
-usethis::use_data(tourism, tourism_dictionary, overwrite = TRUE)
+usethis::use_data(tourists, tourists_dictionary, overwrite = TRUE)
