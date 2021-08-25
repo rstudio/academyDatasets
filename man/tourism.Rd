@@ -6,12 +6,13 @@
 \alias{tourism_dictionary}
 \title{Kaggle Tourism forecasting competition time series}
 \format{
-A tbl_ts:
+A tibble with 109280 rows and 4 variables:
 \describe{
 
-\item{\code{timestamp}}{[date] Month}
-\item{\code{location}}{[fct] Anonymized location indicator}
-\item{\code{value}}{[dbl] Observed value of the series during the specified month}
+\item{\code{month}}{[date] Start date of the month}
+\item{\code{city}}{[chr] Fabricated city}
+\item{\code{country}}{[chr] Fabricated country}
+\item{\code{tourists}}{[int] Number of tourists who visited the location in the specified month}
 }
 
 An object of class \code{list} of length 3.
@@ -33,7 +34,10 @@ New Zealand) and various academics, who had used them in previous tourism
 forecasting studies.
 
 In order to adhere to all confidentiality agreements with all parties, the
-data are presented under coded titles
+data are presented under coded titles.
+
+City and countries were fabricated and assigned to the data. This data does
+not reflect true tourism trends for these cities.
 }
 \section{Functions}{
 \itemize{

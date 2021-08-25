@@ -9,7 +9,10 @@
 #' forecasting studies.
 #'
 #' In order to adhere to all confidentiality agreements with all parties, the
-#' data are presented under coded titles
+#' data are presented under coded titles.
+#'
+#' City and countries were fabricated and assigned to the data. This data does
+#' not reflect true tourism trends for these cities.
 #'
 #' @source <https://zenodo.org/record/4656096>
 #'
