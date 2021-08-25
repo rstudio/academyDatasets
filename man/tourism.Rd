@@ -10,8 +10,8 @@ A tbl_ts:
 \describe{
 
 \item{\code{timestamp}}{[date] Month}
-\item{\code{series}}{[fct] Series number}
-\item{\code{value}}{[dbl] Value of the series during the specified month}
+\item{\code{location}}{[fct] Anonymized location indicator}
+\item{\code{value}}{[dbl] Observed value of the series during the specified month}
 }
 
 An object of class \code{list} of length 3.
@@ -25,7 +25,15 @@ tourism
 tourism_dictionary
 }
 \description{
-366 monthly time series used in the Kaggle Tourism forecasting competition
+From \href{https://robjhyndman.com/papers/forecompijf.pdf}{Athanasopoulos, Hyndman, Song, and Wu (2010)}
+
+The data include 366 monthly series. They were supplied by both tourism
+bodies (such as Tourism Australia, the Hong Kong Tourism Board and Tourism
+New Zealand) and various academics, who had used them in previous tourism
+forecasting studies.
+
+In order to adhere to all confidentiality agreements with all parties, the
+data are presented under coded titles
 }
 \section{Functions}{
 \itemize{
