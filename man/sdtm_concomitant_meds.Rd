@@ -9,18 +9,18 @@
 A tibble with 307 rows and 12 variables:
 \describe{
 
-\item{\code{USUBJID}}{[character] Unique Subject Identifier}
-\item{\code{CMSEQ}}{[double] Sequence Number}
-\item{\code{CMSTDT}}{[double] Start date of the concomitant medication}
-\item{\code{CMSTDY}}{[double] The number of days the subject had been enrolled in the study when the concomitant medication began.}
-\item{\code{CMENDT}}{[double] End date of the concomitant medication}
-\item{\code{CMENDY}}{[double] The number of days the subject had been enrolled in the study when the concomitant medication ended.}
-\item{\code{CMTRT}}{[character] Reported name of the concomitant medication, i.e concomitant treatment}
-\item{\code{PREFTERM}}{[character] The nonproprietary, i.e. generic, name of the concomitant medication}
-\item{\code{ATCTEXT2}}{[character] Anatomical Therapeutic Chemical (ATC) of the concomitant medication}
-\item{\code{CMONGO}}{[character] Is the concomitant medication ongoing? \code{Y} = Yes, \code{N} = No}
-\item{\code{CMDOSE}}{[double] Amount of concomitant medication taken per administration (dose)}
-\item{\code{CMROUTE}}{[character] Route of administration of the concomitant medication}
+\item{\code{USUBJID}}{[chr] Unique Subject Identifier}
+\item{\code{CMSEQ}}{[dbl] Sequence Number}
+\item{\code{CMSTDT}}{[date] Start date of the concomitant medication}
+\item{\code{CMSTDY}}{[dbl] The number of days the subject had been enrolled in the study when the concomitant medication began.}
+\item{\code{CMENDT}}{[date] End date of the concomitant medication}
+\item{\code{CMENDY}}{[dbl] The number of days the subject had been enrolled in the study when the concomitant medication ended.}
+\item{\code{CMTRT}}{[chr] Reported name of the concomitant medication, i.e concomitant treatment}
+\item{\code{PREFTERM}}{[chr] The nonproprietary, i.e. generic, name of the concomitant medication}
+\item{\code{ATCTEXT2}}{[chr] Anatomical Therapeutic Chemical (ATC) of the concomitant medication}
+\item{\code{CMONGO}}{[chr] Is the concomitant medication ongoing? \code{Y} = Yes, \code{N} = No}
+\item{\code{CMDOSE}}{[dbl] Amount of concomitant medication taken per administration (dose)}
+\item{\code{CMROUTE}}{[chr] Route of administration of the concomitant medication}
 }
 
 An object of class \code{list} of length 3.

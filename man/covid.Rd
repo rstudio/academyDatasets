@@ -9,12 +9,12 @@
 A tibble with 20780 rows and 6 variables:
 \describe{
 
-\item{\code{date}}{[double] }
-\item{\code{state}}{[integer] Two-letter abbreviation for the state or territory.}
-\item{\code{tests}}{[double] Daily increase in totalTestResults, calculated from the previous day’s value. (Original: totalTestResultsIncrease)}
-\item{\code{cases}}{[double] The daily increase in API field positive, which measures Cases (confirmed plus probable) calculated based on the previous day’s value. (Original: positiveIncrease)}
-\item{\code{hospitalizations}}{[double] Daily increase in hospitalizedCumulative, calculated from the previous day’s value. (Original: hospitalizedIncrease)}
-\item{\code{deaths}}{[double] Daily increase in death, calculated from the previous day’s value. (Original: deathIncrease)}
+\item{\code{date}}{[date] Date on which data was collected by The COVID Tracking Project.}
+\item{\code{state}}{[fct] Two-letter abbreviation for the state or territory.}
+\item{\code{tests}}{[dbl] Daily increase in totalTestResults, calculated from the previous day’s value. (Original: totalTestResultsIncrease)}
+\item{\code{cases}}{[dbl] The daily increase in API field positive, which measures Cases (confirmed plus probable) calculated based on the previous day’s value. (Original: positiveIncrease)}
+\item{\code{hospitalizations}}{[dbl] Daily increase in hospitalizedCumulative, calculated from the previous day’s value. (Original: hospitalizedIncrease)}
+\item{\code{deaths}}{[dbl] Daily increase in death, calculated from the previous day’s value. (Original: deathIncrease)}
 }
 
 An object of class \code{list} of length 3.

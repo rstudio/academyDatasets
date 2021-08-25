@@ -42,7 +42,7 @@ covid <-
 covid_dictionary <- describe_dataset(
   covid,
   .title = "COVID-19 US Historical Data by State",
-  data = "Date on which data was collected by The COVID Tracking Project.",
+  date = "Date on which data was collected by The COVID Tracking Project.",
   state = "Two-letter abbreviation for the state or territory.",
   tests = "Daily increase in totalTestResults, calculated from the previous day’s value. (Original: totalTestResultsIncrease)",
   cases = "The daily increase in API field positive, which measures Cases (confirmed plus probable) calculated based on the previous day’s value. (Original: positiveIncrease)",

@@ -24,7 +24,10 @@ Depends:
 Suggests: 
     docthis (>= 0.1.1),
     knitr,
-    skimr
+    skimr,
+    tsibble,
+    utils,
+    vctrs
 Remotes: 
     mdlincoln/docthis
 Encoding: UTF-8

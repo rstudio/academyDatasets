@@ -9,22 +9,22 @@
 A tibble with 130560 rows and 16 variables:
 \describe{
 
-\item{\code{protein}}{[character] Abbreviation of viral protein}
-\item{\code{sequence_accession}}{[character] Unique identifier given to the protein sequence record to allow for tracking of different versions of that sequence.}
-\item{\code{complete_genome}}{[character] Is the viral strain's complete genome known?}
-\item{\code{complete_sequence}}{[character] Is the complete sequence of this viral protein known?}
-\item{\code{segment}}{[double] One of eight single-stranded RNA segments that encodes the viral protein}
-\item{\code{segment_length}}{[double] Number of RNA nucleotides in segment}
-\item{\code{collection_date}}{[double] Date of sample collection}
-\item{\code{host_species}}{[character] Species that the viral strain infects}
-\item{\code{country}}{[character] Country of strain origin}
-\item{\code{state_province}}{[character] State or province of origin if applicable}
-\item{\code{geographic_grouping}}{[character] Geographic origin of viral strain}
-\item{\code{flu_season}}{[character] For geographic regions in the northern hemisphere, the two digit year for the fall and winter season when the strain was recorded.}
-\item{\code{strain_name}}{[character] Name of viral strain}
-\item{\code{sequence}}{[character] Protein sequence in amino acid }
-\item{\code{submission_date}}{[double] Date of entry submission}
-\item{\code{passage_history}}{[character] An indicator of what cell line was used for culturing the virus. Nomenclature for passage history is notoriously unstandardized. See https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6599686/}
+\item{\code{protein}}{[chr] Abbreviation of viral protein}
+\item{\code{sequence_accession}}{[chr] Unique identifier given to the protein sequence record to allow for tracking of different versions of that sequence.}
+\item{\code{complete_genome}}{[chr] Is the viral strain's complete genome known?}
+\item{\code{complete_sequence}}{[chr] Is the complete sequence of this viral protein known?}
+\item{\code{segment}}{[dbl] One of eight single-stranded RNA segments that encodes the viral protein}
+\item{\code{segment_length}}{[dbl] Number of RNA nucleotides in segment}
+\item{\code{collection_date}}{[date] Date of sample collection}
+\item{\code{host_species}}{[chr] Species that the viral strain infects}
+\item{\code{country}}{[chr] Country of strain origin}
+\item{\code{state_province}}{[chr] State or province of origin if applicable}
+\item{\code{geographic_grouping}}{[chr] Geographic origin of viral strain}
+\item{\code{flu_season}}{[chr] For geographic regions in the northern hemisphere, the two digit year for the fall and winter season when the strain was recorded.}
+\item{\code{strain_name}}{[chr] Name of viral strain}
+\item{\code{sequence}}{[chr] Protein sequence in amino acid }
+\item{\code{submission_date}}{[date] Date of entry submission}
+\item{\code{passage_history}}{[chr] An indicator of what cell line was used for culturing the virus. Nomenclature for passage history is notoriously unstandardized. See https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6599686/}
 }
 
 An object of class \code{list} of length 3.

@@ -9,14 +9,14 @@
 A tibble with 3419 rows and 8 variables:
 \describe{
 
-\item{\code{seq_no}}{[double] Respondent sequence number}
-\item{\code{sun_reaction}}{[integer] If after several months of not being in the sun, you then went out in the sun without sunscreen or protective clothing for a half hour, which one of these would happen to your skin?}
-\item{\code{shade}}{[integer] When you go outside on a very sunny day, for more than one hour, how often do you stay in the shade?}
-\item{\code{long_sleeves}}{[integer] When you go outside on a very sunny day, for more than one hour, how often do you wear a long sleeved shirt?}
-\item{\code{sunscreen}}{[integer] When you go outside on a very sunny day, for more than one hour, how often do you use sunscreen?}
-\item{\code{sunburns}}{[double] How many times in the past year have you had a sunburn?}
-\item{\code{time_outdoors_workday}}{[double] During the past 30 days, how much time did you usually spend outdoors between 9 in the morning and 5 in the afternoon on the days that you worked or went to school?}
-\item{\code{time_outdoors_weekend}}{[double] During the past 30 days, how much time did you usually spend outdoors between 9 in the morning and 5 in the afternoon on the days when you were not working or going to school?}
+\item{\code{seq_no}}{[dbl] Respondent sequence number}
+\item{\code{sun_reaction}}{[fct] If after several months of not being in the sun, you then went out in the sun without sunscreen or protective clothing for a half hour, which one of these would happen to your skin?}
+\item{\code{shade}}{[fct] When you go outside on a very sunny day, for more than one hour, how often do you stay in the shade?}
+\item{\code{long_sleeves}}{[fct] When you go outside on a very sunny day, for more than one hour, how often do you wear a long sleeved shirt?}
+\item{\code{sunscreen}}{[fct] When you go outside on a very sunny day, for more than one hour, how often do you use sunscreen?}
+\item{\code{sunburns}}{[dbl] How many times in the past year have you had a sunburn?}
+\item{\code{time_outdoors_workday}}{[dbl] During the past 30 days, how much time did you usually spend outdoors between 9 in the morning and 5 in the afternoon on the days that you worked or went to school?}
+\item{\code{time_outdoors_weekend}}{[dbl] During the past 30 days, how much time did you usually spend outdoors between 9 in the morning and 5 in the afternoon on the days when you were not working or going to school?}
 }
 
 An object of class \code{list} of length 3.

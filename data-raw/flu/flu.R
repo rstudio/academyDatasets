@@ -70,3 +70,11 @@ flu_dictionary <- describe_dataset(
   submission_date = "Date of entry submission",
   passage_history = "An indicator of what cell line was used for culturing the virus. Nomenclature for passage history is notoriously unstandardized. See https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6599686/"
 )
+
+# Add the data to the package ----
+usethis::use_data(
+  flu,
+  flu_dictionary,
+  overwrite = TRUE
+)
+# document the data set with: usethis::use_r("flu")
