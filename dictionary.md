@@ -542,36 +542,42 @@ academyDatasets Data
 
 ## Monash University Weather
 
-`oikolab_weather` has 4 columns and 800,456 rows.
+`oikolab_weather` has 9 columns and 100,057 rows.
 
-| Column        | Type | Description                                                                                                                                                                                                                                    |
-|:--------------|:-----|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| timestamp     | dttm | Datetime of observation                                                                                                                                                                                                                        |
-| series\_name  | chr  | Name of the climate observation                                                                                                                                                                                                                |
-| type          | chr  | Type of observation. One of: temperature (C), dewpoint temperature (C), wind speed (m/s), mean sea level pressure (Pa), relative humidity (0-1), surface solar radiation (W/m^2), surface thermal radiation (W/m^2) or total cloud cover (0-1) |
-| series\_value | dbl  | Value of the climate observation                                                                                                                                                                                                               |
+| Column                      | Type | Description                       |
+|:----------------------------|:-----|:----------------------------------|
+| timestamp                   | dttm | Datetime of observation           |
+| temperature                 | dbl  | temperature (C)                   |
+| dewpoint\_temperature       | dbl  | dewpoint temperature (C)          |
+| wind\_speed                 | dbl  | wind speed (m/s)                  |
+| mean\_sea\_level\_pressure  | dbl  | mean sea level pressure (Pa)      |
+| relative\_humidity          | dbl  | relative humidity (0-1)           |
+| surface\_solar\_radiation   | dbl  | surface solar radiation (W/m^2)   |
+| surface\_thermal\_radiation | dbl  | surface thermal radiation (W/m^2) |
+| total\_cloud\_cover         | dbl  | total cloud cover (0-1)           |
 
     ── Data Summary ────────────────────────
                                Values         
     Name                       oikolab_weather
-    Number of rows             800456         
-    Number of columns          4              
+    Number of rows             100057         
+    Number of columns          9              
     _______________________                   
     Column type frequency:                    
-      character                2              
-      numeric                  1              
+      numeric                  8              
       POSIXct                  1              
     ________________________                  
     Group variables            None           
 
-    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 series_name           0             1     2     2     0        8          0
-    2 type                  0             1    10    25     0        8          0
-
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75    p100 hist 
-    1 series_value          0             1 12769. 33582. -2.32  0.88  8.42  301. 103398. ▇▁▁▁▁
+      skim_variable             n_missing complete_rate       mean      sd       p0       p25       p50       p75      p100 hist 
+    1 temperature                       0             1     14.8     5.58      0.86     10.8      13.9      18        40.4  ▂▇▃▁▁
+    2 dewpoint_temperature              0             1      9.50    3.60     -2.32      6.86      9.09     11.9      22.9  ▁▆▇▃▁
+    3 wind_speed                        0             1      3.91    2.05      0.02      2.3       3.67      5.28     13.2  ▆▇▃▁▁
+    4 mean_sea_level_pressure           0             1 101613.    926.    96726.   101170.   101704.   102202.   103398.   ▁▁▂▇▅
+    5 relative_humidity                 0             1      0.729   0.159     0.12      0.62      0.76      0.85      1.09 ▁▂▅▇▂
+    6 surface_solar_radiation           0             1    183.    265.        0         0         7.22    316.     1112.   ▇▂▁▁▁
+    7 surface_thermal_radiation         0             1    325.     32.9     232.      301.      323.      347.      459.   ▁▇▇▂▁
+    8 total_cloud_cover                 0             1      0.587   0.356     0         0.27      0.65      0.94      1    ▅▂▃▃▇
 
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique

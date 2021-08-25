@@ -7,7 +7,13 @@
 #' @source <https://zenodo.org/record/5184708#.YSVNgNNKiM9>
 #'
 #' @format `r rd_describe_format(oikolab_weather, oikolab_weather_dictionary)`
-"oikolab_weather"
 #'
+#' @examples
+#' # Convert to `tsibble`
+#' library(tsibble)
+#' oikolab_weather %>%
+#'   as_tsibble(index = timestamp)
+"oikolab_weather"
+
 #' @describeIn oikolab_weather The `oikolab_weather` data dictionary
 "oikolab_weather_dictionary"

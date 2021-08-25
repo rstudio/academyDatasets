@@ -6,13 +6,18 @@
 \alias{oikolab_weather_dictionary}
 \title{Monash University Weather Data}
 \format{
-A tibble with 800456 rows and 4 variables:
+A tibble with 100057 rows and 9 variables:
 \describe{
 
 \item{\code{timestamp}}{[dttm] Datetime of observation}
-\item{\code{series_name}}{[chr] Name of the climate observation}
-\item{\code{type}}{[chr] Type of observation. One of: temperature (C), dewpoint temperature (C), wind speed (m/s), mean sea level pressure (Pa), relative humidity (0-1), surface solar radiation (W/m^2), surface thermal radiation (W/m^2) or total cloud cover (0-1)}
-\item{\code{series_value}}{[dbl] Value of the climate observation}
+\item{\code{temperature}}{[dbl] temperature (C)}
+\item{\code{dewpoint_temperature}}{[dbl] dewpoint temperature (C)}
+\item{\code{wind_speed}}{[dbl] wind speed (m/s)}
+\item{\code{mean_sea_level_pressure}}{[dbl] mean sea level pressure (Pa)}
+\item{\code{relative_humidity}}{[dbl] relative humidity (0-1)}
+\item{\code{surface_solar_radiation}}{[dbl] surface solar radiation (W/m^2)}
+\item{\code{surface_thermal_radiation}}{[dbl] surface thermal radiation (W/m^2)}
+\item{\code{total_cloud_cover}}{[dbl] total cloud cover (0-1)}
 }
 
 An object of class \code{list} of length 3.
@@ -34,4 +39,10 @@ Monash University, Clayton, Victoria, Australia from 2010-01-01 to 2021-05-31.
 \item \code{oikolab_weather_dictionary}: The \code{oikolab_weather} data dictionary
 }}
 
+\examples{
+# Convert to `tsibble`
+library(tsibble)
+oikolab_weather \%>\%
+  as_tsibble(index = timestamp)
+}
 \keyword{datasets}
