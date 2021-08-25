@@ -44,4 +44,10 @@ not reflect true tourism trends for these cities.
 \item \code{tourism_dictionary}: The \code{tourism} data dictionary
 }}
 
+\examples{
+# Convert to `tsibble`
+tourism \%>\%
+  dplyr::mutate(month = tsibble::yearmonth(month)) \%>\%
+  tsibble::as_tsibble(key = c("city", "country"), index = month)
+}
 \keyword{datasets}

@@ -13,10 +13,15 @@
 #'
 #' City and countries were fabricated and assigned to the data. This data does
 #' not reflect true tourism trends for these cities.
-#'
 #' @source <https://zenodo.org/record/4656096>
 #'
 #' @format `r rd_describe_format(tourism, tourism_dictionary)`
+#'
+#' @examples
+#' # Convert to `tsibble`
+#' tourism %>%
+#'   dplyr::mutate(month = tsibble::yearmonth(month)) %>%
+#'   tsibble::as_tsibble(key = c("city", "country"), index = month)
 "tourism"
 
 #' @describeIn tourism The `tourism` data dictionary
