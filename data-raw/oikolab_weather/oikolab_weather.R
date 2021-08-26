@@ -1,7 +1,10 @@
 # Retrieve oikolab weather datasets
-library(dplyr)
-library(purrr)
-library(tsibble)
+library(dplyr)   # install.packages("dplyr")
+library(purrr)   # install.packages("purrr")
+library(tibble)  # install.packages("tibble")
+library(tidyr)   # install.packages("tidyr")
+library(tsibble) # install.packages("tsibble")
+
 
 # load {academyDatasets} for access to helper functions
 pkgload::load_all()
