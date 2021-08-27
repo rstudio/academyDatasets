@@ -1,7 +1,7 @@
 #' Solar Power
 #'
 #' @description
-#' This dataset contains contains weekly solar power production records from 137
+#' This dataset contains weekly solar power production records from 137
 #' photovoltaic (PV) power plants in Alabama, in 2006. The data were originally
 #' collected by the National Renewable Energy Laboratory (NREL): https://www.nrel.gov/.
 #'
