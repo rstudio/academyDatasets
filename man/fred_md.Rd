@@ -4,20 +4,24 @@
 \name{fred_md}
 \alias{fred_md}
 \alias{fred_md_dictionary}
-\title{107 macro-economic indicators, from the FRED-MD database}
+\title{U.S. macro-economic indicators from the FRED-MD databas}
 \format{
-A tibble with 77896 rows and 3 variables:
+A tibble with 751 rows and 7 variables:
 \describe{
 
-\item{\code{timestamp}}{[double] Date}
-\item{\code{series_name}}{[character] Name of the macro-economic indicator}
-\item{\code{series_value}}{[double] Value of the indicator}
+\item{\code{date}}{[date] }
+\item{\code{rpi}}{[dbl] Real personal income, in billions of dollars}
+\item{\code{hwi}}{[dbl] Help-wanted index: the number of help-wanted ads in major newspapers}
+\item{\code{unrate}}{[dbl] Civilian unemployment rate (percent)}
+\item{\code{ce16ov}}{[dbl] Millions of employed civilians}
+\item{\code{houst}}{[dbl] Total number of new privately owned houses}
+\item{\code{cpiaucsl}}{[dbl] Consumer price index (all items)}
 }
 
 An object of class \code{list} of length 3.
 }
 \source{
-\url{https://zenodo.org/record/4654833#.YSQGh9NKg8M}
+\url{https://research.stlouisfed.org/econ/mccracken/fred-databases/}
 }
 \usage{
 fred_md
@@ -25,8 +29,11 @@ fred_md
 fred_md_dictionary
 }
 \description{
-A dataset containing various macro-economic indicators tracked by the Federal
+A dataset containing six macro-economic indicators tracked by the Federal
 Reserve Bank, extracted from the FRED-MD database.
+
+For more information on a variable, look it up by name here:
+https://fred.stlouisfed.org/.
 }
 \section{Functions}{
 \itemize{

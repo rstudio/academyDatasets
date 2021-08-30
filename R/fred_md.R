@@ -1,11 +1,14 @@
-#' 107 macro-economic indicators, from the FRED-MD database
+#' U.S. macro-economic indicators from the FRED-MD databas
 #'
 #' @description
 #'
-#' A dataset containing various macro-economic indicators tracked by the Federal
+#' A dataset containing six macro-economic indicators tracked by the Federal
 #' Reserve Bank, extracted from the FRED-MD database.
 #'
-#' @source <https://zenodo.org/record/4654833#.YSQGh9NKg8M>
+#' For more information on a variable, look it up by name here:
+#' https://fred.stlouisfed.org/.
+#'
+#' @source <https://research.stlouisfed.org/econ/mccracken/fred-databases/>
 #'
 #' @format `r rd_describe_format(fred_md, fred_md_dictionary)`
 "fred_md"
