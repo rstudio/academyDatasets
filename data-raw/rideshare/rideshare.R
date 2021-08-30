@@ -21,19 +21,24 @@ rideshare <-
   read_tsf(paste0(dirname(local_file), "/", "rideshare_dataset_with_missing_values.tsf"),
            key = "series_name") %>%
   pluck(1) %>%
-  as_tibble() #%>%
-  select(timestamp = start_timestamp, demand = series_value)
-# SAVE THIS ONE TO AN RDS FILE?
+  as_tibble() %>%
+  select(-series_name) %>%
+  rename(timestamp = start_timestamp) %>%
+  pivot_wider(names_from = type, values_from = series_value)
 
-# rideshare_dictionary <- describe_dataset(
-#   rideshare,
-#   .title = "Victoria, Australia Electricity Demand Data",
-#   timestamp = "Datetime of observation",
-#   demand = "Electricity demand (GW)" # https://otexts.com/fpp2/complexseasonality.html
-# )
-#
-# usethis::use_data(
-#   rideshare,
-#   rideshare_dictionary,
-#   overwrite = TRUE
-# )
+# local_rds <- here::here("data-raw", "rideshare", "rideshare.rds")
+# saveRDS(rideshare, file = local_rds)
+#  readRDS(file = local_rds)
+
+rideshare_dictionary <- describe_dataset(
+  rideshare,
+  .title = "Hourly Rideshare Service Data",
+  timestamp = "Datetime of observation",
+  demand = "Electricity demand (GW)" # https://otexts.com/fpp2/complexseasonality.html
+)
+
+usethis::use_data(
+  rideshare,
+  rideshare_dictionary,
+  overwrite = TRUE
+)
