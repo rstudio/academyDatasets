@@ -26,7 +26,7 @@ When you're done with the process below, you'll push this branch to GitHub and o
 One way to quickly create this branch is to use [usethis](https://usethis.r-lib.org).
 
 ```r
-usethis::pr_init("dataset-name"")
+usethis::pr_init("dataset-name")
 ```
 
 ### Import and clean the data (`data-raw/<dataset>/<dataset>.R`)
