@@ -23,6 +23,7 @@ Depends:
     R (>= 2.10)
 Suggests: 
     docthis (>= 0.1.1),
+    dplyr,
     knitr,
     skimr,
     tsibble,

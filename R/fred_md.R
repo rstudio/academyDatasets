@@ -1,4 +1,4 @@
-#' U.S. macro-economic indicators from the FRED-MD databas
+#' U.S. macro-economic indicators from the FRED-MD database.
 #'
 #' @description
 #'
@@ -11,6 +11,14 @@
 #' @source <https://research.stlouisfed.org/econ/mccracken/fred-databases/>
 #'
 #' @format `r rd_describe_format(fred_md, fred_md_dictionary)`
+#'
+#' @examples
+#' # Convert to `tsibble`
+#' library(dplyr)
+#' library(tsibble)
+#' fred_md %>%
+#'   mutate(date = yearmonth(date)) %>%
+#'   as_tsibble(index = date)
 "fred_md"
 
 #' @describeIn fred_md The `fred_md` data dictionary

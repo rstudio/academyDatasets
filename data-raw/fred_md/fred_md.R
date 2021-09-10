@@ -21,7 +21,8 @@ fred_md <-
     HOUST,
     CPIAUCSL
   ) %>%
-  rename_with(str_to_lower)
+  rename_with(str_to_lower) %>%
+  filter(!is.na(date))
 
 fred_md_dictionary <- describe_dataset(
   fred_md,
