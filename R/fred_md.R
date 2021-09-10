@@ -6,7 +6,7 @@
 #' Reserve Bank, extracted from the FRED-MD database.
 #'
 #' For more information on a variable, look it up by name here:
-#' https://fred.stlouisfed.org/.
+#' <https://fred.stlouisfed.org/>
 #'
 #' @source <https://research.stlouisfed.org/econ/mccracken/fred-databases/>
 #'
