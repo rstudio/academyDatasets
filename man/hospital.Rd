@@ -34,5 +34,16 @@ Monthly patient count for products that are related to medical problems. There a
 \item \code{hospital_dictionary}: The \code{hospital} data dictionary
 }}
 
+\examples{
+# Convert to `tsibble`
+library(tsibble)
+library(dplyr)
+hospital \%>\%
+  mutate(
+    date = as.Date(paste(year, month, "1", sep = "-")),
+    .keep = "unused"
+  ) \%>\%
+    as_tsibble(key = c(sku, entity_code), index = date)
+}
 \concept{hospital timeseries datasets}
 \keyword{datasets}

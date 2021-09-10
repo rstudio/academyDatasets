@@ -7,6 +7,17 @@
 #' @family hospital timeseries datasets
 #'
 #' @format `r rd_describe_format(hospital, hospital_dictionary)`
+#'
+#' @examples
+#' # Convert to `tsibble`
+#' library(tsibble)
+#' library(dplyr)
+#' hospital %>%
+#'   mutate(
+#'     date = as.Date(paste(year, month, "1", sep = "-")),
+#'     .keep = "unused"
+#'   ) %>%
+#'     as_tsibble(key = c(sku, entity_code), index = date)
 "hospital"
 
 #' @describeIn hospital The `hospital` data dictionary
