@@ -4,7 +4,7 @@
 \name{fred_md}
 \alias{fred_md}
 \alias{fred_md_dictionary}
-\title{U.S. macro-economic indicators from the FRED-MD databas}
+\title{U.S. macro-economic indicators from the FRED-MD database.}
 \format{
 A tibble with 751 rows and 7 variables:
 \describe{
@@ -40,4 +40,12 @@ https://fred.stlouisfed.org/.
 \item \code{fred_md_dictionary}: The \code{fred_md} data dictionary
 }}
 
+\examples{
+# Convert to `tsibble`
+library(dplyr)
+library(tsibble)
+fred_md \%>\%
+  mutate(date = yearmonth(date)) \%>\%
+  as_tsibble(index = date)
+}
 \keyword{datasets}
