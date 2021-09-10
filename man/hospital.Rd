@@ -40,10 +40,10 @@ library(tsibble)
 library(dplyr)
 hospital \%>\%
   mutate(
-    date = as.Date(paste(year, month, "1", sep = "-")),
+    date = yearmonth(paste(year, month, sep = "-")),
     .keep = "unused"
   ) \%>\%
-    as_tsibble(key = c(sku, entity_code), index = date)
+  as_tsibble(key = c(sku, entity_code), index = date)
 }
 \concept{hospital timeseries datasets}
 \keyword{datasets}

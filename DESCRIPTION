@@ -22,8 +22,8 @@ BugReports: https://github.com/rstudio/academyDatasets/issues
 Depends: 
     R (>= 2.10)
 Suggests: 
-    dplyr,
     docthis (>= 0.1.1),
+    dplyr,
     knitr,
     skimr,
     tsibble,
