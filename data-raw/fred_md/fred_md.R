@@ -27,12 +27,12 @@ fred_md <-
 fred_md_dictionary <- describe_dataset(
   fred_md,
   .title = "U.S. macro-economic indicators from the FRED-MD database",
-  timestamp = "Date",
+  date = "Date",
   rpi = "Real personal income, in billions of dollars",
   hwi =
     "Help-wanted index: the number of help-wanted ads in major newspapers",
   unrate = "Civilian unemployment rate (percent)",
-  ce16ov = "Millions of employed civilians",
+  ce16ov = "Thousands of employed civilians",
   houst = "Total number of new privately owned houses",
   cpiaucsl = "Consumer price index (all items)"
 )

@@ -9,11 +9,11 @@
 A tibble with 751 rows and 7 variables:
 \describe{
 
-\item{\code{date}}{[date] }
+\item{\code{date}}{[date] Date}
 \item{\code{rpi}}{[dbl] Real personal income, in billions of dollars}
 \item{\code{hwi}}{[dbl] Help-wanted index: the number of help-wanted ads in major newspapers}
 \item{\code{unrate}}{[dbl] Civilian unemployment rate (percent)}
-\item{\code{ce16ov}}{[dbl] Millions of employed civilians}
+\item{\code{ce16ov}}{[dbl] Thousands of employed civilians}
 \item{\code{houst}}{[dbl] Total number of new privately owned houses}
 \item{\code{cpiaucsl}}{[dbl] Consumer price index (all items)}
 }
@@ -33,7 +33,7 @@ A dataset containing six macro-economic indicators tracked by the Federal
 Reserve Bank, extracted from the FRED-MD database.
 
 For more information on a variable, look it up by name here:
-https://fred.stlouisfed.org/.
+\url{https://fred.stlouisfed.org/}
 }
 \section{Functions}{
 \itemize{
