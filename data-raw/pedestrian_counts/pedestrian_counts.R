@@ -21,7 +21,8 @@ pedestrian_counts <-
     date = start_timestamp,
     sensor_id = series_name,
     ped_count = series_value
-  )
+  ) %>%
+  mutate(ped_count = as.integer(ped_count))
 
 lubridate::second(pedestrian_counts$date) <- 0
 
