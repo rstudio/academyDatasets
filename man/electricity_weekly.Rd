@@ -11,7 +11,7 @@ A tibble with 50076 rows and 3 variables:
 
 \item{\code{client}}{[chr] ID of the electric company client}
 \item{\code{date}}{[date] Date}
-\item{\code{power}}{[dbl] Weekly electricity consumption, in kilowatts (kW)}
+\item{\code{power}}{[int] Weekly electricity consumption, in kilowatts (kW)}
 }
 
 An object of class \code{list} of length 3.
