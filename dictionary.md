@@ -1,7 +1,10 @@
 academyDatasets Data
 ================
 
+-   [`aus_electricity`](#australian-electricity-demand)
+-   [`car_parts`](#monthly-car-part-sales)
 -   [`covid`](#covid-19-us-historical-data-by-state)
+-   [`elec_demand`](#victoria--australia-electricity-demand)
 -   [`encounters`](#patient-encounter)
 -   [`fda_adverse_daily`](#daily-counts-of-fda-drug-adverse-event-reports)
 -   [`fda_pt_drugs`](#patient-and-drug-information-for-fda-drug-adverse-events)
@@ -13,6 +16,7 @@ academyDatasets Data
 -   [`nhanes_sleep`](#national-health-and-nutrition-examination-survey--sleep-disorders--2017-2018)
 -   [`ny_air`](#daily-predicted-new-york-air-quality)
 -   [`oikolab_weather`](#monash-university-weather)
+-   [`pedestrian_counts`](#melbourne-pedestrian-count)
 -   [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
 -   [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
 -   [`sdtm_demographics`](#sdtm-formatted-demographic)
@@ -20,6 +24,76 @@ academyDatasets Data
 -   [`sdtm_subject_visits`](#sdtm-subject-visits)
 -   [`sdtm_vital_signs`](#sdtm-vital-signs)
 -   [`vaccines`](#covid-19-vaccine-allocation)
+
+## Australian electricity demand
+
+`aus_electricity` has 3 columns and 1,155,264 rows.
+
+| Column | Type | Description                                                                                                           |
+|:-------|:-----|:----------------------------------------------------------------------------------------------------------------------|
+| date   | dttm | Starting date-time of demand reading                                                                                  |
+| state  | chr  | State abbreviation: Victoria (VIC), New South Wales (NSW), Queensland (QUN), Tasmania (TAS), and South Australia (SA) |
+| demand | dbl  | Half-hourly electricity demand in MW                                                                                  |
+
+    ── Data Summary ────────────────────────
+                               Values         
+    Name                       aus_electricity
+    Number of rows             1155264        
+    Number of columns          3              
+    _______________________                   
+    Column type frequency:                    
+      character                1              
+      numeric                  1              
+      POSIXct                  1              
+    ________________________                  
+    Group variables            None           
+
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+    1 state                 0             1     2     3     0        5          0
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75   p100 hist 
+    1 demand                0             1 3500. 2438. -234. 1065. 3837. 5216. 12866. ▇▆▅▁▁
+
+    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min                 max                 median              n_unique
+    1 date                  0             1 2002-01-01 00:00:00 2015-04-01 23:30:00 2008-08-03 19:00:00   232272
+
+## Monthly Car Part Sales
+
+`car_parts` has 3 columns and 136,374 rows.
+
+| Column    | Type | Description                     |
+|:----------|:-----|:--------------------------------|
+| part\_num | chr  | ID of the car part              |
+| date      | date | Start date of the month         |
+| qty       | int  | Number of parts sold that month |
+
+    ── Data Summary ────────────────────────
+                               Values   
+    Name                       car_parts
+    Number of rows             136374   
+    Number of columns          3        
+    _______________________             
+    Column type frequency:              
+      character                1        
+      Date                     1        
+      numeric                  1        
+    ________________________            
+    Group variables            None     
+
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+    1 part_num              0             1     2     5     0     2674          0
+
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 date                  0             1 1998-01-01 2002-03-01 2000-02-01       51
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
+    1 qty                6122         0.955 0.508  1.28     0     0     0     1    52 ▇▁▁▁▁
 
 ## COVID-19 US Historical Data by State
 
@@ -61,6 +135,35 @@ academyDatasets Data
     2 cases                    0             1  1384.   3024.    -7757   65    435  1335.  71734 ▇▁▁▁▁
     3 hospitalizations         0             1    37.4   208.   -12257    0      0    36   16373 ▁▁▇▁▁
     4 deaths                   0             1    24.8    60.2    -201    0      6    24    2559 ▇▁▁▁▁
+
+## Victoria, Australia Electricity Demand
+
+`elec_demand` has 2 columns and 17,520 rows.
+
+| Column    | Type | Description             |
+|:----------|:-----|:------------------------|
+| timestamp | dttm | Datetime of observation |
+| demand    | dbl  | Electricity demand (GW) |
+
+    ── Data Summary ────────────────────────
+                               Values     
+    Name                       elec_demand
+    Number of rows             17520      
+    Number of columns          2          
+    _______________________               
+    Column type frequency:                
+      numeric                  1          
+      POSIXct                  1          
+    ________________________              
+    Group variables            None       
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
+    1 demand                0             1  4.61 0.878  2.86  3.93  4.60  5.16  9.35 ▆▇▂▁▁
+
+    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min                 max                 median              n_unique
+    1 timestamp             0             1 2014-01-01 00:00:01 2014-12-31 23:30:01 2014-07-02 11:45:01    17520
 
 ## Patient encounter
 
@@ -582,6 +685,41 @@ academyDatasets Data
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 timestamp             0             1 2010-01-01 00:00:00 2021-06-01 00:00:00 2015-09-16 12:00:00   100057
+
+## Melbourne pedestrian count
+
+`pedestrian_counts` has 3 columns and 3,132,346 rows.
+
+| Column     | Type | Description                 |
+|:-----------|:-----|:----------------------------|
+| date       | dttm | Date-time of sensor reading |
+| sensor\_id | chr  | Sensor ID                   |
+| ped\_count | int  | Hourly count of pedestrians |
+
+    ── Data Summary ────────────────────────
+                               Values           
+    Name                       pedestrian_counts
+    Number of rows             3132346          
+    Number of columns          3                
+    _______________________                     
+    Column type frequency:                      
+      character                1                
+      numeric                  1                
+      POSIXct                  1                
+    ________________________                    
+    Group variables            None             
+
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+    1 sensor_id             0             1     2     3     0       66          0
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
+    1 ped_count             0             1  602.  834.     0    60   242   797 15979 ▇▁▁▁▁
+
+    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min                 max                 median              n_unique
+    1 date                  0             1 2009-05-01 00:00:00 2020-04-30 23:00:00 2016-06-03 14:00:00    96432
 
 ## SDTM formatted Adverse Event
 
