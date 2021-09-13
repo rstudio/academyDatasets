@@ -585,7 +585,7 @@ academyDatasets Data
 |:-----------|:-----|:----------------------------|
 | date       | dttm | Date-time of sensor reading |
 | sensor\_id | chr  | Sensor ID                   |
-| ped\_count | dbl  | Hourly count of pedestrians |
+| ped\_count | int  | Hourly count of pedestrians |
 
     ── Data Summary ────────────────────────
                                Values           
@@ -610,7 +610,7 @@ academyDatasets Data
 
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
-    1 date                  0             1 2009-05-01 00:00:01 2020-04-30 23:00:01 2016-06-03 14:00:01    98723
+    1 date                  0             1 2009-05-01 00:00:00 2020-04-30 23:00:00 2016-06-03 14:00:00    96432
 
 ## Hourly Summaries of Rideshare Service
 
@@ -631,7 +631,7 @@ academyDatasets Data
 | surge\_min        | dbl  | Minimum multiplier by which price was increased, default 1 |
 | surge\_mean       | dbl  | Mean multiplier by which price was increased, default 1    |
 | surge\_max        | dbl  | Maximum multiplier by which price was increased, default 1 |
-| api\_calls        | dbl  | Number of API calls in the hour                            |
+| api\_calls        | int  | Number of API calls in the hour                            |
 | temp              | dbl  | Temperature (F)                                            |
 | rain              | dbl  | Rain in the last hour (inches)                             |
 | humidity          | dbl  | Humidity (%)                                               |

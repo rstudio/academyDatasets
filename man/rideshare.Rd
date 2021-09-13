@@ -22,7 +22,7 @@ A tibble with 84396 rows and 19 variables:
 \item{\code{surge_min}}{[dbl] Minimum multiplier by which price was increased, default 1}
 \item{\code{surge_mean}}{[dbl] Mean multiplier by which price was increased, default 1}
 \item{\code{surge_max}}{[dbl] Maximum multiplier by which price was increased, default 1}
-\item{\code{api_calls}}{[dbl] Number of API calls in the hour}
+\item{\code{api_calls}}{[int] Number of API calls in the hour}
 \item{\code{temp}}{[dbl] Temperature (F)}
 \item{\code{rain}}{[dbl] Rain in the last hour (inches)}
 \item{\code{humidity}}{[dbl] Humidity (\%)}
