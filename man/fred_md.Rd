@@ -11,10 +11,10 @@ A tibble with 751 rows and 7 variables:
 
 \item{\code{date}}{[date] Date}
 \item{\code{rpi}}{[dbl] Real personal income, in billions of dollars}
-\item{\code{hwi}}{[dbl] Help-wanted index: the number of help-wanted ads in major newspapers}
+\item{\code{hwi}}{[int] Help-wanted index: the number of help-wanted ads in major newspapers}
 \item{\code{unrate}}{[dbl] Civilian unemployment rate (percent)}
 \item{\code{ce16ov}}{[dbl] Thousands of employed civilians}
-\item{\code{houst}}{[dbl] Total number of new privately owned houses}
+\item{\code{houst}}{[int] Total number of new privately owned houses}
 \item{\code{cpiaucsl}}{[dbl] Consumer price index (all items)}
 }
 
