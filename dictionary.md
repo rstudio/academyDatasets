@@ -14,7 +14,6 @@ academyDatasets Data
 -   [`nhanes_sleep`](#national-health-and-nutrition-examination-survey--sleep-disorders--2017-2018)
 -   [`ny_air`](#daily-predicted-new-york-air-quality)
 -   [`pedestrian_counts`](#melbourne-pedestrian-count)
--   [`rideshare`](#hourly-summaries-of-rideshare-service)
 -   [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
 -   [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
 -   [`sdtm_demographics`](#sdtm-formatted-demographic)
