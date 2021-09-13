@@ -11,7 +11,8 @@ sunspots <-
   read_tsf(key = "series_name") %>%
   pluck(1) %>%
   as_tibble() %>%
-  select(date = start_timestamp, sunspots = series_value)
+  select(date = start_timestamp, sunspots = series_value) %>%
+  mutate(sunspots = as.integer(sunspots))
 
 sunspots_dictionary <- describe_dataset(
   sunspots,
