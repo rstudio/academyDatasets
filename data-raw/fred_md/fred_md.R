@@ -22,7 +22,8 @@ fred_md <-
     CPIAUCSL
   ) %>%
   rename_with(str_to_lower) %>%
-  filter(!is.na(date))
+  filter(!is.na(date)) %>%
+  mutate(across(c(hwi, houst), as.integer))
 
 fred_md_dictionary <- describe_dataset(
   fred_md,
