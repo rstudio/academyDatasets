@@ -13,6 +13,7 @@ academyDatasets Data
 -   [`nhanes_dermatology`](#national-health-and-nutrition-examination-survey--dermatology--2017-2018)
 -   [`nhanes_sleep`](#national-health-and-nutrition-examination-survey--sleep-disorders--2017-2018)
 -   [`ny_air`](#daily-predicted-new-york-air-quality)
+-   [`pedestrian_counts`](#melbourne-pedestrian-count)
 -   [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
 -   [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
 -   [`sdtm_demographics`](#sdtm-formatted-demographic)
@@ -574,6 +575,41 @@ academyDatasets Data
     1 county                0             1 62    35.8  1     31    62    93    123   ▇▇▇▇▇
     2 pm25_max              0             1  7.05  3.52 0.753  4.56  6.37  8.82  31.0 ▇▆▁▁▁
     3 pm25_median           0             1  6.55  3.31 0.629  4.20  5.91  8.23  30.1 ▇▅▁▁▁
+
+## Melbourne pedestrian count
+
+`pedestrian_counts` has 3 columns and 3,132,346 rows.
+
+| Column     | Type | Description                 |
+|:-----------|:-----|:----------------------------|
+| date       | dttm | Date-time of sensor reading |
+| sensor\_id | chr  | Sensor ID                   |
+| ped\_count | dbl  | Hourly count of pedestrians |
+
+    ── Data Summary ────────────────────────
+                               Values           
+    Name                       pedestrian_counts
+    Number of rows             3132346          
+    Number of columns          3                
+    _______________________                     
+    Column type frequency:                      
+      character                1                
+      numeric                  1                
+      POSIXct                  1                
+    ________________________                    
+    Group variables            None             
+
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+    1 sensor_id             0             1     2     3     0       66          0
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
+    1 ped_count             0             1  602.  834.     0    60   242   797 15979 ▇▁▁▁▁
+
+    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min                 max                 median              n_unique
+    1 date                  0             1 2009-05-01 00:00:01 2020-04-30 23:00:01 2016-06-03 14:00:01    98723
 
 ## SDTM formatted Adverse Event
 
