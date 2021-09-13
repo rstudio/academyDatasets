@@ -1,9 +1,7 @@
 academyDatasets Data
 ================
 
--   [`aus_electricity`](#australian-electricity-demand)
 -   [`covid`](#covid-19-us-historical-data-by-state)
--   [`elec_demand`](#victoria--australia-electricity-demand)
 -   [`encounters`](#patient-encounter)
 -   [`fda_adverse_daily`](#daily-counts-of-fda-drug-adverse-event-reports)
 -   [`fda_pt_drugs`](#patient-and-drug-information-for-fda-drug-adverse-events)
@@ -14,7 +12,7 @@ academyDatasets Data
 -   [`nhanes_dermatology`](#national-health-and-nutrition-examination-survey--dermatology--2017-2018)
 -   [`nhanes_sleep`](#national-health-and-nutrition-examination-survey--sleep-disorders--2017-2018)
 -   [`ny_air`](#daily-predicted-new-york-air-quality)
--   [`pedestrian_counts`](#melbourne-pedestrian-count)
+-   [`oikolab_weather`](#monash-university-weather)
 -   [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
 -   [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
 -   [`sdtm_demographics`](#sdtm-formatted-demographic)
@@ -22,41 +20,6 @@ academyDatasets Data
 -   [`sdtm_subject_visits`](#sdtm-subject-visits)
 -   [`sdtm_vital_signs`](#sdtm-vital-signs)
 -   [`vaccines`](#covid-19-vaccine-allocation)
-
-## Australian electricity demand
-
-`aus_electricity` has 3 columns and 1,155,264 rows.
-
-| Column | Type | Description                                                                                                           |
-|:-------|:-----|:----------------------------------------------------------------------------------------------------------------------|
-| date   | dttm | Starting date-time of demand reading                                                                                  |
-| state  | chr  | State abbreviation: Victoria (VIC), New South Wales (NSW), Queensland (QUN), Tasmania (TAS), and South Australia (SA) |
-| demand | dbl  | Half-hourly electricity demand in MW                                                                                  |
-
-    ── Data Summary ────────────────────────
-                               Values         
-    Name                       aus_electricity
-    Number of rows             1155264        
-    Number of columns          3              
-    _______________________                   
-    Column type frequency:                    
-      character                1              
-      numeric                  1              
-      POSIXct                  1              
-    ________________________                  
-    Group variables            None           
-
-    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 state                 0             1     2     3     0        5          0
-
-    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75   p100 hist 
-    1 demand                0             1 3500. 2438. -234. 1065. 3837. 5216. 12866. ▇▆▅▁▁
-
-    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate min                 max                 median              n_unique
-    1 date                  0             1 2002-01-01 00:00:00 2015-04-01 23:30:00 2008-08-03 19:00:00   232272
 
 ## COVID-19 US Historical Data by State
 
@@ -98,35 +61,6 @@ academyDatasets Data
     2 cases                    0             1  1384.   3024.    -7757   65    435  1335.  71734 ▇▁▁▁▁
     3 hospitalizations         0             1    37.4   208.   -12257    0      0    36   16373 ▁▁▇▁▁
     4 deaths                   0             1    24.8    60.2    -201    0      6    24    2559 ▇▁▁▁▁
-
-## Victoria, Australia Electricity Demand
-
-`elec_demand` has 2 columns and 17,520 rows.
-
-| Column    | Type | Description             |
-|:----------|:-----|:------------------------|
-| timestamp | dttm | Datetime of observation |
-| demand    | dbl  | Electricity demand (GW) |
-
-    ── Data Summary ────────────────────────
-                               Values     
-    Name                       elec_demand
-    Number of rows             17520      
-    Number of columns          2          
-    _______________________               
-    Column type frequency:                
-      numeric                  1          
-      POSIXct                  1          
-    ________________________              
-    Group variables            None       
-
-    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
-    1 demand                0             1  4.61 0.878  2.86  3.93  4.60  5.16  9.35 ▆▇▂▁▁
-
-    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate min                 max                 median              n_unique
-    1 timestamp             0             1 2014-01-01 00:00:01 2014-12-31 23:30:01 2014-07-02 11:45:01    17520
 
 ## Patient encounter
 
@@ -606,40 +540,48 @@ academyDatasets Data
     2 pm25_max              0             1  7.05  3.52 0.753  4.56  6.37  8.82  31.0 ▇▆▁▁▁
     3 pm25_median           0             1  6.55  3.31 0.629  4.20  5.91  8.23  30.1 ▇▅▁▁▁
 
-## Melbourne pedestrian count
+## Monash University Weather
 
-`pedestrian_counts` has 3 columns and 3,132,346 rows.
+`oikolab_weather` has 9 columns and 100,057 rows.
 
-| Column     | Type | Description                 |
-|:-----------|:-----|:----------------------------|
-| date       | dttm | Date-time of sensor reading |
-| sensor\_id | chr  | Sensor ID                   |
-| ped\_count | dbl  | Hourly count of pedestrians |
+| Column                      | Type | Description                       |
+|:----------------------------|:-----|:----------------------------------|
+| timestamp                   | dttm | Datetime of observation           |
+| temperature                 | dbl  | temperature (C)                   |
+| dewpoint\_temperature       | dbl  | dewpoint temperature (C)          |
+| wind\_speed                 | dbl  | wind speed (m/s)                  |
+| mean\_sea\_level\_pressure  | dbl  | mean sea level pressure (Pa)      |
+| relative\_humidity          | dbl  | relative humidity (0-1)           |
+| surface\_solar\_radiation   | dbl  | surface solar radiation (W/m^2)   |
+| surface\_thermal\_radiation | dbl  | surface thermal radiation (W/m^2) |
+| total\_cloud\_cover         | dbl  | total cloud cover (0-1)           |
 
     ── Data Summary ────────────────────────
-                               Values           
-    Name                       pedestrian_counts
-    Number of rows             3132346          
-    Number of columns          3                
-    _______________________                     
-    Column type frequency:                      
-      character                1                
-      numeric                  1                
-      POSIXct                  1                
-    ________________________                    
-    Group variables            None             
-
-    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 sensor_id             0             1     2     3     0       66          0
+                               Values         
+    Name                       oikolab_weather
+    Number of rows             100057         
+    Number of columns          9              
+    _______________________                   
+    Column type frequency:                    
+      numeric                  8              
+      POSIXct                  1              
+    ________________________                  
+    Group variables            None           
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
-    1 ped_count             0             1  602.  834.     0    60   242   797 15979 ▇▁▁▁▁
+      skim_variable             n_missing complete_rate       mean      sd       p0       p25       p50       p75      p100 hist 
+    1 temperature                       0             1     14.8     5.58      0.86     10.8      13.9      18        40.4  ▂▇▃▁▁
+    2 dewpoint_temperature              0             1      9.50    3.60     -2.32      6.86      9.09     11.9      22.9  ▁▆▇▃▁
+    3 wind_speed                        0             1      3.91    2.05      0.02      2.3       3.67      5.28     13.2  ▆▇▃▁▁
+    4 mean_sea_level_pressure           0             1 101613.    926.    96726.   101170.   101704.   102202.   103398.   ▁▁▂▇▅
+    5 relative_humidity                 0             1      0.729   0.159     0.12      0.62      0.76      0.85      1.09 ▁▂▅▇▂
+    6 surface_solar_radiation           0             1    183.    265.        0         0         7.22    316.     1112.   ▇▂▁▁▁
+    7 surface_thermal_radiation         0             1    325.     32.9     232.      301.      323.      347.      459.   ▁▇▇▂▁
+    8 total_cloud_cover                 0             1      0.587   0.356     0         0.27      0.65      0.94      1    ▅▂▃▃▇
 
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
-    1 date                  0             1 2009-05-01 00:00:01 2020-04-30 23:00:01 2016-06-03 14:00:01    98723
+    1 timestamp             0             1 2010-01-01 00:00:00 2021-06-01 00:00:00 2015-09-16 12:00:00   100057
 
 ## SDTM formatted Adverse Event
 
