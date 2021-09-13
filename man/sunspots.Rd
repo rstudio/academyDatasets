@@ -10,7 +10,7 @@ A tibble with 73924 rows and 2 variables:
 \describe{
 
 \item{\code{date}}{[date] Date of observation}
-\item{\code{sunspots}}{[dbl] Observed number of sunspots}
+\item{\code{sunspots}}{[int] Observed number of sunspots}
 }
 
 An object of class \code{list} of length 3.

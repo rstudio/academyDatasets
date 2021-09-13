@@ -7,7 +7,7 @@ url_sunspots <- "https://zenodo.org/record/4654773/files/sunspot_dataset_with_mi
 #===============================================================================
 
 sunspots <-
-  archive::archive_read(url_zip) %>%
+  archive::archive_read(url_sunspots) %>%
   read_tsf(key = "series_name") %>%
   pluck(1) %>%
   as_tibble() %>%
