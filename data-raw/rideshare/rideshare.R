@@ -24,7 +24,8 @@ rideshare <-
   as_tibble() %>%
   select(-series_name) %>%
   rename(timestamp = start_timestamp) %>%
-  pivot_wider(names_from = type, values_from = series_value)
+  pivot_wider(names_from = type, values_from = series_value) %>%
+  mutate(api_calls = as.integer(api_calls))
 
 local_rds <- here::here("data-raw", "rideshare", "rideshare.rds")
 saveRDS(rideshare, file = local_rds)
