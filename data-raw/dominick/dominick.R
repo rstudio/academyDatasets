@@ -36,7 +36,7 @@ dominick <- dominick_raw %>%
     -matches("deli."), -matches("meat."), -matches("video.")
   ) %>%
   mutate(
-    store    = switch_case(store, 69 ~ 137, preserve = TRUE),
+    store    = as.integer(switch_case(store, 69 ~ 137, preserve = TRUE)),
     date     = paste0("19", date) %>% as.Date("%Y%m%d"),
     custcoun = as.integer(custcoun),
     across(where(is.numeric), na_if_in, ~ . < 0)

@@ -9,7 +9,7 @@
 A tibble with 279519 rows and 25 variables:
 \describe{
 
-\item{\code{store}}{[dbl] Store number}
+\item{\code{store}}{[int] Store number}
 \item{\code{date}}{[date] Date}
 \item{\code{custcoun}}{[int] Number of customers}
 \item{\code{grocery}}{[dbl] Non-specialty grocery sales in dollars}
