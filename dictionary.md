@@ -2,9 +2,7 @@ academyDatasets Data
 ================
 
 -   [`aus_electricity`](#australian-electricity-demand)
--   [`car_parts`](#monthly-car-part-sales)
 -   [`covid`](#covid-19-us-historical-data-by-state)
--   [`elec_demand`](#victoria--australia-electricity-demand)
 -   [`encounters`](#patient-encounter)
 -   [`fda_adverse_daily`](#daily-counts-of-fda-drug-adverse-event-reports)
 -   [`fda_pt_drugs`](#patient-and-drug-information-for-fda-drug-adverse-events)
@@ -15,8 +13,8 @@ academyDatasets Data
 -   [`nhanes_dermatology`](#national-health-and-nutrition-examination-survey--dermatology--2017-2018)
 -   [`nhanes_sleep`](#national-health-and-nutrition-examination-survey--sleep-disorders--2017-2018)
 -   [`ny_air`](#daily-predicted-new-york-air-quality)
--   [`oikolab_weather`](#monash-university-weather)
 -   [`pedestrian_counts`](#melbourne-pedestrian-count)
+-   [`rideshare`](#hourly-summaries-of-rideshare-service)
 -   [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
 -   [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
 -   [`sdtm_demographics`](#sdtm-formatted-demographic)
@@ -60,41 +58,6 @@ academyDatasets Data
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 date                  0             1 2002-01-01 00:00:00 2015-04-01 23:30:00 2008-08-03 19:00:00   232272
 
-## Monthly Car Part Sales
-
-`car_parts` has 3 columns and 136,374 rows.
-
-| Column    | Type | Description                     |
-|:----------|:-----|:--------------------------------|
-| part\_num | chr  | ID of the car part              |
-| date      | date | Start date of the month         |
-| qty       | int  | Number of parts sold that month |
-
-    ── Data Summary ────────────────────────
-                               Values   
-    Name                       car_parts
-    Number of rows             136374   
-    Number of columns          3        
-    _______________________             
-    Column type frequency:              
-      character                1        
-      Date                     1        
-      numeric                  1        
-    ________________________            
-    Group variables            None     
-
-    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 part_num              0             1     2     5     0     2674          0
-
-    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate min        max        median     n_unique
-    1 date                  0             1 1998-01-01 2002-03-01 2000-02-01       51
-
-    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
-    1 qty                6122         0.955 0.508  1.28     0     0     0     1    52 ▇▁▁▁▁
-
 ## COVID-19 US Historical Data by State
 
 `covid` has 6 columns and 20,780 rows.
@@ -135,35 +98,6 @@ academyDatasets Data
     2 cases                    0             1  1384.   3024.    -7757   65    435  1335.  71734 ▇▁▁▁▁
     3 hospitalizations         0             1    37.4   208.   -12257    0      0    36   16373 ▁▁▇▁▁
     4 deaths                   0             1    24.8    60.2    -201    0      6    24    2559 ▇▁▁▁▁
-
-## Victoria, Australia Electricity Demand
-
-`elec_demand` has 2 columns and 17,520 rows.
-
-| Column    | Type | Description             |
-|:----------|:-----|:------------------------|
-| timestamp | dttm | Datetime of observation |
-| demand    | dbl  | Electricity demand (GW) |
-
-    ── Data Summary ────────────────────────
-                               Values     
-    Name                       elec_demand
-    Number of rows             17520      
-    Number of columns          2          
-    _______________________               
-    Column type frequency:                
-      numeric                  1          
-      POSIXct                  1          
-    ________________________              
-    Group variables            None       
-
-    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
-    1 demand                0             1  4.61 0.878  2.86  3.93  4.60  5.16  9.35 ▆▇▂▁▁
-
-    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate min                 max                 median              n_unique
-    1 timestamp             0             1 2014-01-01 00:00:01 2014-12-31 23:30:01 2014-07-02 11:45:01    17520
 
 ## Patient encounter
 
@@ -643,49 +577,6 @@ academyDatasets Data
     2 pm25_max              0             1  7.05  3.52 0.753  4.56  6.37  8.82  31.0 ▇▆▁▁▁
     3 pm25_median           0             1  6.55  3.31 0.629  4.20  5.91  8.23  30.1 ▇▅▁▁▁
 
-## Monash University Weather
-
-`oikolab_weather` has 9 columns and 100,057 rows.
-
-| Column                      | Type | Description                       |
-|:----------------------------|:-----|:----------------------------------|
-| timestamp                   | dttm | Datetime of observation           |
-| temperature                 | dbl  | temperature (C)                   |
-| dewpoint\_temperature       | dbl  | dewpoint temperature (C)          |
-| wind\_speed                 | dbl  | wind speed (m/s)                  |
-| mean\_sea\_level\_pressure  | dbl  | mean sea level pressure (Pa)      |
-| relative\_humidity          | dbl  | relative humidity (0-1)           |
-| surface\_solar\_radiation   | dbl  | surface solar radiation (W/m^2)   |
-| surface\_thermal\_radiation | dbl  | surface thermal radiation (W/m^2) |
-| total\_cloud\_cover         | dbl  | total cloud cover (0-1)           |
-
-    ── Data Summary ────────────────────────
-                               Values         
-    Name                       oikolab_weather
-    Number of rows             100057         
-    Number of columns          9              
-    _______________________                   
-    Column type frequency:                    
-      numeric                  8              
-      POSIXct                  1              
-    ________________________                  
-    Group variables            None           
-
-    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable             n_missing complete_rate       mean      sd       p0       p25       p50       p75      p100 hist 
-    1 temperature                       0             1     14.8     5.58      0.86     10.8      13.9      18        40.4  ▂▇▃▁▁
-    2 dewpoint_temperature              0             1      9.50    3.60     -2.32      6.86      9.09     11.9      22.9  ▁▆▇▃▁
-    3 wind_speed                        0             1      3.91    2.05      0.02      2.3       3.67      5.28     13.2  ▆▇▃▁▁
-    4 mean_sea_level_pressure           0             1 101613.    926.    96726.   101170.   101704.   102202.   103398.   ▁▁▂▇▅
-    5 relative_humidity                 0             1      0.729   0.159     0.12      0.62      0.76      0.85      1.09 ▁▂▅▇▂
-    6 surface_solar_radiation           0             1    183.    265.        0         0         7.22    316.     1112.   ▇▂▁▁▁
-    7 surface_thermal_radiation         0             1    325.     32.9     232.      301.      323.      347.      459.   ▁▇▇▂▁
-    8 total_cloud_cover                 0             1      0.587   0.356     0         0.27      0.65      0.94      1    ▅▂▃▃▇
-
-    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate min                 max                 median              n_unique
-    1 timestamp             0             1 2010-01-01 00:00:00 2021-06-01 00:00:00 2015-09-16 12:00:00   100057
-
 ## Melbourne pedestrian count
 
 `pedestrian_counts` has 3 columns and 3,132,346 rows.
@@ -720,6 +611,73 @@ academyDatasets Data
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 date                  0             1 2009-05-01 00:00:00 2020-04-30 23:00:00 2016-06-03 14:00:00    96432
+
+## Hourly Summaries of Rideshare Service
+
+`rideshare` has 19 columns and 84,396 rows.
+
+| Column            | Type | Description                                                |
+|:------------------|:-----|:-----------------------------------------------------------|
+| source\_location  | chr  | Starting point of the ride                                 |
+| provider\_name    | chr  | Rideshare service provider                                 |
+| provider\_service | chr  | Provider-specific ride type identifier                     |
+| timestamp         | dttm | Hour                                                       |
+| price\_min        | dbl  | Minimum price estimate for rides in USD                    |
+| price\_mean       | dbl  | Mean price estimate for rides in USD                       |
+| price\_max        | dbl  | Maxmimum price estimate for rides in USD                   |
+| distance\_min     | dbl  | Minimum Distance between source and destination            |
+| distance\_mean    | dbl  | Mean Distance between source and destination               |
+| distance\_max     | dbl  | Maximum Distance between source and destination            |
+| surge\_min        | dbl  | Minimum multiplier by which price was increased, default 1 |
+| surge\_mean       | dbl  | Mean multiplier by which price was increased, default 1    |
+| surge\_max        | dbl  | Maximum multiplier by which price was increased, default 1 |
+| api\_calls        | int  | Number of API calls in the hour                            |
+| temp              | dbl  | Temperature (F)                                            |
+| rain              | dbl  | Rain in the last hour (inches)                             |
+| humidity          | dbl  | Humidity (%)                                               |
+| clouds            | dbl  | Cloud cover (0-1)                                          |
+| wind              | dbl  | Wind speed (mph)                                           |
+
+    ── Data Summary ────────────────────────
+                               Values   
+    Name                       rideshare
+    Number of rows             84396    
+    Number of columns          19       
+    _______________________             
+    Column type frequency:              
+      character                3        
+      numeric                  15       
+      POSIXct                  1        
+    ________________________            
+    Group variables            None     
+
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable    n_missing complete_rate   min   max empty n_unique whitespace
+    1 source_location          0             1     6    23     0       12          0
+    2 provider_name            0             1     4     4     0        2          0
+    3 provider_service         0             1     3    12     0       13          0
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       skim_variable n_missing complete_rate     mean       sd    p0   p25    p50    p75   p100 hist 
+     1 price_min         37311         0.558 12.5      7.25     2.5   7    10.5   16.5   55     ▇▃▂▁▁
+     2 price_mean        37311         0.558 16.6      8.49     3     9.35 15.0   21.7   55     ▇▆▃▁▁
+     3 price_max         37311         0.558 23.4     12.5      3    13.5  21.5   31.5   97.5   ▇▆▁▁▁
+     4 distance_min      33386         0.604  1.00     0.505    0.02  0.56  0.99   1.35   6.09  ▇▃▁▁▁
+     5 distance_mean     33386         0.604  2.19     0.619    0.03  1.77  2.12   2.66   6.09  ▁▇▅▁▁
+     6 distance_max      33386         0.604  3.64     1.23     0.03  2.71  3.31   4.44   7.86  ▁▇▇▂▁
+     7 surge_min         33386         0.604  1.00     0.00636  1     1     1      1      2     ▇▁▁▁▁
+     8 surge_mean        33386         0.604  1.01     0.0362   1     1     1      1      2     ▇▁▁▁▁
+     9 surge_max         33386         0.604  1.12     0.267    1     1     1      1      3     ▇▁▁▁▁
+    10 api_calls         33386         0.604 13.6      6.28     1    10    12     16     53     ▇▇▁▁▁
+    11 temp              33698         0.601 39.0      6.97    19.6  35.3  40.1   43.8   55.4   ▁▃▇▇▂
+    12 rain              33698         0.601  0.00502  0.0260   0     0     0      0      0.360 ▇▁▁▁▁
+    13 humidity          33698         0.601  0.748    0.132    0.45  0.64  0.73   0.875  0.99  ▂▆▇▆▇
+    14 clouds            33698         0.601  0.661    0.319    0     0.42  0.757  0.957  1     ▂▂▃▂▇
+    15 wind              33698         0.601  6.54     3.67     0.3   3.33  6.2    9.57  18.2   ▇▇▇▂▁
+
+    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min                 max                 median              n_unique
+    1 timestamp             0             1 2018-11-26 06:00:00 2018-12-18 18:00:00 2018-12-07 12:00:00      541
 
 ## SDTM formatted Adverse Event
 
