@@ -5,7 +5,6 @@ academyDatasets Data
 -   [`car_parts`](#monthly-car-part-sales)
 -   [`covid`](#covid-19-us-historical-data-by-state)
 -   [`elec_demand`](#victoria--australia-electricity-demand)
--   [`electricity_weekly`](#weekly-electricity-consumption)
 -   [`encounters`](#patient-encounter)
 -   [`fda_adverse_daily`](#daily-counts-of-fda-drug-adverse-event-reports)
 -   [`fda_pt_drugs`](#patient-and-drug-information-for-fda-drug-adverse-events)
@@ -165,41 +164,6 @@ academyDatasets Data
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 timestamp             0             1 2014-01-01 00:00:01 2014-12-31 23:30:01 2014-07-02 11:45:01    17520
-
-## Weekly Electricity Consumption
-
-`electricity_weekly` has 3 columns and 50,076 rows.
-
-| Column | Type | Description                                       |
-|:-------|:-----|:--------------------------------------------------|
-| client | chr  | ID of the electric company client                 |
-| date   | date | Date                                              |
-| power  | int  | Weekly electricity consumption, in kilowatts (kW) |
-
-    ── Data Summary ────────────────────────
-                               Values            
-    Name                       electricity_weekly
-    Number of rows             50076             
-    Number of columns          3                 
-    _______________________                      
-    Column type frequency:                       
-      character                1                 
-      Date                     1                 
-      numeric                  1                 
-    ________________________                     
-    Group variables            None              
-
-    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 client                0             1     3     5     0      321          0
-
-    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate min        max        median     n_unique
-    1 date                  0             1 2012-01-01 2014-12-21 2013-06-26      156
-
-    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate    mean       sd    p0    p25   p50     p75     p100 hist 
-    1 power                 0             1 426778. 2212413.     0 47782. 96071 243288. 63075300 ▇▁▁▁▁
 
 ## Patient encounter
 
