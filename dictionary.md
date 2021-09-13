@@ -3,6 +3,7 @@ academyDatasets Data
 
 -   [`aus_electricity`](#australian-electricity-demand)
 -   [`covid`](#covid-19-us-historical-data-by-state)
+-   [`elec_demand`](#victoria--australia-electricity-demand)
 -   [`encounters`](#patient-encounter)
 -   [`fda_adverse_daily`](#daily-counts-of-fda-drug-adverse-event-reports)
 -   [`fda_pt_drugs`](#patient-and-drug-information-for-fda-drug-adverse-events)
@@ -97,6 +98,35 @@ academyDatasets Data
     2 cases                    0             1  1384.   3024.    -7757   65    435  1335.  71734 ▇▁▁▁▁
     3 hospitalizations         0             1    37.4   208.   -12257    0      0    36   16373 ▁▁▇▁▁
     4 deaths                   0             1    24.8    60.2    -201    0      6    24    2559 ▇▁▁▁▁
+
+## Victoria, Australia Electricity Demand
+
+`elec_demand` has 2 columns and 17,520 rows.
+
+| Column    | Type | Description             |
+|:----------|:-----|:------------------------|
+| timestamp | dttm | Datetime of observation |
+| demand    | dbl  | Electricity demand (GW) |
+
+    ── Data Summary ────────────────────────
+                               Values     
+    Name                       elec_demand
+    Number of rows             17520      
+    Number of columns          2          
+    _______________________               
+    Column type frequency:                
+      numeric                  1          
+      POSIXct                  1          
+    ________________________              
+    Group variables            None       
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
+    1 demand                0             1  4.61 0.878  2.86  3.93  4.60  5.16  9.35 ▆▇▂▁▁
+
+    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min                 max                 median              n_unique
+    1 timestamp             0             1 2014-01-01 00:00:01 2014-12-31 23:30:01 2014-07-02 11:45:01    17520
 
 ## Patient encounter
 
