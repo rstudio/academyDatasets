@@ -13,7 +13,7 @@
 #' # Convert to `tsibble`
 #' library(tsibble)
 #' aus_electricity %>%
-#'   tsibble::as_tsibble(key = state, index = date)
+#'   as_tsibble(key = state, index = date)
 #'
 #' @describeIn aus_electricity The `aus_electricity` data dictionary
 "aus_electricity_dictionary"
