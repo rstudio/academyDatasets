@@ -37,7 +37,7 @@ Australia: Victoria, New South Wales, Queensland, Tasmania, and South Australia.
 # Convert to `tsibble`
 library(tsibble)
 aus_electricity \%>\%
-  tsibble::as_tsibble(key = state, index = date)
+  as_tsibble(key = state, index = date)
 
 }
 \keyword{datasets}

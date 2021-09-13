@@ -11,7 +11,7 @@ A tibble with 136374 rows and 3 variables:
 
 \item{\code{part_num}}{[chr] ID of the car part}
 \item{\code{date}}{[date] Start date of the month}
-\item{\code{qty}}{[dbl] Number of parts sold that month}
+\item{\code{qty}}{[int] Number of parts sold that month}
 }
 
 An object of class \code{list} of length 3.
