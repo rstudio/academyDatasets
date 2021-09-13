@@ -4,16 +4,11 @@ Version: 0.1.0
 Authors@R: 
     c(person(given = "Garrick",
              family = "Aden-Buie",
-             role = c("cre", "aut"),
-             email = "garrick@rstudio.com"),
-      person(given = "Desirée",
-             family = "De Leon",
-             role = "aut",
-             email = "desiree@rstudio.com"),
-      person(given = "Garrett",
-             family = "Grolemund",
-             role = "aut",
-             email = "garrett@rstudio.com"))
+             role = c("aut", "cre"),
+             email = "garrick@rstudio.com",
+             comment = c(ORCID = "0000-0002-7111-0077")),
+      person(given = "RStudio",
+             role = c("cph", "fnd")))
 Description: A set of datasets for use with RStudio Academy exercises,
     tutorials, and recipes.
 License: file LICENSE

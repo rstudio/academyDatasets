@@ -1,6 +1,7 @@
 academyDatasets Data
 ================
 
+-   [`aus_electricity`](#australian-electricity-demand)
 -   [`car_parts`](#monthly-car-part-sales)
 -   [`covid`](#covid-19-us-historical-data-by-state)
 -   [`encounters`](#patient-encounter)
@@ -20,6 +21,41 @@ academyDatasets Data
 -   [`sdtm_subject_visits`](#sdtm-subject-visits)
 -   [`sdtm_vital_signs`](#sdtm-vital-signs)
 -   [`vaccines`](#covid-19-vaccine-allocation)
+
+## Australian electricity demand
+
+`aus_electricity` has 3 columns and 1,155,264 rows.
+
+| Column | Type | Description                                                                                                           |
+|:-------|:-----|:----------------------------------------------------------------------------------------------------------------------|
+| date   | dttm | Starting date-time of demand reading                                                                                  |
+| state  | chr  | State abbreviation: Victoria (VIC), New South Wales (NSW), Queensland (QUN), Tasmania (TAS), and South Australia (SA) |
+| demand | dbl  | Half-hourly electricity demand in MW                                                                                  |
+
+    ── Data Summary ────────────────────────
+                               Values         
+    Name                       aus_electricity
+    Number of rows             1155264        
+    Number of columns          3              
+    _______________________                   
+    Column type frequency:                    
+      character                1              
+      numeric                  1              
+      POSIXct                  1              
+    ________________________                  
+    Group variables            None           
+
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+    1 state                 0             1     2     3     0        5          0
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75   p100 hist 
+    1 demand                0             1 3500. 2438. -234. 1065. 3837. 5216. 12866. ▇▆▅▁▁
+
+    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min                 max                 median              n_unique
+    1 date                  0             1 2002-01-01 00:00:00 2015-04-01 23:30:00 2008-08-03 19:00:00   232272
 
 ## Monthly Car Part Sales
 
