@@ -24,8 +24,10 @@ electricity_weekly <-
   pluck(1) %>%
   as_tibble() %>%
   select(client = series_name, date = start_timestamp, power = series_value) %>%
-  mutate(client = str_replace(client, "T", "EC"))
-
+  mutate(
+    client = str_replace(client, "T", "EC"),
+    power = as.integer(power)
+  )
 
 electricity_weekly_dictionary <- describe_dataset(
   electricity_weekly,
