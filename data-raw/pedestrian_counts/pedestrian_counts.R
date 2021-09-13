@@ -23,6 +23,8 @@ pedestrian_counts <-
     ped_count = series_value
   )
 
+lubridate::second(pedestrian_counts$date) <- 0
+
 pedestrian_counts_dictionary <- describe_dataset(
   pedestrian_counts,
   .title = "Melbourne pedestrian count data",

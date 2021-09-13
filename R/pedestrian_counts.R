@@ -13,7 +13,7 @@
 #' # Convert to `tsibble`
 #' library(tsibble)
 #' pedestrian_counts %>%
-#'   tsibble::as_tsibble(key = sensor_id, index = date)
+#'   as_tsibble(key = sensor_id, index = date)
 #'
 #' @describeIn pedestrian_counts The `pedestrian_counts` data dictionary
 "pedestrian_counts_dictionary"
