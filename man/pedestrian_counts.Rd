@@ -11,7 +11,7 @@ A tibble with 3132346 rows and 3 variables:
 
 \item{\code{date}}{[dttm] Date-time of sensor reading}
 \item{\code{sensor_id}}{[chr] Sensor ID}
-\item{\code{ped_count}}{[dbl] Hourly count of pedestrians}
+\item{\code{ped_count}}{[int] Hourly count of pedestrians}
 }
 
 An object of class \code{list} of length 3.
@@ -37,7 +37,7 @@ Melbourne city, starting from May 2009.
 # Convert to `tsibble`
 library(tsibble)
 pedestrian_counts \%>\%
-  tsibble::as_tsibble(key = sensor_id, index = date)
+  as_tsibble(key = sensor_id, index = date)
 
 }
 \keyword{datasets}
