@@ -24,7 +24,10 @@ car_parts <-
   pluck(1) %>%
   as_tibble() %>%
   select(part_num = series_name, date = start_timestamp, qty = series_value) %>%
-  mutate(part_num = str_replace(part_num, "T", "P"))
+  mutate(
+    part_num = str_replace(part_num, "T", "P"),
+    qty = as.integer(qty)
+  )
 
 
 car_parts_dictionary <- describe_dataset(
