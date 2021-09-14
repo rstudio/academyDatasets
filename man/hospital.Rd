@@ -11,9 +11,9 @@ A tibble with 64428 rows and 5 variables:
 
 \item{\code{sku}}{[chr] Hospital stock-keeping unit (SKU) code, representing a specific medical product}
 \item{\code{entity_code}}{[chr] Code related to medical product for use with medical billing and insurance purposes}
-\item{\code{month}}{[dbl] Month of interest}
-\item{\code{year}}{[dbl] Year of interest}
-\item{\code{patient_counts}}{[dbl] Number of patients who received the medical product}
+\item{\code{month}}{[int] Month of interest}
+\item{\code{year}}{[int] Year of interest}
+\item{\code{patient_counts}}{[int] Number of patients who received the medical product}
 }
 
 An object of class \code{list} of length 3.
