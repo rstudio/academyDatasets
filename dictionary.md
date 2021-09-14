@@ -10,6 +10,7 @@ academyDatasets Data
 -   [`fda_adverse_daily`](#daily-counts-of-fda-drug-adverse-event-reports)
 -   [`fda_pt_drugs`](#patient-and-drug-information-for-fda-drug-adverse-events)
 -   [`flu`](#protein-sequences-of-influenza-b-virus-strains)
+-   [`fred_md`](#u-s--macro-economic-indicators-from-the-fred-md-database)
 -   [`mdrd`](#modification-of-diet-in-renal-disease)
 -   [`mdrd_supplemental`](#modification-of-diet-in-renal-disease---supplemental)
 -   [`medications`](#patient-medication)
@@ -18,12 +19,14 @@ academyDatasets Data
 -   [`ny_air`](#daily-predicted-new-york-air-quality)
 -   [`oikolab_weather`](#monash-university-weather)
 -   [`pedestrian_counts`](#melbourne-pedestrian-count)
+-   [`rideshare`](#hourly-summaries-of-rideshare-service)
 -   [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
 -   [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
 -   [`sdtm_demographics`](#sdtm-formatted-demographic)
 -   [`sdtm_lab_results`](#sdtm-laboratory-test-results)
 -   [`sdtm_subject_visits`](#sdtm-subject-visits)
 -   [`sdtm_vital_signs`](#sdtm-vital-signs)
+-   [`sunspots`](#sunspots)
 -   [`vaccines`](#covid-19-vaccine-allocation)
 
 ## Australian electricity demand
@@ -419,6 +422,45 @@ academyDatasets Data
     1 segment                0             1    5.19   2.25     1     3     6     7     8 ▃▂▅▅▇
     2 segment_length         0             1 1628.   480.    1024  1154  1530  2181  2396 ▇▅▃▁▆
 
+## U.S. macro-economic indicators from the FRED-MD database
+
+`fred_md` has 7 columns and 751 rows.
+
+| Column   | Type | Description                                                          |
+|:---------|:-----|:---------------------------------------------------------------------|
+| date     | date | Date                                                                 |
+| rpi      | dbl  | Real personal income, in billions of dollars                         |
+| hwi      | int  | Help-wanted index: the number of help-wanted ads in major newspapers |
+| unrate   | dbl  | Civilian unemployment rate (percent)                                 |
+| ce16ov   | dbl  | Thousands of employed civilians                                      |
+| houst    | int  | Total number of new privately owned houses                           |
+| cpiaucsl | dbl  | Consumer price index (all items)                                     |
+
+    ── Data Summary ────────────────────────
+                               Values 
+    Name                       fred_md
+    Number of rows             751    
+    Number of columns          7      
+    _______________________           
+    Column type frequency:            
+      Date                     1      
+      numeric                  6      
+    ________________________          
+    Group variables            None   
+
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 date                  0             1 1959-01-01 2021-07-01 1990-04-01      751
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate      mean       sd      p0     p25      p50     p75     p100 hist 
+    1 rpi                   0         1       8562.    4397.    2442.   4789.    7718.   12389.  21268.  ▇▅▅▃▁
+    2 hwi                   1         0.999   3888.    1320.    1357    3016.    3834.    4652.  10073   ▅▇▂▁▁
+    3 unrate                0         1          5.99     1.66     3.4     4.9      5.7      7      14.8 ▇▆▂▁▁
+    4 ce16ov                0         1     113063.   28879.   63684   86300.  117655   139342. 158735   ▇▆▆▇▇
+    5 houst                 0         1       1430.     388.     478    1193     1455     1650    2494   ▂▅▇▃▁
+    6 cpiaucsl              0         1        130.      76.6     29.0    50.2    129.     199.    272.  ▇▃▅▃▃
+
 ## Modification of Diet in Renal Disease
 
 `mdrd` has 10 columns and 1,988 rows.
@@ -757,6 +799,73 @@ academyDatasets Data
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 date                  0             1 2009-05-01 00:00:00 2020-04-30 23:00:00 2016-06-03 14:00:00    96432
 
+## Hourly Summaries of Rideshare Service
+
+`rideshare` has 19 columns and 84,396 rows.
+
+| Column            | Type | Description                                                |
+|:------------------|:-----|:-----------------------------------------------------------|
+| source\_location  | chr  | Starting point of the ride                                 |
+| provider\_name    | chr  | Rideshare service provider                                 |
+| provider\_service | chr  | Provider-specific ride type identifier                     |
+| timestamp         | dttm | Hour                                                       |
+| price\_min        | dbl  | Minimum price estimate for rides in USD                    |
+| price\_mean       | dbl  | Mean price estimate for rides in USD                       |
+| price\_max        | dbl  | Maxmimum price estimate for rides in USD                   |
+| distance\_min     | dbl  | Minimum Distance between source and destination            |
+| distance\_mean    | dbl  | Mean Distance between source and destination               |
+| distance\_max     | dbl  | Maximum Distance between source and destination            |
+| surge\_min        | dbl  | Minimum multiplier by which price was increased, default 1 |
+| surge\_mean       | dbl  | Mean multiplier by which price was increased, default 1    |
+| surge\_max        | dbl  | Maximum multiplier by which price was increased, default 1 |
+| api\_calls        | int  | Number of API calls in the hour                            |
+| temp              | dbl  | Temperature (F)                                            |
+| rain              | dbl  | Rain in the last hour (inches)                             |
+| humidity          | dbl  | Humidity (%)                                               |
+| clouds            | dbl  | Cloud cover (0-1)                                          |
+| wind              | dbl  | Wind speed (mph)                                           |
+
+    ── Data Summary ────────────────────────
+                               Values   
+    Name                       rideshare
+    Number of rows             84396    
+    Number of columns          19       
+    _______________________             
+    Column type frequency:              
+      character                3        
+      numeric                  15       
+      POSIXct                  1        
+    ________________________            
+    Group variables            None     
+
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable    n_missing complete_rate   min   max empty n_unique whitespace
+    1 source_location          0             1     6    23     0       12          0
+    2 provider_name            0             1     4     4     0        2          0
+    3 provider_service         0             1     3    12     0       13          0
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       skim_variable n_missing complete_rate     mean       sd    p0   p25    p50    p75   p100 hist 
+     1 price_min         37311         0.558 12.5      7.25     2.5   7    10.5   16.5   55     ▇▃▂▁▁
+     2 price_mean        37311         0.558 16.6      8.49     3     9.35 15.0   21.7   55     ▇▆▃▁▁
+     3 price_max         37311         0.558 23.4     12.5      3    13.5  21.5   31.5   97.5   ▇▆▁▁▁
+     4 distance_min      33386         0.604  1.00     0.505    0.02  0.56  0.99   1.35   6.09  ▇▃▁▁▁
+     5 distance_mean     33386         0.604  2.19     0.619    0.03  1.77  2.12   2.66   6.09  ▁▇▅▁▁
+     6 distance_max      33386         0.604  3.64     1.23     0.03  2.71  3.31   4.44   7.86  ▁▇▇▂▁
+     7 surge_min         33386         0.604  1.00     0.00636  1     1     1      1      2     ▇▁▁▁▁
+     8 surge_mean        33386         0.604  1.01     0.0362   1     1     1      1      2     ▇▁▁▁▁
+     9 surge_max         33386         0.604  1.12     0.267    1     1     1      1      3     ▇▁▁▁▁
+    10 api_calls         33386         0.604 13.6      6.28     1    10    12     16     53     ▇▇▁▁▁
+    11 temp              33698         0.601 39.0      6.97    19.6  35.3  40.1   43.8   55.4   ▁▃▇▇▂
+    12 rain              33698         0.601  0.00502  0.0260   0     0     0      0      0.360 ▇▁▁▁▁
+    13 humidity          33698         0.601  0.748    0.132    0.45  0.64  0.73   0.875  0.99  ▂▆▇▆▇
+    14 clouds            33698         0.601  0.661    0.319    0     0.42  0.757  0.957  1     ▂▂▃▂▇
+    15 wind              33698         0.601  6.54     3.67     0.3   3.33  6.2    9.57  18.2   ▇▇▇▂▁
+
+    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min                 max                 median              n_unique
+    1 timestamp             0             1 2018-11-26 06:00:00 2018-12-18 18:00:00 2018-12-07 12:00:00      541
+
 ## SDTM formatted Adverse Event
 
 `sdtm_adverse_events` has 14 columns and 357 rows.
@@ -1066,6 +1175,35 @@ academyDatasets Data
     3 VSSTRESN            314         0.901  58.0   31.1   11.6  36.7  56.9  78.9  153. ▇▃▅▂▁
     4 VSSTNRLO              0         1      50.5   24.6   16    36.6  50    60     90  ▃▃▇▁▃
     5 VSSTNRHI              0         1      67.4   35.4   20    37    80    80    120  ▇▁▇▁▃
+
+## sunspots
+
+`sunspots` has 2 columns and 73,924 rows.
+
+| Column   | Type | Description                 |
+|:---------|:-----|:----------------------------|
+| date     | date | Date of observation         |
+| sunspots | int  | Observed number of sunspots |
+
+    ── Data Summary ────────────────────────
+                               Values  
+    Name                       sunspots
+    Number of rows             73924   
+    Number of columns          2       
+    _______________________            
+    Column type frequency:             
+      Date                     1       
+      numeric                  1       
+    ________________________           
+    Group variables            None    
+
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 date                  0             1 1818-01-08 2020-05-31 1919-03-21    73924
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
+    1 sunspots           3240         0.956  82.7  77.3     0    21    63   127   528 ▇▃▁▁▁
 
 ## COVID-19 Vaccine Allocation
 
