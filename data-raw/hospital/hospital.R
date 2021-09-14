@@ -30,7 +30,7 @@ hospital <-
     entity_code = m_price_hosp_los2000_root_entity_code
   ) %>%
   mutate(
-    across(month:year, as.double)
+    across(c(month, year, patient_counts), as.integer)
   )
 
 hospital_dictionary <-
