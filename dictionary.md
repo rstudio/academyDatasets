@@ -2,17 +2,22 @@ academyDatasets Data
 ================
 
 -   [`aus_electricity`](#australian-electricity-demand)
+-   [`car_parts`](#monthly-car-part-sales)
 -   [`covid`](#covid-19-us-historical-data-by-state)
+-   [`elec_demand`](#victoria--australia-electricity-demand)
+-   [`electricity_weekly`](#weekly-electricity-consumption)
 -   [`encounters`](#patient-encounter)
 -   [`fda_adverse_daily`](#daily-counts-of-fda-drug-adverse-event-reports)
 -   [`fda_pt_drugs`](#patient-and-drug-information-for-fda-drug-adverse-events)
 -   [`flu`](#protein-sequences-of-influenza-b-virus-strains)
+-   [`fred_md`](#u-s--macro-economic-indicators-from-the-fred-md-database)
 -   [`mdrd`](#modification-of-diet-in-renal-disease)
 -   [`mdrd_supplemental`](#modification-of-diet-in-renal-disease---supplemental)
 -   [`medications`](#patient-medication)
 -   [`nhanes_dermatology`](#national-health-and-nutrition-examination-survey--dermatology--2017-2018)
 -   [`nhanes_sleep`](#national-health-and-nutrition-examination-survey--sleep-disorders--2017-2018)
 -   [`ny_air`](#daily-predicted-new-york-air-quality)
+-   [`oikolab_weather`](#monash-university-weather)
 -   [`pedestrian_counts`](#melbourne-pedestrian-count)
 -   [`rideshare`](#hourly-summaries-of-rideshare-service)
 -   [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
@@ -21,6 +26,7 @@ academyDatasets Data
 -   [`sdtm_lab_results`](#sdtm-laboratory-test-results)
 -   [`sdtm_subject_visits`](#sdtm-subject-visits)
 -   [`sdtm_vital_signs`](#sdtm-vital-signs)
+-   [`sunspots`](#sunspots)
 -   [`vaccines`](#covid-19-vaccine-allocation)
 
 ## Australian electricity demand
@@ -57,6 +63,41 @@ academyDatasets Data
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 date                  0             1 2002-01-01 00:00:00 2015-04-01 23:30:00 2008-08-03 19:00:00   232272
+
+## Monthly Car Part Sales
+
+`car_parts` has 3 columns and 136,374 rows.
+
+| Column    | Type | Description                     |
+|:----------|:-----|:--------------------------------|
+| part\_num | chr  | ID of the car part              |
+| date      | date | Start date of the month         |
+| qty       | int  | Number of parts sold that month |
+
+    ── Data Summary ────────────────────────
+                               Values   
+    Name                       car_parts
+    Number of rows             136374   
+    Number of columns          3        
+    _______________________             
+    Column type frequency:              
+      character                1        
+      Date                     1        
+      numeric                  1        
+    ________________________            
+    Group variables            None     
+
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+    1 part_num              0             1     2     5     0     2674          0
+
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 date                  0             1 1998-01-01 2002-03-01 2000-02-01       51
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
+    1 qty                6122         0.955 0.508  1.28     0     0     0     1    52 ▇▁▁▁▁
 
 ## COVID-19 US Historical Data by State
 
@@ -98,6 +139,70 @@ academyDatasets Data
     2 cases                    0             1  1384.   3024.    -7757   65    435  1335.  71734 ▇▁▁▁▁
     3 hospitalizations         0             1    37.4   208.   -12257    0      0    36   16373 ▁▁▇▁▁
     4 deaths                   0             1    24.8    60.2    -201    0      6    24    2559 ▇▁▁▁▁
+
+## Victoria, Australia Electricity Demand
+
+`elec_demand` has 2 columns and 17,520 rows.
+
+| Column    | Type | Description             |
+|:----------|:-----|:------------------------|
+| timestamp | dttm | Datetime of observation |
+| demand    | dbl  | Electricity demand (GW) |
+
+    ── Data Summary ────────────────────────
+                               Values     
+    Name                       elec_demand
+    Number of rows             17520      
+    Number of columns          2          
+    _______________________               
+    Column type frequency:                
+      numeric                  1          
+      POSIXct                  1          
+    ________________________              
+    Group variables            None       
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
+    1 demand                0             1  4.61 0.878  2.86  3.93  4.60  5.16  9.35 ▆▇▂▁▁
+
+    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min                 max                 median              n_unique
+    1 timestamp             0             1 2014-01-01 00:00:01 2014-12-31 23:30:01 2014-07-02 11:45:01    17520
+
+## Weekly Electricity Consumption
+
+`electricity_weekly` has 3 columns and 50,076 rows.
+
+| Column | Type | Description                                       |
+|:-------|:-----|:--------------------------------------------------|
+| client | chr  | ID of the electric company client                 |
+| date   | date | Date                                              |
+| power  | int  | Weekly electricity consumption, in kilowatts (kW) |
+
+    ── Data Summary ────────────────────────
+                               Values            
+    Name                       electricity_weekly
+    Number of rows             50076             
+    Number of columns          3                 
+    _______________________                      
+    Column type frequency:                       
+      character                1                 
+      Date                     1                 
+      numeric                  1                 
+    ________________________                     
+    Group variables            None              
+
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+    1 client                0             1     3     5     0      321          0
+
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 date                  0             1 2012-01-01 2014-12-21 2013-06-26      156
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate    mean       sd    p0    p25   p50     p75     p100 hist 
+    1 power                 0             1 426778. 2212413.     0 47782. 96071 243288. 63075300 ▇▁▁▁▁
 
 ## Patient encounter
 
@@ -316,6 +421,45 @@ academyDatasets Data
       skim_variable  n_missing complete_rate    mean     sd    p0   p25   p50   p75  p100 hist 
     1 segment                0             1    5.19   2.25     1     3     6     7     8 ▃▂▅▅▇
     2 segment_length         0             1 1628.   480.    1024  1154  1530  2181  2396 ▇▅▃▁▆
+
+## U.S. macro-economic indicators from the FRED-MD database
+
+`fred_md` has 7 columns and 751 rows.
+
+| Column   | Type | Description                                                          |
+|:---------|:-----|:---------------------------------------------------------------------|
+| date     | date | Date                                                                 |
+| rpi      | dbl  | Real personal income, in billions of dollars                         |
+| hwi      | int  | Help-wanted index: the number of help-wanted ads in major newspapers |
+| unrate   | dbl  | Civilian unemployment rate (percent)                                 |
+| ce16ov   | dbl  | Thousands of employed civilians                                      |
+| houst    | int  | Total number of new privately owned houses                           |
+| cpiaucsl | dbl  | Consumer price index (all items)                                     |
+
+    ── Data Summary ────────────────────────
+                               Values 
+    Name                       fred_md
+    Number of rows             751    
+    Number of columns          7      
+    _______________________           
+    Column type frequency:            
+      Date                     1      
+      numeric                  6      
+    ________________________          
+    Group variables            None   
+
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 date                  0             1 1959-01-01 2021-07-01 1990-04-01      751
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate      mean       sd      p0     p25      p50     p75     p100 hist 
+    1 rpi                   0         1       8562.    4397.    2442.   4789.    7718.   12389.  21268.  ▇▅▅▃▁
+    2 hwi                   1         0.999   3888.    1320.    1357    3016.    3834.    4652.  10073   ▅▇▂▁▁
+    3 unrate                0         1          5.99     1.66     3.4     4.9      5.7      7      14.8 ▇▆▂▁▁
+    4 ce16ov                0         1     113063.   28879.   63684   86300.  117655   139342. 158735   ▇▆▆▇▇
+    5 houst                 0         1       1430.     388.     478    1193     1455     1650    2494   ▂▅▇▃▁
+    6 cpiaucsl              0         1        130.      76.6     29.0    50.2    129.     199.    272.  ▇▃▅▃▃
 
 ## Modification of Diet in Renal Disease
 
@@ -576,6 +720,49 @@ academyDatasets Data
     1 county                0             1 62    35.8  1     31    62    93    123   ▇▇▇▇▇
     2 pm25_max              0             1  7.05  3.52 0.753  4.56  6.37  8.82  31.0 ▇▆▁▁▁
     3 pm25_median           0             1  6.55  3.31 0.629  4.20  5.91  8.23  30.1 ▇▅▁▁▁
+
+## Monash University Weather
+
+`oikolab_weather` has 9 columns and 100,057 rows.
+
+| Column                      | Type | Description                       |
+|:----------------------------|:-----|:----------------------------------|
+| timestamp                   | dttm | Datetime of observation           |
+| temperature                 | dbl  | temperature (C)                   |
+| dewpoint\_temperature       | dbl  | dewpoint temperature (C)          |
+| wind\_speed                 | dbl  | wind speed (m/s)                  |
+| mean\_sea\_level\_pressure  | dbl  | mean sea level pressure (Pa)      |
+| relative\_humidity          | dbl  | relative humidity (0-1)           |
+| surface\_solar\_radiation   | dbl  | surface solar radiation (W/m^2)   |
+| surface\_thermal\_radiation | dbl  | surface thermal radiation (W/m^2) |
+| total\_cloud\_cover         | dbl  | total cloud cover (0-1)           |
+
+    ── Data Summary ────────────────────────
+                               Values         
+    Name                       oikolab_weather
+    Number of rows             100057         
+    Number of columns          9              
+    _______________________                   
+    Column type frequency:                    
+      numeric                  8              
+      POSIXct                  1              
+    ________________________                  
+    Group variables            None           
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable             n_missing complete_rate       mean      sd       p0       p25       p50       p75      p100 hist 
+    1 temperature                       0             1     14.8     5.58      0.86     10.8      13.9      18        40.4  ▂▇▃▁▁
+    2 dewpoint_temperature              0             1      9.50    3.60     -2.32      6.86      9.09     11.9      22.9  ▁▆▇▃▁
+    3 wind_speed                        0             1      3.91    2.05      0.02      2.3       3.67      5.28     13.2  ▆▇▃▁▁
+    4 mean_sea_level_pressure           0             1 101613.    926.    96726.   101170.   101704.   102202.   103398.   ▁▁▂▇▅
+    5 relative_humidity                 0             1      0.729   0.159     0.12      0.62      0.76      0.85      1.09 ▁▂▅▇▂
+    6 surface_solar_radiation           0             1    183.    265.        0         0         7.22    316.     1112.   ▇▂▁▁▁
+    7 surface_thermal_radiation         0             1    325.     32.9     232.      301.      323.      347.      459.   ▁▇▇▂▁
+    8 total_cloud_cover                 0             1      0.587   0.356     0         0.27      0.65      0.94      1    ▅▂▃▃▇
+
+    ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min                 max                 median              n_unique
+    1 timestamp             0             1 2010-01-01 00:00:00 2021-06-01 00:00:00 2015-09-16 12:00:00   100057
 
 ## Melbourne pedestrian count
 
@@ -988,6 +1175,35 @@ academyDatasets Data
     3 VSSTRESN            314         0.901  58.0   31.1   11.6  36.7  56.9  78.9  153. ▇▃▅▂▁
     4 VSSTNRLO              0         1      50.5   24.6   16    36.6  50    60     90  ▃▃▇▁▃
     5 VSSTNRHI              0         1      67.4   35.4   20    37    80    80    120  ▇▁▇▁▃
+
+## sunspots
+
+`sunspots` has 2 columns and 73,924 rows.
+
+| Column   | Type | Description                 |
+|:---------|:-----|:----------------------------|
+| date     | date | Date of observation         |
+| sunspots | int  | Observed number of sunspots |
+
+    ── Data Summary ────────────────────────
+                               Values  
+    Name                       sunspots
+    Number of rows             73924   
+    Number of columns          2       
+    _______________________            
+    Column type frequency:             
+      Date                     1       
+      numeric                  1       
+    ________________________           
+    Group variables            None    
+
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 date                  0             1 1818-01-08 2020-05-31 1919-03-21    73924
+
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
+    1 sunspots           3240         0.956  82.7  77.3     0    21    63   127   528 ▇▃▁▁▁
 
 ## COVID-19 Vaccine Allocation
 

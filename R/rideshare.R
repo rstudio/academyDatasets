@@ -12,13 +12,9 @@
 #'
 #' @examples
 #' # Convert to `tsibble`
-#' library(dplyr)
-#' library(tidyr)
 #' library(tsibble)
 #' rideshare %>%
-#'   pivot_longer(price_min:wind, names_to = "type", values_to = "series_value") %>%
-#'   select(source_location:provider_service, type, everything()) %>%
-#'   as_tsibble(key = c("source_location":"type"), index = "timestamp")
+#'   as_tsibble(key = source_location:provider_service, index = timestamp)
 "rideshare"
 
 #' @describeIn rideshare The `rideshare` data dictionary
