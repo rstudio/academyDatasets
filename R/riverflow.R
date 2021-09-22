@@ -13,8 +13,7 @@
 #' @examples
 #' # Convert to `tsibble`
 #' library(tsibble)
-#' riverflow %>%
-#'   tsibble::as_tsibble()
+#' as_tsibble(riverflow)
 
 #' @describeIn riverflow The `riverflow` data dictionary
 "riverflow_dictionary"
