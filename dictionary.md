@@ -2,6 +2,7 @@ academyDatasets Data
 ================
 
   - [`aus_electricity`](#australian-electricity-demand)
+  - [`bitcoin`](#daily-bitcoin-prices-with-possible-influencers)
   - [`car_parts`](#monthly-car-part-sales)
   - [`covid`](#covid-19-us-historical-data-by-state)
   - [`dominick`](#dominick-s-finer-foods-department-sales)
@@ -24,14 +25,17 @@ academyDatasets Data
   - [`oikolab_weather`](#monash-university-weather)
   - [`pedestrian_counts`](#melbourne-pedestrian-count)
   - [`rideshare`](#hourly-summaries-of-rideshare-service)
+  - [`riverflow`](#daily-flow-rate-of-the-saugeen-river)
   - [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
   - [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
   - [`sdtm_demographics`](#sdtm-formatted-demographic)
   - [`sdtm_lab_results`](#sdtm-laboratory-test-results)
   - [`sdtm_subject_visits`](#sdtm-subject-visits)
   - [`sdtm_vital_signs`](#sdtm-vital-signs)
+  - [`solar`](#solar-power-production)
   - [`sunspots`](#sunspots)
   - [`tourists`](#366-monthly-time-series-used-in-the-kaggle-tourism-forecasting-competition)
+  - [`us_births`](#daily-us-births)
   - [`vaccines`](#covid-19-vaccine-allocation)
 
 ## Australian electricity demand
@@ -68,6 +72,69 @@ academyDatasets Data
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 date                  0             1 2002-01-01 00:00:00 2015-04-01 23:30:00 2008-08-03 19:00:00   232272
+
+## Daily Bitcoin prices with possible influencers
+
+`bitcoin` has 19 columns and 4,581 rows.
+
+| Column                     | Type | Description                                               |
+| :------------------------- | :--- | :-------------------------------------------------------- |
+| timestamp                  | date | Day                                                       |
+| price                      | dbl  | Price in US dollars (USD)                                 |
+| difficulty                 | dbl  | Mining difficulty                                         |
+| sent\_addresses            | int  | Number of addresses that sent Bitcoin                     |
+| send\_usd                  | dbl  | Amount of Bitcoin sent, in USD                            |
+| market\_cap                | dbl  | Market value of all existing Bitcoin in USD               |
+| confirmation\_time         | dbl  | Time to record a transaction in block chain               |
+| transactions               | int  | Number of blockchain transactions                         |
+| median\_transaction\_size  | dbl  | Median transaction size                                   |
+| mining\_profitability      | dbl  | Profit in USD/Day for 1 THash/s                           |
+| fee\_reward                | dbl  | Average fee percentage in total block reward              |
+| top\_100\_percent          | dbl  | Percent of Bitcoin owned by the top 100 richest addresses |
+| median\_transaction\_value | dbl  | Median transaction value in USD                           |
+| av\_transaction\_value     | dbl  | Average transaction value in USD                          |
+| block\_size                | dbl  | Average (mined?) Bitcoin block size in kilobytes          |
+| hashrate                   | dbl  | Bitcoin hashrate in Ehash/s                               |
+| active\_addresses          | int  | Number of unique (from or to) addresses per day           |
+| google\_trends             | dbl  | Google trends interest score for Bitcoin                  |
+| tweets                     | int  | Tweets per day with the tag \#Bitcoin                     |
+
+    ── Data Summary ────────────────────────
+                               Values 
+    Name                       bitcoin
+    Number of rows             4581   
+    Number of columns          19     
+    _______________________           
+    Column type frequency:            
+      Date                     1      
+      numeric                  18     
+    ________________________          
+    Group variables            None   
+    
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 timestamp             0             1 2009-01-03 2021-07-19 2015-04-12     4581
+    
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       skim_variable            n_missing complete_rate    mean      sd      p0      p25      p50      p75    p100 hist 
+     1 price                          560         0.878 5.09e 3 1.03e 4 4.95e-2 8.64e+ 1 5.84e+ 2 6.92e+ 3 6.34e 4 ▇▁▁▁▁
+     2 difficulty                       6         0.999 3.45e12 6.27e12 1   e+0 1.61e+ 6 4.76e+10 4.31e+12 2.50e13 ▇▁▁▁▁
+     3 sent_addresses                   8         0.998 2.10e 5 1.90e 5 1   e+0 1.41e+ 4 1.69e+ 5 3.82e+ 5 7.30e 5 ▇▂▅▂▁
+     4 send_usd                       561         0.878 3.85e 9 7.57e 9 5.54e+2 6.70e+ 7 7.49e+ 8 4.68e+ 9 7.34e10 ▇▁▁▁▁
+     5 market_cap                     561         0.878 9.15e10 1.91e11 1.70e+5 9.68e+ 8 7.72e+ 9 1.21e+11 1.19e12 ▇▁▁▁▁
+     6 confirmation_time                8         0.998 1.04e 1 8.35e 0 2.08e+0 8.73e+ 0 9.54e+ 0 1.05e+ 1 3.6 e 2 ▇▁▁▁▁
+     7 transactions                   261         0.943 1.52e 5 1.26e 5 1   e+0 3.16e+ 4 1.25e+ 5 2.71e+ 5 4.90e 5 ▇▂▅▃▁
+     8 median_transaction_size       1205         0.737 1.15e 0 3.04e 0 4.86e-7 4.07e- 2 1.01e- 1 6.57e- 1 3.41e 1 ▇▁▁▁▁
+     9 mining_profitability           561         0.878 5.94e 3 2.73e 4 6.37e-2 3.32e- 1 2.07e+ 0 2.29e+ 3 4.81e 5 ▇▁▁▁▁
+    10 fee_reward                     641         0.860 3.25e 0 5.10e 0 1.48e-9 3.31e- 1 1.04e+ 0 3.83e+ 0 4.36e 1 ▇▁▁▁▁
+    11 top_100_percent                 12         0.997 1.88e 1 5.95e 0 5.22e+0 1.55e+ 1 1.91e+ 1 2.08e+ 1 1   e 2 ▇▂▁▁▁
+    12 median_transaction_value       561         0.878 2.71e 2 4.21e 2 2.74e-3 6.96e+ 1 1.37e+ 2 3.32e+ 2 5.42e 3 ▇▁▁▁▁
+    13 av_transaction_value           561         0.878 3.15e 4 6.97e 4 6.62e-1 1.66e+ 3 5.74e+ 3 2.71e+ 4 8.12e 5 ▇▁▁▁▁
+    14 block_size                       6         0.999 4.37e 5 3.69e 5 1.34e+2 2.48e+ 4 3.95e+ 5 8.17e+ 5 9.98e 5 ▇▂▂▃▅
+    15 hashrate                         7         0.998 2.49e19 4.50e19 4.62e+5 1.18e+13 3.43e+17 3.41e+19 1.98e20 ▇▁▁▁▁
+    16 active_addresses                28         0.994 3.26e 5 3.09e 5 4   e+0 2.04e+ 4 2.26e+ 5 5.84e+ 5 1.20e 6 ▇▂▃▂▁
+    17 google_trends                  563         0.877 3.27e 1 5.22e 1 4.95e-4 4.96e+ 0 1.05e+ 1 4.09e+ 1 6.17e 2 ▇▁▁▁▁
+    18 tweets                        1978         0.568 3.77e 4 2.93e 4 7.3 e+3 2.11e+ 4 2.73e+ 4 3.99e+ 4 3.64e 5 ▇▁▁▁▁
 
 ## Monthly Car Part Sales
 
@@ -1067,6 +1134,35 @@ academyDatasets Data
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 timestamp             0             1 2018-11-26 06:00:00 2018-12-18 18:00:00 2018-12-07 12:00:00      541
 
+## Daily flow rate of the Saugeen River
+
+`riverflow` has 2 columns and 23,741 rows.
+
+| Column     | Type | Description                                      |
+| :--------- | :--- | :----------------------------------------------- |
+| date       | date | Date of observation                              |
+| flow\_rate | dbl  | Volumetric flow rate, in cubic meters per second |
+
+    ── Data Summary ────────────────────────
+                               Values   
+    Name                       riverflow
+    Number of rows             23741    
+    Number of columns          2        
+    _______________________             
+    Column type frequency:              
+      Date                     1        
+      numeric                  1        
+    ________________________            
+    Group variables            None     
+    
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 date                  0             1 1915-01-01 1979-12-31 1947-07-02    23741
+    
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
+    1 flow_rate             0             1  30.1  39.2   2.3   9.9  17.3    34   640 ▇▁▁▁▁
+
 ## SDTM formatted Adverse Event
 
 `sdtm_adverse_events` has 14 columns and 357 rows.
@@ -1377,6 +1473,41 @@ academyDatasets Data
     4 VSSTNRLO              0         1      50.5   24.6   16    36.6  50    60     90  ▃▃▇▁▃
     5 VSSTNRHI              0         1      67.4   35.4   20    37    80    80    120  ▇▁▇▁▃
 
+## Solar Power Production
+
+`solar` has 3 columns and 7,124 rows.
+
+| Column | Type | Description                             |
+| :----- | :--- | :-------------------------------------- |
+| plant  | chr  | ID of the photovoltaic (PV) power plant |
+| date   | date | Date                                    |
+| power  | dbl  | Solar power capacity, in megawatts (MW) |
+
+    ── Data Summary ────────────────────────
+                               Values
+    Name                       solar 
+    Number of rows             7124  
+    Number of columns          3     
+    _______________________          
+    Column type frequency:           
+      character                1     
+      Date                     1     
+      numeric                  1     
+    ________________________         
+    Group variables            None  
+    
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+    1 plant                 0             1     3     5     0      137          0
+    
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 date                  0             1 2006-01-01 2006-12-24 2006-06-28       52
+    
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75   p100 hist 
+    1 power                 0             1 6418. 3031.  732. 4509. 6056. 7223. 28949. ▇▅▁▁▁
+
 ## sunspots
 
 `sunspots` has 2 columns and 73,924 rows.
@@ -1442,6 +1573,35 @@ academyDatasets Data
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean     sd    p0   p25   p50   p75    p100 hist 
     1 tourists              0             1 9969. 38147.     0   308  1287 5761. 1364825 ▇▁▁▁▁
+
+## Daily US births
+
+`us_births` has 2 columns and 7,305 rows.
+
+| Column    | Type | Description                |
+| :-------- | :--- | :------------------------- |
+| timestamp | date | Day                        |
+| births    | int  | Number of births in the US |
+
+    ── Data Summary ────────────────────────
+                               Values   
+    Name                       us_births
+    Number of rows             7305     
+    Number of columns          2        
+    _______________________             
+    Column type frequency:              
+      Date                     1        
+      numeric                  1        
+    ________________________            
+    Group variables            None     
+    
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 timestamp             0             1 1969-01-01 1988-12-31 1979-01-01     7305
+    
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
+    1 births                0             1 9649. 1127.  6675  8792  9622 10510 12851 ▂▇▇▆▁
 
 ## COVID-19 Vaccine Allocation
 
