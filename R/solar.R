@@ -3,7 +3,7 @@
 #' @description
 #' This dataset contains weekly solar power production records from 137
 #' photovoltaic (PV) power plants in Alabama, in 2006. The data were originally
-#' collected by the National Renewable Energy Laboratory (NREL): https://www.nrel.gov/.
+#' collected by the National Renewable Energy Laboratory (NREL): <https://www.nrel.gov/>
 #'
 #' @source <https://zenodo.org/record/4656151#.YSktINNKjSU>
 #'
@@ -14,7 +14,7 @@
 #' # Convert to `tsibble`
 #' library(tsibble)
 #' solar %>%
-#'   tsibble::as_tsibble(key = plant, index = date)
+#'   as_tsibble(key = plant, index = date)
 
 #' @describeIn solar The `solar` data dictionary
 "solar_dictionary"
