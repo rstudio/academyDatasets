@@ -50,12 +50,12 @@ jobs:
       - uses: r-lib/actions/check-r-package@v1
 
       - name: Update dictionary
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' && runner.os == 'macOS'
         run: rmarkdown::render("dictionary.Rmd")
         shell: Rscript {0}
 
       - name: Commit results
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' && runner.os == 'macOS'
         run: |
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
