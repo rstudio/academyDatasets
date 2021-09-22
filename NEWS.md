@@ -1,5 +1,13 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# academyDatasets 0.3.0
+
+- `riverflow` from [Saugeen River in Ontario](https://zenodo.org/record/4656058) (#58 @brendanhcullen)
+- `solar` from [National Renewable Energy Laboratory (NREL)](https://zenodo.org/record/4656151) (#66 @brendanhcullen)
+- `bitcoin` from [forecastingdata.org](https://zenodo.org/record/5121965) (#59 @garrettgman)
+- `us_births` from [forecastingdata.org](https://zenodo.org/record/4656049) (#62 @garrettgman)
+
+
 # academyDatasets 0.2.0
 
 ## New Datasets
