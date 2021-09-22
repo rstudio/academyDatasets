@@ -17,7 +17,7 @@
 #' # Convert to `tsibble`
 #' library(tsibble)
 #' us_births %>%
-#'   tsibble::as_tsibble()
+#'   as_tsibble()
 
 #' @describeIn us_births The `us_births` data dictionary
 "us_births_dictionary"

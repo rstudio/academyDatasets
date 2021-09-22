@@ -12,7 +12,9 @@ us_births <- archive::archive_read(url) %>%
   pluck(1) %>%
   select(
     timestamp = start_timestamp, births = series_value
-  ) %>% as_tibble()
+  ) %>%
+  as_tibble() %>%
+  mutate(births = as.integer(births))
 
 us_births_dictionary <- describe_dataset(
   us_births,
