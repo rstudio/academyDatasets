@@ -10,7 +10,7 @@ A tibble with 7305 rows and 2 variables:
 \describe{
 
 \item{\code{timestamp}}{[date] Day}
-\item{\code{births}}{[dbl] Number of births in the US}
+\item{\code{births}}{[int] Number of births in the US}
 }
 
 An object of class \code{list} of length 3.
@@ -41,6 +41,6 @@ mosaicData: project mosaic data sets. R package version 0.18.0.
 # Convert to `tsibble`
 library(tsibble)
 us_births \%>\%
-  tsibble::as_tsibble()
+  as_tsibble()
 }
 \keyword{datasets}
