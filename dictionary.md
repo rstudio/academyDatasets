@@ -1,40 +1,45 @@
 academyDatasets Data
 ================
 
--   [`aus_electricity`](#australian-electricity-demand)
--   [`car_parts`](#monthly-car-part-sales)
--   [`covid`](#covid-19-us-historical-data-by-state)
--   [`elec_demand`](#victoria--australia-electricity-demand)
--   [`electricity_weekly`](#weekly-electricity-consumption)
--   [`encounters`](#patient-encounter)
--   [`fda_adverse_daily`](#daily-counts-of-fda-drug-adverse-event-reports)
--   [`fda_pt_drugs`](#patient-and-drug-information-for-fda-drug-adverse-events)
--   [`flu`](#protein-sequences-of-influenza-b-virus-strains)
--   [`fred_md`](#u-s--macro-economic-indicators-from-the-fred-md-database)
--   [`mdrd`](#modification-of-diet-in-renal-disease)
--   [`mdrd_supplemental`](#modification-of-diet-in-renal-disease---supplemental)
--   [`medications`](#patient-medication)
--   [`nhanes_dermatology`](#national-health-and-nutrition-examination-survey--dermatology--2017-2018)
--   [`nhanes_sleep`](#national-health-and-nutrition-examination-survey--sleep-disorders--2017-2018)
--   [`ny_air`](#daily-predicted-new-york-air-quality)
--   [`oikolab_weather`](#monash-university-weather)
--   [`pedestrian_counts`](#melbourne-pedestrian-count)
--   [`rideshare`](#hourly-summaries-of-rideshare-service)
--   [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
--   [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
--   [`sdtm_demographics`](#sdtm-formatted-demographic)
--   [`sdtm_lab_results`](#sdtm-laboratory-test-results)
--   [`sdtm_subject_visits`](#sdtm-subject-visits)
--   [`sdtm_vital_signs`](#sdtm-vital-signs)
--   [`sunspots`](#sunspots)
--   [`vaccines`](#covid-19-vaccine-allocation)
+  - [`aus_electricity`](#australian-electricity-demand)
+  - [`car_parts`](#monthly-car-part-sales)
+  - [`covid`](#covid-19-us-historical-data-by-state)
+  - [`dominick`](#dominick-s-finer-foods-department-sales)
+  - [`dominick_oatmeal`](#dominick-s-finer-foods-oatmeal-sales)
+  - [`dominick_soap`](#dominick-s-finer-foods-bath-soap-sales)
+  - [`elec_demand`](#victoria--australia-electricity-demand)
+  - [`electricity_weekly`](#weekly-electricity-consumption)
+  - [`encounters`](#patient-encounter)
+  - [`fda_adverse_daily`](#daily-counts-of-fda-drug-adverse-event-reports)
+  - [`fda_pt_drugs`](#patient-and-drug-information-for-fda-drug-adverse-events)
+  - [`flu`](#protein-sequences-of-influenza-b-virus-strains)
+  - [`fred_md`](#u-s--macro-economic-indicators-from-the-fred-md-database)
+  - [`hospital`](#monthly-counts-of-patients-use-of-medical-products)
+  - [`mdrd`](#modification-of-diet-in-renal-disease)
+  - [`mdrd_supplemental`](#modification-of-diet-in-renal-disease---supplemental)
+  - [`medications`](#patient-medication)
+  - [`nhanes_dermatology`](#national-health-and-nutrition-examination-survey--dermatology--2017-2018)
+  - [`nhanes_sleep`](#national-health-and-nutrition-examination-survey--sleep-disorders--2017-2018)
+  - [`ny_air`](#daily-predicted-new-york-air-quality)
+  - [`oikolab_weather`](#monash-university-weather)
+  - [`pedestrian_counts`](#melbourne-pedestrian-count)
+  - [`rideshare`](#hourly-summaries-of-rideshare-service)
+  - [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
+  - [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
+  - [`sdtm_demographics`](#sdtm-formatted-demographic)
+  - [`sdtm_lab_results`](#sdtm-laboratory-test-results)
+  - [`sdtm_subject_visits`](#sdtm-subject-visits)
+  - [`sdtm_vital_signs`](#sdtm-vital-signs)
+  - [`sunspots`](#sunspots)
+  - [`tourists`](#366-monthly-time-series-used-in-the-kaggle-tourism-forecasting-competition)
+  - [`vaccines`](#covid-19-vaccine-allocation)
 
 ## Australian electricity demand
 
 `aus_electricity` has 3 columns and 1,155,264 rows.
 
 | Column | Type | Description                                                                                                           |
-|:-------|:-----|:----------------------------------------------------------------------------------------------------------------------|
+| :----- | :--- | :-------------------------------------------------------------------------------------------------------------------- |
 | date   | dttm | Starting date-time of demand reading                                                                                  |
 | state  | chr  | State abbreviation: Victoria (VIC), New South Wales (NSW), Queensland (QUN), Tasmania (TAS), and South Australia (SA) |
 | demand | dbl  | Half-hourly electricity demand in MW                                                                                  |
@@ -51,15 +56,15 @@ academyDatasets Data
       POSIXct                  1              
     ________________________                  
     Group variables            None           
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 state                 0             1     2     3     0        5          0
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75   p100 hist 
     1 demand                0             1 3500. 2438. -234. 1065. 3837. 5216. 12866. ▇▆▅▁▁
-
+    
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 date                  0             1 2002-01-01 00:00:00 2015-04-01 23:30:00 2008-08-03 19:00:00   232272
@@ -69,7 +74,7 @@ academyDatasets Data
 `car_parts` has 3 columns and 136,374 rows.
 
 | Column    | Type | Description                     |
-|:----------|:-----|:--------------------------------|
+| :-------- | :--- | :------------------------------ |
 | part\_num | chr  | ID of the car part              |
 | date      | date | Start date of the month         |
 | qty       | int  | Number of parts sold that month |
@@ -86,15 +91,15 @@ academyDatasets Data
       numeric                  1        
     ________________________            
     Group variables            None     
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 part_num              0             1     2     5     0     2674          0
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 date                  0             1 1998-01-01 2002-03-01 2000-02-01       51
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
     1 qty                6122         0.955 0.508  1.28     0     0     0     1    52 ▇▁▁▁▁
@@ -104,7 +109,7 @@ academyDatasets Data
 `covid` has 6 columns and 20,780 rows.
 
 | Column           | Type | Description                                                                                                                                                         |
-|:-----------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :--------------- | :--- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | date             | date | Date on which data was collected by The COVID Tracking Project.                                                                                                     |
 | state            | fct  | Two-letter abbreviation for the state or territory.                                                                                                                 |
 | tests            | dbl  | Daily increase in totalTestResults, calculated from the previous day’s value. (Original: totalTestResultsIncrease)                                                  |
@@ -124,15 +129,15 @@ academyDatasets Data
       numeric                  4     
     ________________________         
     Group variables            None  
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 date                  0             1 2020-01-13 2021-03-07 2020-09-03      420
-
+    
     ── Variable type: factor ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate ordered n_unique top_counts                        
     1 state              2153         0.896 FALSE         50 WA: 420, MA: 411, VA: 406, FL: 404
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable    n_missing complete_rate    mean      sd      p0   p25   p50    p75   p100 hist 
     1 tests                    0             1 17508.  33586.  -130545 1206.  6125 19086. 473076 ▁▇▁▁▁
@@ -140,12 +145,173 @@ academyDatasets Data
     3 hospitalizations         0             1    37.4   208.   -12257    0      0    36   16373 ▁▁▇▁▁
     4 deaths                   0             1    24.8    60.2    -201    0      6    24    2559 ▇▁▁▁▁
 
+## Dominick’s Finer Foods department sales
+
+`dominick` has 25 columns and 279,519 rows.
+
+| Column   | Type | Description                             |
+| :------- | :--- | :-------------------------------------- |
+| store    | int  | Store number                            |
+| date     | date | Date                                    |
+| custcoun | int  | Number of customers                     |
+| grocery  | dbl  | Non-specialty grocery sales in dollars  |
+| gm       | dbl  | General merchandising sales in dollars  |
+| dairy    | dbl  | Dairy sales in dollars                  |
+| frozen   | dbl  | Frozen food sales in dollars            |
+| meat     | dbl  | Meat sales in dollars                   |
+| fish     | dbl  | Fish sales in dollars                   |
+| produce  | dbl  | Produce sales in dollars                |
+| saladbar | dbl  | Salad bar sales in dollars              |
+| floral   | dbl  | Floral sales in dollars                 |
+| deli     | dbl  | Deli sales in dollars                   |
+| cheese   | dbl  | Cheese case sales in dollars            |
+| bakery   | dbl  | Bakery sales in dollars                 |
+| pharmacy | dbl  | Pharmacy sales in dollars               |
+| jewelry  | dbl  | Jewelry sales in dollars                |
+| cosmetic | dbl  | NA                                      |
+| haba     | dbl  | Health and beauty aids sales in dollars |
+| camera   | dbl  | Camera sales in dollars                 |
+| photofin | dbl  | Photo development sales in dollars      |
+| video    | dbl  | Video sales in dollars                  |
+| beer     | dbl  | Beer sales in dollars                   |
+| wine     | dbl  | Wine sales in dollars                   |
+| spirits  | dbl  | Alcoholic spirits sales in dollars      |
+
+    ── Data Summary ────────────────────────
+                               Values  
+    Name                       dominick
+    Number of rows             279519  
+    Number of columns          25      
+    _______________________            
+    Column type frequency:             
+      Date                     1       
+      numeric                  24      
+    ________________________           
+    Group variables            None    
+    
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 date                  0             1 1900-03-19 1997-04-30 1992-06-16     3408
+    
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       skim_variable n_missing complete_rate    mean     sd    p0      p25      p50     p75    p100 hist 
+     1 store                 0         1        79.7   36.3     2    53       84      110      139  ▃▅▇▇▇
+     2 custcoun              0         1      2709.  1080.      0  2058     2595     3246    83390  ▇▁▁▁▁
+     3 grocery               2         1.00  22230.  9735.      0 15526.   20242.   26939.  599697. ▇▁▁▁▁
+     4 gm                    2         1.00   3261.  2091.      0  1850.    2762.    4127.  264902  ▇▁▁▁▁
+     5 dairy                 0         1      4595.  2436.      0  3315.    4444.    5871.   60787. ▇▁▁▁▁
+     6 frozen                0         1      3498.  1862.      0  2466.    3385.    4536.   37855. ▇▁▁▁▁
+     7 meat                  0         1      5381.  3141.      0  3451.    4706.    6599.  753516  ▇▁▁▁▁
+     8 fish                  0         1       694.   908.      0   330.     541.     876.  368039  ▇▁▁▁▁
+     9 produce               0         1      5575.  2894.      0  3700.    5015.    6842.  455599. ▇▁▁▁▁
+    10 saladbar             29         1.00    360.   308.      0   169.     321.     482.    7672  ▇▁▁▁▁
+    11 floral                5         1.00    507.  1026.      0   188.     320.     552.  371059  ▇▁▁▁▁
+    12 deli                  0         1      2449.  1665.      0  1489.    2094.    2986.  412001. ▇▁▁▁▁
+    13 cheese               19         1.00    276.   295.      0    89.1    194.     358.    6512. ▇▁▁▁▁
+    14 bakery                0         1      1442.   744.      0   934.    1284.    1784.   70523  ▇▁▁▁▁
+    15 pharmacy            118         1.00    722.  1114.      0     0        0     1338.   16820. ▇▁▁▁▁
+    16 jewelry             258         0.999    11.0   94.5     0     0        0        0     8756. ▇▁▁▁▁
+    17 cosmetic             25         1.00    101.   217.      0     0        3.63    73.7   6184. ▇▁▁▁▁
+    18 haba                 18         1.00   1921.  1390.      0   966.    1618.    2666.   34308. ▇▁▁▁▁
+    19 camera              126         1.00     50.6  420.      0     0        0       71.7 178381  ▇▁▁▁▁
+    20 photofin             27         1.00    153.   148.      0    47.9    119.     213.    2072. ▇▁▁▁▁
+    21 video               424         0.998   100.   187.      0     2.99    42.9    127.   14097  ▇▁▁▁▁
+    22 beer                 58         1.00    647.   711.      0   213.     485.     881.  115267  ▇▁▁▁▁
+    23 wine                  3         1.00    422.   531.      0     0      295.     572.   11875. ▇▁▁▁▁
+    24 spirits               6         1.00    290.   340.      0     0      223.     416.   37862  ▇▁▁▁▁
+
+## Dominick’s Finer Foods oatmeal sales
+
+`dominick_oatmeal` has 7 columns and 974,069 rows.
+
+| Column  | Type | Description                          |
+| :------ | :--- | :----------------------------------- |
+| week    | date | Start date of the week               |
+| store   | int  | Store number                         |
+| product | chr  | Abbreviated product name             |
+| size    | chr  | Product size                         |
+| price   | dbl  | Price per unit in dollars            |
+| profit  | dbl  | Profit per unit in dollars           |
+| move    | int  | Number of units sold during the week |
+
+    ── Data Summary ────────────────────────
+                               Values          
+    Name                       dominick_oatmeal
+    Number of rows             974069          
+    Number of columns          7               
+    _______________________                    
+    Column type frequency:                     
+      character                2               
+      Date                     1               
+      numeric                  4               
+    ________________________                   
+    Group variables            None            
+    
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+    1 product               0             1     7    20     0       87          0
+    2 size                  0             1     4     6     0       38          0
+    
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 week                  0             1 1991-04-07 1997-03-02 1994-03-20      305
+    
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   mean     sd    p0   p25   p50    p75     p100 hist 
+    1 store                 0             1 84.7   36.9    2    59    90    114      146    ▃▅▆▇▆
+    2 price                 0             1  2.65   0.658  0.25  2.12  2.78   3.15     4.47 ▁▃▆▇▁
+    3 profit                0             1  0.246  0.121 -1     0.2   0.23   0.26     0.87 ▁▁▁▇▁
+    4 move                  0             1 10.4   92.1    1     3     6     11    87096    ▇▁▁▁▁
+
+## Dominick’s Finer Foods bath soap sales
+
+`dominick_soap` has 7 columns and 415,833 rows.
+
+| Column  | Type | Description                          |
+| :------ | :--- | :----------------------------------- |
+| week    | date | Start date of the week               |
+| store   | int  | Store number                         |
+| product | chr  | Abbreviated product name             |
+| size    | chr  | Product size                         |
+| price   | dbl  | Price per unit in dollars            |
+| profit  | dbl  | Profit per unit in dollars           |
+| move    | int  | Number of units sold during the week |
+
+    ── Data Summary ────────────────────────
+                               Values       
+    Name                       dominick_soap
+    Number of rows             415833       
+    Number of columns          7            
+    _______________________                 
+    Column type frequency:                  
+      character                2            
+      Date                     1            
+      numeric                  4            
+    ________________________                
+    Group variables            None         
+    
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+    1 product               0             1    10    20     0      469          0
+    2 size                  0             1     2     6     0       66          0
+    
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 week                  0             1 1991-12-22 1997-03-02 1994-11-13      265
+    
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   mean     sd    p0   p25    p50    p75   p100 hist 
+    1 store                 0             1 99.8   34.2    2    80    107    128    146    ▂▂▃▇▇
+    2 price                 0             1  3.16   1.59   0.01  2.29   2.79   3.49  28    ▇▁▁▁▁
+    3 profit                0             1  0.395  0.113 -0.99  0.34   0.38   0.45   0.93 ▁▁▁▇▁
+    4 move                  0             1  1.83   1.41   1     1      1      2     86    ▇▁▁▁▁
+
 ## Victoria, Australia Electricity Demand
 
 `elec_demand` has 2 columns and 17,520 rows.
 
 | Column    | Type | Description             |
-|:----------|:-----|:------------------------|
+| :-------- | :--- | :---------------------- |
 | timestamp | dttm | Datetime of observation |
 | demand    | dbl  | Electricity demand (GW) |
 
@@ -160,11 +326,11 @@ academyDatasets Data
       POSIXct                  1          
     ________________________              
     Group variables            None       
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
     1 demand                0             1  4.61 0.878  2.86  3.93  4.60  5.16  9.35 ▆▇▂▁▁
-
+    
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 timestamp             0             1 2014-01-01 00:00:01 2014-12-31 23:30:01 2014-07-02 11:45:01    17520
@@ -174,7 +340,7 @@ academyDatasets Data
 `electricity_weekly` has 3 columns and 50,076 rows.
 
 | Column | Type | Description                                       |
-|:-------|:-----|:--------------------------------------------------|
+| :----- | :--- | :------------------------------------------------ |
 | client | chr  | ID of the electric company client                 |
 | date   | date | Date                                              |
 | power  | int  | Weekly electricity consumption, in kilowatts (kW) |
@@ -191,15 +357,15 @@ academyDatasets Data
       numeric                  1                 
     ________________________                     
     Group variables            None              
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 client                0             1     3     5     0      321          0
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 date                  0             1 2012-01-01 2014-12-21 2013-06-26      156
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate    mean       sd    p0    p25   p50     p75     p100 hist 
     1 power                 0             1 426778. 2212413.     0 47782. 96071 243288. 63075300 ▇▁▁▁▁
@@ -209,7 +375,7 @@ academyDatasets Data
 `encounters` has 15 columns and 53,346 rows.
 
 | Column                | Type | Description                                                                                                                             |
-|:----------------------|:-----|:----------------------------------------------------------------------------------------------------------------------------------------|
+| :-------------------- | :--- | :-------------------------------------------------------------------------------------------------------------------------------------- |
 | id                    | chr  | Primary Key. Unique Identifier of the encounter.                                                                                        |
 | start                 | dttm | The date and time the encounter started.                                                                                                |
 | stop                  | dttm | The date and time the encounter concluded.                                                                                              |
@@ -238,7 +404,7 @@ academyDatasets Data
       POSIXct                  2         
     ________________________             
     Group variables            None      
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable     n_missing complete_rate   min   max empty n_unique whitespace
     1 id                        0         1        36    36     0    53346          0
@@ -249,7 +415,7 @@ academyDatasets Data
     6 encounterclass            0         1         8    10     0        6          0
     7 description               0         1         6    70     0       50          0
     8 reasondescription     39569         0.258     4    69     0       80          0
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable       n_missing complete_rate    mean      sd         p0         p25         p50         p75    p100 hist 
     1 code                        0         1     2.68e 8 1.57e 8 22298006   162673000   185347001   390906007   7.03e 8 ▁▇▃▁▁
@@ -257,7 +423,7 @@ academyDatasets Data
     3 total_claim_cost            0         1     1.29e 2 4.58e 0       77.5       129.        129.        129.  1.29e 2 ▁▁▁▁▇
     4 payer_coverage              0         1     6.20e 1 4.36e 1        0          17.5        69.2        89.2 1.29e 2 ▅▁▇▃▃
     5 reasoncode              39569         0.258 1.25e12 1.20e13  6072007    55822004    72892002   195967001   1.24e14 ▇▁▁▁▁
-
+    
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 start                 0             1 1912-07-21 19:05:21 2020-04-28 18:58:37 2011-08-08 08:50:18    50029
@@ -268,7 +434,7 @@ academyDatasets Data
 `fda_adverse_daily` has 3 columns and 5,968 rows.
 
 | Column        | Type | Description                                                               |
-|:--------------|:-----|:--------------------------------------------------------------------------|
+| :------------ | :--- | :------------------------------------------------------------------------ |
 | receive\_date | date | Date that the report was first received by FDA.                           |
 | public        | dbl  | Number of reports that were submitted directly by a member of the public. |
 | manufacturer  | dbl  | Number of reports that were submitted through a drug manufacturer.        |
@@ -284,11 +450,11 @@ academyDatasets Data
       numeric                  2                
     ________________________                    
     Group variables            None             
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 receive_date          0             1 2004-01-01 2020-12-31 2012-10-28     5968
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
     1 public                0             1  123.  111.     0   39    102  171    751 ▇▂▁▁▁
@@ -299,7 +465,7 @@ academyDatasets Data
 `fda_pt_drugs` has 17 columns and 5,765 rows.
 
 | Column            | Type | Description                                                                                                                                                                                                      |
-|:------------------|:-----|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :---------------- | :--- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | report\_id        | chr  | The 8-digit Safety Report ID number, also known as the case report number or case ID. Can be used to identify or find a specific adverse event report.                                                           |
 | receive\_date     | date | Date that the report was first received by FDA.                                                                                                                                                                  |
 | receipt\_date     | date | Date that the most recent information in the report was received by FDA.                                                                                                                                         |
@@ -331,7 +497,7 @@ academyDatasets Data
       numeric                  3           
     ________________________               
     Group variables            None        
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 report_id             0             1     8     8     0      851          0
@@ -343,18 +509,18 @@ academyDatasets Data
     7 indication            0             1     4    57     0      370          0
     8 reaction              0             1     4    57     0     1058          0
     9 outcome               0             1     5    23     0        6          0
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable   n_missing complete_rate min        max        median     n_unique
     1 receive_date            0             1 2019-01-01 2019-01-10 2019-01-04       10
     2 receipt_date            0             1 2019-01-01 2021-03-15 2019-01-18      209
     3 drug_start_date         0             1 2002-08-01 2019-10-29 2018-06-22      582
     4 drug_end_date           0             1 2002-08-01 2019-11-20 2018-10-11      514
-
+    
     ── Variable type: logical ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean count              
     1 serious               0             1 0.942 TRU: 5433, FAL: 332
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75   p100 hist 
     1 age                   0             1  56.9  19.4  0     45      60    71    95  ▁▂▃▇▃
@@ -366,7 +532,7 @@ academyDatasets Data
 `flu` has 16 columns and 130,560 rows.
 
 | Column               | Type | Description                                                                                                                                                                                  |
-|:---------------------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :------------------- | :--- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | protein              | chr  | Abbreviation of viral protein                                                                                                                                                                |
 | sequence\_accession  | chr  | Unique identifier given to the protein sequence record to allow for tracking of different versions of that sequence.                                                                         |
 | complete\_genome     | chr  | Is the viral strain’s complete genome known?                                                                                                                                                 |
@@ -396,7 +562,7 @@ academyDatasets Data
       numeric                  2     
     ________________________         
     Group variables            None  
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
        skim_variable       n_missing complete_rate   min   max empty n_unique whitespace
      1 protein                  3729         0.971     2     3     0       11          0
@@ -411,12 +577,12 @@ academyDatasets Data
     10 strain_name                 0         1         7    39     0    15091          0
     11 sequence                    1         1.00     99   771     0    19936          0
     12 passage_history         56199         0.570     2    30     0     1658          0
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable   n_missing complete_rate min        max        median     n_unique
     1 collection_date        22          1.00 0001-02-23 2186-07-07 2016-07-05     4084
     2 submission_date         2          1.00 1993-08-02 2020-04-29 2017-08-24      394
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable  n_missing complete_rate    mean     sd    p0   p25   p50   p75  p100 hist 
     1 segment                0             1    5.19   2.25     1     3     6     7     8 ▃▂▅▅▇
@@ -427,7 +593,7 @@ academyDatasets Data
 `fred_md` has 7 columns and 751 rows.
 
 | Column   | Type | Description                                                          |
-|:---------|:-----|:---------------------------------------------------------------------|
+| :------- | :--- | :------------------------------------------------------------------- |
 | date     | date | Date                                                                 |
 | rpi      | dbl  | Real personal income, in billions of dollars                         |
 | hwi      | int  | Help-wanted index: the number of help-wanted ads in major newspapers |
@@ -447,11 +613,11 @@ academyDatasets Data
       numeric                  6      
     ________________________          
     Group variables            None   
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 date                  0             1 1959-01-01 2021-07-01 1990-04-01      751
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate      mean       sd      p0     p25      p50     p75     p100 hist 
     1 rpi                   0         1       8562.    4397.    2442.   4789.    7718.   12389.  21268.  ▇▅▅▃▁
@@ -461,12 +627,47 @@ academyDatasets Data
     5 houst                 0         1       1430.     388.     478    1193     1455     1650    2494   ▂▅▇▃▁
     6 cpiaucsl              0         1        130.      76.6     29.0    50.2    129.     199.    272.  ▇▃▅▃▃
 
+## Monthly counts of patients use of medical products
+
+`hospital` has 5 columns and 64,428 rows.
+
+| Column          | Type | Description                                                                         |
+| :-------------- | :--- | :---------------------------------------------------------------------------------- |
+| sku             | chr  | Hospital stock-keeping unit (SKU) code, representing a specific medical product     |
+| entity\_code    | chr  | Code related to medical product for use with medical billing and insurance purposes |
+| month           | int  | Month of interest                                                                   |
+| year            | int  | Year of interest                                                                    |
+| patient\_counts | int  | Number of patients who received the medical product                                 |
+
+    ── Data Summary ────────────────────────
+                               Values  
+    Name                       hospital
+    Number of rows             64428   
+    Number of columns          5       
+    _______________________            
+    Column type frequency:             
+      character                2       
+      numeric                  3       
+    ________________________           
+    Group variables            None    
+    
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+    1 sku                   0             1     4     5     0       71          0
+    2 entity_code           0             1     3     6     0       35          0
+    
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable  n_missing complete_rate   mean     sd    p0     p25    p50     p75  p100 hist 
+    1 month                  0             1    6.5   3.45     1    3.75    6.5    9.25    12 ▇▅▅▅▇
+    2 year                   0             1 2003     2.00  2000 2001    2003   2005     2006 ▇▃▃▃▇
+    3 patient_counts         0             1  267.  835.       1   18      38    152    12090 ▇▁▁▁▁
+
 ## Modification of Diet in Renal Disease
 
 `mdrd` has 10 columns and 1,988 rows.
 
 | Column         | Type | Description                                                                                                      |
-|:---------------|:-----|:-----------------------------------------------------------------------------------------------------------------|
+| :------------- | :--- | :--------------------------------------------------------------------------------------------------------------- |
 | ptid           | dbl  | Patient identifier                                                                                               |
 | gfr            | dbl  | Glomerular filtration rate in milliliters per minute. A measure of how much blood the kidneys filter per minute. |
 | months         | dbl  | Number of months after the start of the study that the measurement was taken.                                    |
@@ -488,7 +689,7 @@ academyDatasets Data
       numeric                  10    
     ________________________         
     Group variables            None  
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
        skim_variable  n_missing complete_rate    mean     sd    p0   p25    p50    p75   p100 hist 
      1 ptid                   0             1 127.    73.5    1    64    128    192    255    ▇▇▇▇▇
@@ -507,7 +708,7 @@ academyDatasets Data
 `mdrd_supplemental` has 5 columns and 255 rows.
 
 | Column | Type | Description        |
-|:-------|:-----|:-------------------|
+| :----- | :--- | :----------------- |
 | ptid   | dbl  | Patient identifier |
 | sex    | chr  | Sex                |
 | age    | dbl  | Age (years)        |
@@ -525,11 +726,11 @@ academyDatasets Data
       numeric                  4                
     ________________________                    
     Group variables            None             
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 sex                   0             1     1     1     0        2          0
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   mean     sd    p0   p25    p50    p75   p100 hist 
     1 ptid                  0             1 128    73.8    1    64.5  128    192.   255    ▇▇▇▇▇
@@ -542,7 +743,7 @@ academyDatasets Data
 `medications` has 13 columns and 42,989 rows.
 
 | Column            | Type | Description                                                                  |
-|:------------------|:-----|:-----------------------------------------------------------------------------|
+| :---------------- | :--- | :--------------------------------------------------------------------------- |
 | start             | dttm | The date and time the medication was prescribed.                             |
 | stop              | dttm | The date and time the prescription ended, if applicable.                     |
 | patient           | chr  | Foreign key to the Patient.                                                  |
@@ -569,7 +770,7 @@ academyDatasets Data
       POSIXct                  2          
     ________________________              
     Group variables            None       
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable     n_missing complete_rate   min   max empty n_unique whitespace
     1 patient                   0         1        36    36     0     1107          0
@@ -577,7 +778,7 @@ academyDatasets Data
     3 encounter                 0         1        36    36     0    27269          0
     4 description               0         1        15   113     0      134          0
     5 reasondescription     11117         0.741     4    69     0       36          0
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable  n_missing complete_rate    mean      sd          p0        p25       p50        p75    p100 hist 
     1 code                   0         1     6.44e 5 4.92e 5   105078      309362     583214     865098  2.12e 6 ▇▆▂▁▁
@@ -586,7 +787,7 @@ academyDatasets Data
     4 dispenses              0         1     1.05e 1 4.04e 1        1           1          5         12  8.85e 2 ▇▁▁▁▁
     5 totalcost              0         1     2.33e 3 1.26e 4        0.99      263.       527.      3162. 1.30e 6 ▇▁▁▁▁
     6 reasoncode         11117         0.741 1.32e11 2.99e12 10509002    55822004   59621000  233678006  6.78e13 ▇▁▁▁▁
-
+    
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 start                 0         1     1913-06-17 04:54:18 2020-04-28 18:58:37 2005-03-19 21:31:22    25996
@@ -597,7 +798,7 @@ academyDatasets Data
 `nhanes_dermatology` has 8 columns and 3,419 rows.
 
 | Column                  | Type | Description                                                                                                                                                                           |
-|:------------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :---------------------- | :--- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | seq\_no                 | dbl  | Respondent sequence number                                                                                                                                                            |
 | sun\_reaction           | fct  | If after several months of not being in the sun, you then went out in the sun without sunscreen or protective clothing for a half hour, which one of these would happen to your skin? |
 | shade                   | fct  | When you go outside on a very sunny day, for more than one hour, how often do you stay in the shade?                                                                                  |
@@ -618,14 +819,14 @@ academyDatasets Data
       numeric                  4                 
     ________________________                     
     Group variables            None              
-
+    
     ── Variable type: factor ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate ordered n_unique top_counts                             
     1 sun_reaction          1         1.00  FALSE          7 Not: 1474, Tur: 819, Mil: 747, A s: 268
     2 shade                 1         1.00  FALSE          7 Som: 1459, Mos: 897, Rar: 521, Alw: 323
     3 long_sleeves         14         0.996 FALSE          6 Nev: 1159, Som: 916, Rar: 815, Mos: 303
     4 sunscreen            14         0.996 FALSE          5 Nev: 1363, Som: 706, Rar: 623, Mos: 399
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable         n_missing complete_rate      mean      sd    p0   p25   p50    p75   p100 hist 
     1 seq_no                        0         1     98316.    2677.   93711 96023 98303 100626 102956 ▇▇▇▇▇
@@ -638,7 +839,7 @@ academyDatasets Data
 `nhanes_sleep` has 11 columns and 6,161 rows.
 
 | Column                 | Type | Description                                                                                    |
-|:-----------------------|:-----|:-----------------------------------------------------------------------------------------------|
+| :--------------------- | :--- | :--------------------------------------------------------------------------------------------- |
 | seq\_no                | dbl  | Respondent sequence number                                                                     |
 | sleep\_time\_workday   | time | What time do you usually fall asleep on weekdays or workdays?                                  |
 | wake\_time\_workday    | time | What time do you usually wake up on weekdays or workdays?                                      |
@@ -664,24 +865,24 @@ academyDatasets Data
       numeric                  3           
     ________________________               
     Group variables            None        
-
+    
     ── Variable type: difftime ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable      n_missing complete_rate min    max        median     n_unique
     1 sleep_time_workday        74         0.988 0 secs 85500 secs 79200 secs       57
     2 wake_time_workday         61         0.990 0 secs 84600 secs 23400 secs      101
     3 sleep_time_weekend        71         0.988 0 secs 85800 secs 75600 secs       58
     4 wake_time_weekend         59         0.990 0 secs 82800 secs 28800 secs       65
-
+    
     ── Variable type: factor ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable  n_missing complete_rate ordered n_unique top_counts                                
     1 snore                  0             1 FALSE          6 Nev: 1688, Fre: 1577, Rar: 1370, Occ: 1068
     2 stop_breathing         0             1 FALSE          6 Nev: 4474, Rar: 699, Occ: 361, Don: 344   
     3 overly_sleepy          0             1 FALSE          6 Som: 2059, Rar: 1468, Oft: 1066, Nev: 1028
-
+    
     ── Variable type: logical ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean count               
     1 told_doctor           5         0.999 0.263 FAL: 4535, TRU: 1621
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable        n_missing complete_rate     mean      sd    p0   p25   p50      p75   p100 hist 
     1 seq_no                       0         1     98284.   2681.   93705 95959 98267 100608   102956 ▇▇▇▇▇
@@ -693,7 +894,7 @@ academyDatasets Data
 `ny_air` has 4 columns and 22,692 rows.
 
 | Column       | Type | Description                                    |
-|:-------------|:-----|:-----------------------------------------------|
+| :----------- | :--- | :--------------------------------------------- |
 | date         | date | Date                                           |
 | county       | dbl  | County                                         |
 | pm25\_max    | dbl  | Maximum predicted value of PM2.5 concentration |
@@ -710,11 +911,11 @@ academyDatasets Data
       numeric                  3     
     ________________________         
     Group variables            None  
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 date                  0             1 2016-01-01 2016-12-31 2016-07-01      366
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
     1 county                0             1 62    35.8  1     31    62    93    123   ▇▇▇▇▇
@@ -726,7 +927,7 @@ academyDatasets Data
 `oikolab_weather` has 9 columns and 100,057 rows.
 
 | Column                      | Type | Description                       |
-|:----------------------------|:-----|:----------------------------------|
+| :-------------------------- | :--- | :-------------------------------- |
 | timestamp                   | dttm | Datetime of observation           |
 | temperature                 | dbl  | temperature (C)                   |
 | dewpoint\_temperature       | dbl  | dewpoint temperature (C)          |
@@ -748,7 +949,7 @@ academyDatasets Data
       POSIXct                  1              
     ________________________                  
     Group variables            None           
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable             n_missing complete_rate       mean      sd       p0       p25       p50       p75      p100 hist 
     1 temperature                       0             1     14.8     5.58      0.86     10.8      13.9      18        40.4  ▂▇▃▁▁
@@ -759,7 +960,7 @@ academyDatasets Data
     6 surface_solar_radiation           0             1    183.    265.        0         0         7.22    316.     1112.   ▇▂▁▁▁
     7 surface_thermal_radiation         0             1    325.     32.9     232.      301.      323.      347.      459.   ▁▇▇▂▁
     8 total_cloud_cover                 0             1      0.587   0.356     0         0.27      0.65      0.94      1    ▅▂▃▃▇
-
+    
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 timestamp             0             1 2010-01-01 00:00:00 2021-06-01 00:00:00 2015-09-16 12:00:00   100057
@@ -769,7 +970,7 @@ academyDatasets Data
 `pedestrian_counts` has 3 columns and 3,132,346 rows.
 
 | Column     | Type | Description                 |
-|:-----------|:-----|:----------------------------|
+| :--------- | :--- | :-------------------------- |
 | date       | dttm | Date-time of sensor reading |
 | sensor\_id | chr  | Sensor ID                   |
 | ped\_count | int  | Hourly count of pedestrians |
@@ -786,15 +987,15 @@ academyDatasets Data
       POSIXct                  1                
     ________________________                    
     Group variables            None             
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 sensor_id             0             1     2     3     0       66          0
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
     1 ped_count             0             1  602.  834.     0    60   242   797 15979 ▇▁▁▁▁
-
+    
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 date                  0             1 2009-05-01 00:00:00 2020-04-30 23:00:00 2016-06-03 14:00:00    96432
@@ -804,7 +1005,7 @@ academyDatasets Data
 `rideshare` has 19 columns and 84,396 rows.
 
 | Column            | Type | Description                                                |
-|:------------------|:-----|:-----------------------------------------------------------|
+| :---------------- | :--- | :--------------------------------------------------------- |
 | source\_location  | chr  | Starting point of the ride                                 |
 | provider\_name    | chr  | Rideshare service provider                                 |
 | provider\_service | chr  | Provider-specific ride type identifier                     |
@@ -837,13 +1038,13 @@ academyDatasets Data
       POSIXct                  1        
     ________________________            
     Group variables            None     
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable    n_missing complete_rate   min   max empty n_unique whitespace
     1 source_location          0             1     6    23     0       12          0
     2 provider_name            0             1     4     4     0        2          0
     3 provider_service         0             1     3    12     0       13          0
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
        skim_variable n_missing complete_rate     mean       sd    p0   p25    p50    p75   p100 hist 
      1 price_min         37311         0.558 12.5      7.25     2.5   7    10.5   16.5   55     ▇▃▂▁▁
@@ -861,7 +1062,7 @@ academyDatasets Data
     13 humidity          33698         0.601  0.748    0.132    0.45  0.64  0.73   0.875  0.99  ▂▆▇▆▇
     14 clouds            33698         0.601  0.661    0.319    0     0.42  0.757  0.957  1     ▂▂▃▂▇
     15 wind              33698         0.601  6.54     3.67     0.3   3.33  6.2    9.57  18.2   ▇▇▇▂▁
-
+    
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
     1 timestamp             0             1 2018-11-26 06:00:00 2018-12-18 18:00:00 2018-12-07 12:00:00      541
@@ -871,7 +1072,7 @@ academyDatasets Data
 `sdtm_adverse_events` has 14 columns and 357 rows.
 
 | Column   | Type | Description                                                                                            |
-|:---------|:-----|:-------------------------------------------------------------------------------------------------------|
+| :------- | :--- | :----------------------------------------------------------------------------------------------------- |
 | USUBJID  | chr  | Unique Subject Identifier                                                                              |
 | AESEQ    | dbl  | Sequence Number                                                                                        |
 | AESTDT   | date | Start date of the adverse event                                                                        |
@@ -899,7 +1100,7 @@ academyDatasets Data
       numeric                  3                  
     ________________________                      
     Group variables            None               
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 USUBJID               0             1     6     6     0      114          0
@@ -911,12 +1112,12 @@ academyDatasets Data
     7 AESEV                 0             1     4     8     0        3          0
     8 AEREL                 0             1    11    18     0        5          0
     9 AEOUT                 0             1     9    25     0        4          0
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 AESTDT                0             1 2015-02-05 2016-12-05 2015-12-19      272
     2 AEENDT                0             1 2015-03-25 2016-12-10 2016-02-29      248
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75  p100 hist 
     1 AESEQ                 0             1   2.39   1.26     1     1     2     3     5 ▇▆▆▃▂
@@ -928,7 +1129,7 @@ academyDatasets Data
 `sdtm_concomitant_meds` has 12 columns and 307 rows.
 
 | Column   | Type | Description                                                                                          |
-|:---------|:-----|:-----------------------------------------------------------------------------------------------------|
+| :------- | :--- | :--------------------------------------------------------------------------------------------------- |
 | USUBJID  | chr  | Unique Subject Identifier                                                                            |
 | CMSEQ    | dbl  | Sequence Number                                                                                      |
 | CMSTDT   | date | Start date of the concomitant medication                                                             |
@@ -954,7 +1155,7 @@ academyDatasets Data
       numeric                  4                    
     ________________________                        
     Group variables            None                 
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 USUBJID               0             1     6     6     0      104          0
@@ -963,12 +1164,12 @@ academyDatasets Data
     4 ATCTEXT2              0             1    11    36     0       14          0
     5 CMONGO                0             1     1     1     0        2          0
     6 CMROUTE               0             1     6    14     0        5          0
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 CMSTDT                0             1 2015-01-23 2016-12-22 2015-12-27      234
     2 CMENDT                0             1 2015-01-28 2016-12-27 2016-03-16      222
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75  p100 hist 
     1 CMSEQ                 0             1   2.26   1.18     1     1     2    3      5 ▇▆▅▃▁
@@ -981,7 +1182,7 @@ academyDatasets Data
 `sdtm_demographics` has 14 columns and 150 rows.
 
 | Column   | Type | Description                                                                                                                                                                                                                      |
-|:---------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :------- | :--- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | USUBJID  | chr  | Unique Subject Identifier                                                                                                                                                                                                        |
 | SITE     | chr  | Name of study site                                                                                                                                                                                                               |
 | SITEID   | chr  | Study Site Identifier                                                                                                                                                                                                            |
@@ -1009,7 +1210,7 @@ academyDatasets Data
       numeric                  3                
     ________________________                    
     Group variables            None             
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 USUBJID               0             1     6     6     0      150          0
@@ -1021,12 +1222,12 @@ academyDatasets Data
     7 ARMCD                 0             1     4     8     0        4          0
     8 SBJTSTAT              0             1     7    17     0        4          0
     9 SAFFL                 0             1     1     1     0        2          0
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 RFSTDTC               0             1 2015-01-06 2015-12-29 2015-06-18      123
     2 RFENDTC               0             1 2015-01-18 2016-12-24 2015-12-30      134
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean      sd    p0   p25   p50   p75  p100 hist 
     1 AGE                   0             1  34.7  10.9      18  25.2    35   43     55 ▇▇▆▆▅
@@ -1038,7 +1239,7 @@ academyDatasets Data
 `sdtm_lab_results` has 11 columns and 13,708 rows.
 
 | Column   | Type | Description                                            |
-|:---------|:-----|:-------------------------------------------------------|
+| :------- | :--- | :----------------------------------------------------- |
 | USUBJID  | chr  | Unique Subject Identifier                              |
 | VISIT    | chr  | Protocol defined text description of the visit         |
 | VISITNUM | dbl  | Visit number                                           |
@@ -1063,7 +1264,7 @@ academyDatasets Data
       numeric                  5               
     ________________________                   
     Group variables            None            
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 USUBJID               0             1     6     6     0      135          0
@@ -1071,11 +1272,11 @@ academyDatasets Data
     3 LBCAT                 0             1     5     5     0        3          0
     4 LBTEST                0             1     3    33     0       23          0
     5 LBSTRESU              0             1     3    14     0       10          0
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 LBDT                  0             1 2015-01-06 2016-12-31 2015-10-28      375
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   mean     sd    p0   p25    p50   p75  p100 hist 
     1 VISITNUM              0         1       2.39   2.17   0   0.175   2      4      7  ▇▂▅▁▂
@@ -1089,7 +1290,7 @@ academyDatasets Data
 `sdtm_subject_visits` has 6 columns and 1,202 rows.
 
 | Column   | Type | Description                                                                       |
-|:---------|:-----|:----------------------------------------------------------------------------------|
+| :------- | :--- | :-------------------------------------------------------------------------------- |
 | USUBJID  | chr  | Unique Subject Identifier                                                         |
 | VISIT    | chr  | Protocol defined text description of the visit                                    |
 | VISITNUM | dbl  | Visit number                                                                      |
@@ -1109,17 +1310,17 @@ academyDatasets Data
       numeric                  2                  
     ________________________                      
     Group variables            None               
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 USUBJID               0             1     6     6     0      150          0
     2 VISIT                 0             1     7    17     0       17          0
     3 SVSTATUS              0             1     6    10     0        6          0
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 SVDT                  0             1 2015-01-06 2016-12-31 2016-01-04      538
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75  p100 hist 
     1 VISITNUM              0             1   3.44   2.31     0   1     3.1   5.1     7 ▇▃▇▃▇
@@ -1130,7 +1331,7 @@ academyDatasets Data
 `sdtm_vital_signs` has 11 columns and 3,170 rows.
 
 | Column   | Type | Description                                                       |
-|:---------|:-----|:------------------------------------------------------------------|
+| :------- | :--- | :---------------------------------------------------------------- |
 | USUBJID  | chr  | Unique Subject Identifier                                         |
 | VISIT    | chr  | Protocol defined text description of the visit                    |
 | VISITNUM | dbl  | Visit number                                                      |
@@ -1155,7 +1356,7 @@ academyDatasets Data
       numeric                  5               
     ________________________                   
     Group variables            None            
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 USUBJID               0             1     6     6     0      128          0
@@ -1163,11 +1364,11 @@ academyDatasets Data
     3 VSCAT                 0             1    11    11     0        1          0
     4 VSTEST                0             1    10    24     0        5          0
     5 VSSTRESU              0             1     2    14     0        4          0
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 VSDT                  0             1 2015-01-06 2016-12-18 2015-11-06      402
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75  p100 hist 
     1 VISITNUM              0         1       2.46   2.14   0     1     2     4      7  ▇▃▅▂▂
@@ -1181,7 +1382,7 @@ academyDatasets Data
 `sunspots` has 2 columns and 73,924 rows.
 
 | Column   | Type | Description                 |
-|:---------|:-----|:----------------------------|
+| :------- | :--- | :-------------------------- |
 | date     | date | Date of observation         |
 | sunspots | int  | Observed number of sunspots |
 
@@ -1196,21 +1397,58 @@ academyDatasets Data
       numeric                  1       
     ________________________           
     Group variables            None    
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 date                  0             1 1818-01-08 2020-05-31 1919-03-21    73924
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
     1 sunspots           3240         0.956  82.7  77.3     0    21    63   127   528 ▇▃▁▁▁
+
+## 366 monthly time series used in the Kaggle Tourism forecasting competition
+
+`tourists` has 4 columns and 109,280 rows.
+
+| Column   | Type | Description                                                        |
+| :------- | :--- | :----------------------------------------------------------------- |
+| month    | date | Start date of the month                                            |
+| city     | chr  | Fabricated city                                                    |
+| country  | chr  | Fabricated country                                                 |
+| tourists | int  | Number of tourists who visited the location in the specified month |
+
+    ── Data Summary ────────────────────────
+                               Values  
+    Name                       tourists
+    Number of rows             109280  
+    Number of columns          4       
+    _______________________            
+    Column type frequency:             
+      character                2       
+      Date                     1       
+      numeric                  1       
+    ________________________           
+    Group variables            None    
+    
+    ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+    1 city                  0             1     3    28     0      363          0
+    2 country               0             1     4    32     0      137          0
+    
+    ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate min        max        median     n_unique
+    1 month                 0             1 1979-01-01 2007-09-01 1994-11-01      345
+    
+    ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      skim_variable n_missing complete_rate  mean     sd    p0   p25   p50   p75    p100 hist 
+    1 tourists              0             1 9969. 38147.     0   308  1287 5761. 1364825 ▇▁▁▁▁
 
 ## COVID-19 Vaccine Allocation
 
 `vaccines` has 5 columns and 3,591 rows.
 
 | Column       | Type | Description                      |
-|:-------------|:-----|:---------------------------------|
+| :----------- | :--- | :------------------------------- |
 | jurisdiction | chr  | State or territory               |
 | vaccine      | chr  | Vaccine type                     |
 | week         | date | Week the vaccines were allocated |
@@ -1229,16 +1467,16 @@ academyDatasets Data
       numeric                  2       
     ________________________           
     Group variables            None    
-
+    
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   min   max empty n_unique whitespace
     1 jurisdiction          0             1     4    20     0       63          0
     2 vaccine               0             1     6     7     0        3          0
-
+    
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 week                  0             1 2020-12-14 2021-05-31 2021-03-15       25
-
+    
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75   p100 hist 
     1 first_dose            0         1     52049. 71512.     0  9600 29100 67500 672600 ▇▁▁▁▁
