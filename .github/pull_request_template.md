@@ -4,7 +4,7 @@ Please write any notes about the dataset here. For example, where was it sourced
 
 ### Merging
 
-When you merge this PR, please use the following template in your merge commit, replacing the `<placeholder>` values.
+When you merge this PR, please use the following template in your merge commit **description**, replacing the `<placeholder>` values.
 
 ```
 - `<dataset>` from [<source>](<url>) (#<pr> @<your_github>)
