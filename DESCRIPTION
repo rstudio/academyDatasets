@@ -28,6 +28,7 @@ Suggests:
     vctrs
 Remotes: 
     mdlincoln/docthis
+Config/needs/actions: cynkra/fledge
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
