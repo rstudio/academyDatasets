@@ -16,7 +16,7 @@
 #' # Convert to `tsibble`
 #' library(tsibble)
 #' bitcoin %>%
-#'   tsibble::as_tsibble()
+#'   as_tsibble()
 "bitcoin"
 
 #' @describeIn bitcoin The `bitcoin` data dictionary

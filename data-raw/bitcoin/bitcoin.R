@@ -16,7 +16,8 @@ bitcoin <- archive::archive_read(url) %>%
   mutate(series = as.factor(series)) %>% # For tidy data
   pivot_wider(names_from = series, values_from = value) %>%
   relocate(timestamp, price) %>%
-  as_tibble()
+  as_tibble() %>% 
+  mutate(across(c(sent_addresses, transactions, active_addresses, tweets), as.integer))
 
 bitcoin_dictionary <- describe_dataset(
   bitcoin,
