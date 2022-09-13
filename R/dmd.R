@@ -27,3 +27,6 @@
 #'
 #' @format `r rd_describe_format(dmd, dmd_dictionary)`
 "dmd"
+
+#' @describeIn dmd The `dmd` data dictionary
+"dmd_dictionary"
