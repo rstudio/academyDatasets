@@ -1,6 +1,6 @@
 Package: academyDatasets
 Title: Datasets for RStudio Academy
-Version: 0.3.0
+Version: 0.4.0
 Authors@R: 
     c(person(given = "Garrick",
              family = "Aden-Buie",

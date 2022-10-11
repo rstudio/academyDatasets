@@ -1,5 +1,9 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# academyDatasets 0.4.0
+
+- `dmd` from [Vanderbilt Biostats](https://biostat.app.vumc.org/wiki/pub/Main/DataSets/dmd.html) (#78 @malcolmbarrett)
+
 # academyDatasets 0.3.0
 
 - `riverflow` from [Saugeen River in Ontario](https://zenodo.org/record/4656058) (#58 @brendanhcullen)
