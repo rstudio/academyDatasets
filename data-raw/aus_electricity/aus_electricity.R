@@ -20,11 +20,13 @@ aus_electricity <- url_zip %>%
     demand = series_value
   )
 
+aus_electricity$state[aus_electricity$state == "QUN"] <- "QLD"
+
 aus_electricity_dictionary <- describe_dataset(
   aus_electricity,
   .title = "Australian electricity demand data",
   date = "Starting date-time of demand reading",
-  state = "State abbreviation: Victoria (VIC), New South Wales (NSW), Queensland (QUN), Tasmania (TAS), and South Australia (SA)",
+  state = "State abbreviation: Victoria (VIC), New South Wales (NSW), Queensland (QLD), Tasmania (TAS), and South Australia (SA)",
   demand = "Half-hourly electricity demand in MW"
 )
 
