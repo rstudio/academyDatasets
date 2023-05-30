@@ -33,6 +33,6 @@ manufacturer, and state/territory.
 \section{Functions}{
 \itemize{
 \item \code{vaccines_dictionary}: The \code{vaccines} data dictionary
-}}
 
+}}
 \keyword{datasets}

@@ -52,8 +52,8 @@ sleep habits and disorders.
 \section{Functions}{
 \itemize{
 \item \code{nhanes_sleep_dictionary}: The \code{nhanes_sleep} data dictionary
-}}
 
+}}
 \seealso{
 Other NHANES datasets: 
 \code{\link{nhanes_dermatology}}

@@ -38,8 +38,8 @@ For more information on a variable, look it up by name here:
 \section{Functions}{
 \itemize{
 \item \code{fred_md_dictionary}: The \code{fred_md} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(dplyr)

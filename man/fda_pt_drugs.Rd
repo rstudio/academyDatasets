@@ -45,8 +45,8 @@ event reports received by the FDA in January 2019.
 \section{Functions}{
 \itemize{
 \item \code{fda_pt_drugs_dictionary}: The \code{fda_pt_drugs} data dictionary
-}}
 
+}}
 \seealso{
 Other openFDA datasets: 
 \code{\link{fda_adverse_daily}}

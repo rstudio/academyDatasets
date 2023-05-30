@@ -43,8 +43,8 @@ with different characteristics of their visits
 \section{Functions}{
 \itemize{
 \item \code{encounters_dictionary}: The \code{encounters} data dictionary
-}}
 
+}}
 \seealso{
 Other Synthea Synthetic Patient Population data: 
 \code{\link{medications}}

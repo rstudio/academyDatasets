@@ -42,8 +42,8 @@ simulated clinical trial.
 \section{Functions}{
 \itemize{
 \item \code{sdtm_demographics_dictionary}: The \code{sdtm_demographics} data dictionary
-}}
 
+}}
 \seealso{
 Other Rho SDTM datasets: 
 \code{\link{sdtm_adverse_events}},

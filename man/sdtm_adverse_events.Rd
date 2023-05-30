@@ -45,8 +45,8 @@ under study.
 \section{Functions}{
 \itemize{
 \item \code{sdtm_adverse_events_dictionary}: The \code{sdtm_adverse_events} data dictionary
-}}
 
+}}
 \seealso{
 Other Rho SDTM datasets: 
 \code{\link{sdtm_concomitant_meds}},

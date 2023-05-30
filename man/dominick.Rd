@@ -68,8 +68,8 @@ register/scanner receipts.
 \section{Functions}{
 \itemize{
 \item \code{dominick_dictionary}: The \code{dominick} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(tsibble)

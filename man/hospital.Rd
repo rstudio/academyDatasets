@@ -32,8 +32,8 @@ Monthly patient count for products that are related to medical problems. There a
 \section{Functions}{
 \itemize{
 \item \code{hospital_dictionary}: The \code{hospital} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(tsibble)

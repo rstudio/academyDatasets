@@ -52,8 +52,8 @@ BitInfoCharts, 2021. Cryptocurrency statistics. URL \url{https://bitinfocharts.c
 \section{Functions}{
 \itemize{
 \item \code{bitcoin_dictionary}: The \code{bitcoin} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(tsibble)

@@ -31,12 +31,11 @@ to 12/31/1979.
 \section{Functions}{
 \itemize{
 \item \code{riverflow_dictionary}: The \code{riverflow} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(tsibble)
-riverflow \%>\%
-  tsibble::as_tsibble()
+as_tsibble(riverflow)
 }
 \keyword{datasets}

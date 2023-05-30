@@ -33,8 +33,8 @@ not from the original MDRD study.
 \section{Functions}{
 \itemize{
 \item \code{mdrd_supplemental_dictionary}: The \code{mdrd_supplemental} data dictionary
-}}
 
+}}
 \seealso{
 Other MDRD datasets: 
 \code{\link{mdrd}}

@@ -49,8 +49,8 @@ event report, it is normally required to send the report to FDA."
 \section{Functions}{
 \itemize{
 \item \code{fda_adverse_daily_dictionary}: The \code{fda_adverse_daily} data dictionary
-}}
 
+}}
 \seealso{
 Other openFDA datasets: 
 \code{\link{fda_pt_drugs}}

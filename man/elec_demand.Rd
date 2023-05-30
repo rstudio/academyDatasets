@@ -30,8 +30,8 @@ Victoria, Australia in 2014.
 \section{Functions}{
 \itemize{
 \item \code{elec_demand_dictionary}: The \code{elec_demand} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(tsibble)

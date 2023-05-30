@@ -64,8 +64,8 @@ reasons.
 \section{Functions}{
 \itemize{
 \item \code{mdrd_dictionary}: The \code{mdrd} data dictionary
-}}
 
+}}
 \seealso{
 Other MDRD datasets: 
 \code{\link{mdrd_supplemental}}

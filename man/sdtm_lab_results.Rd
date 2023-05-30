@@ -39,8 +39,8 @@ a simulated clinical trial.
 \section{Functions}{
 \itemize{
 \item \code{sdtm_lab_results_dictionary}: The \code{sdtm_lab_results} data dictionary
-}}
 
+}}
 \seealso{
 Other Rho SDTM datasets: 
 \code{\link{sdtm_adverse_events}},

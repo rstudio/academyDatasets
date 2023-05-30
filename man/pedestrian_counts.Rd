@@ -31,8 +31,8 @@ Melbourne city, starting from May 2009.
 \section{Functions}{
 \itemize{
 \item \code{pedestrian_counts_dictionary}: The \code{pedestrian_counts} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(tsibble)

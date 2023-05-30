@@ -40,8 +40,8 @@ temperature, and so on.
 \section{Functions}{
 \itemize{
 \item \code{sdtm_vital_signs_dictionary}: The \code{sdtm_vital_signs} data dictionary
-}}
 
+}}
 \seealso{
 Other Rho SDTM datasets: 
 \code{\link{sdtm_adverse_events}},

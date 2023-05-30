@@ -10,7 +10,7 @@ A tibble with 1155264 rows and 3 variables:
 \describe{
 
 \item{\code{date}}{[dttm] Starting date-time of demand reading}
-\item{\code{state}}{[chr] State abbreviation: Victoria (VIC), New South Wales (NSW), Queensland (QUN), Tasmania (TAS), and South Australia (SA)}
+\item{\code{state}}{[chr] State abbreviation: Victoria (VIC), New South Wales (NSW), Queensland (QLD), Tasmania (TAS), and South Australia (SA)}
 \item{\code{demand}}{[dbl] Half-hourly electricity demand in MW}
 }
 
@@ -31,8 +31,8 @@ Australia: Victoria, New South Wales, Queensland, Tasmania, and South Australia.
 \section{Functions}{
 \itemize{
 \item \code{aus_electricity_dictionary}: The \code{aus_electricity} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(tsibble)

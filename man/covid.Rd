@@ -57,8 +57,8 @@ which means we can’t, either. You can
 \section{Functions}{
 \itemize{
 \item \code{covid_dictionary}: The \code{covid} data dictionary
-}}
 
+}}
 \seealso{
 Other COVID-19 datasets: 
 \code{\link{covid_state_pop}}

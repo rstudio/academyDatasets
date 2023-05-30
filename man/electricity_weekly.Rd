@@ -31,8 +31,8 @@ clients in Portugal from 2012 to 2014.
 \section{Functions}{
 \itemize{
 \item \code{electricity_weekly_dictionary}: The \code{electricity_weekly} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(tsibble)
