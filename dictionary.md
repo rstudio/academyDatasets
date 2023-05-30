@@ -1,43 +1,43 @@
 academyDatasets Data
 ================
 
--   [`aus_electricity`](#australian-electricity-demand)
--   [`bitcoin`](#daily-bitcoin-prices-with-possible-influencers)
--   [`car_parts`](#monthly-car-part-sales)
--   [`covid`](#covid-19-us-historical-data-by-state)
--   [`dmd`](#dmd)
--   [`dominick`](#dominick-s-finer-foods-department-sales)
--   [`dominick_oatmeal`](#dominick-s-finer-foods-oatmeal-sales)
--   [`dominick_soap`](#dominick-s-finer-foods-bath-soap-sales)
--   [`elec_demand`](#victoria--australia-electricity-demand)
--   [`electricity_weekly`](#weekly-electricity-consumption)
--   [`encounters`](#patient-encounter)
--   [`fda_adverse_daily`](#daily-counts-of-fda-drug-adverse-event-reports)
--   [`fda_pt_drugs`](#patient-and-drug-information-for-fda-drug-adverse-events)
--   [`flu`](#protein-sequences-of-influenza-b-virus-strains)
--   [`fred_md`](#u-s--macro-economic-indicators-from-the-fred-md-database)
--   [`hospital`](#monthly-counts-of-patients-use-of-medical-products)
--   [`mdrd`](#modification-of-diet-in-renal-disease)
--   [`mdrd_supplemental`](#modification-of-diet-in-renal-disease---supplemental)
--   [`medications`](#patient-medication)
--   [`nhanes_dermatology`](#national-health-and-nutrition-examination-survey--dermatology--2017-2018)
--   [`nhanes_sleep`](#national-health-and-nutrition-examination-survey--sleep-disorders--2017-2018)
--   [`ny_air`](#daily-predicted-new-york-air-quality)
--   [`oikolab_weather`](#monash-university-weather)
--   [`pedestrian_counts`](#melbourne-pedestrian-count)
--   [`rideshare`](#hourly-summaries-of-rideshare-service)
--   [`riverflow`](#daily-flow-rate-of-the-saugeen-river)
--   [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
--   [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
--   [`sdtm_demographics`](#sdtm-formatted-demographic)
--   [`sdtm_lab_results`](#sdtm-laboratory-test-results)
--   [`sdtm_subject_visits`](#sdtm-subject-visits)
--   [`sdtm_vital_signs`](#sdtm-vital-signs)
--   [`solar`](#solar-power-production)
--   [`sunspots`](#sunspots)
--   [`tourists`](#366-monthly-time-series-used-in-the-kaggle-tourism-forecasting-competition)
--   [`us_births`](#daily-us-births)
--   [`vaccines`](#covid-19-vaccine-allocation)
+- [`aus_electricity`](#australian-electricity-demand)
+- [`bitcoin`](#daily-bitcoin-prices-with-possible-influencers)
+- [`car_parts`](#monthly-car-part-sales)
+- [`covid`](#covid-19-us-historical-data-by-state)
+- [`dmd`](#dmd)
+- [`dominick`](#dominick-s-finer-foods-department-sales)
+- [`dominick_oatmeal`](#dominick-s-finer-foods-oatmeal-sales)
+- [`dominick_soap`](#dominick-s-finer-foods-bath-soap-sales)
+- [`elec_demand`](#victoria--australia-electricity-demand)
+- [`electricity_weekly`](#weekly-electricity-consumption)
+- [`encounters`](#patient-encounter)
+- [`fda_adverse_daily`](#daily-counts-of-fda-drug-adverse-event-reports)
+- [`fda_pt_drugs`](#patient-and-drug-information-for-fda-drug-adverse-events)
+- [`flu`](#protein-sequences-of-influenza-b-virus-strains)
+- [`fred_md`](#u-s--macro-economic-indicators-from-the-fred-md-database)
+- [`hospital`](#monthly-counts-of-patients-use-of-medical-products)
+- [`mdrd`](#modification-of-diet-in-renal-disease)
+- [`mdrd_supplemental`](#modification-of-diet-in-renal-disease---supplemental)
+- [`medications`](#patient-medication)
+- [`nhanes_dermatology`](#national-health-and-nutrition-examination-survey--dermatology--2017-2018)
+- [`nhanes_sleep`](#national-health-and-nutrition-examination-survey--sleep-disorders--2017-2018)
+- [`ny_air`](#daily-predicted-new-york-air-quality)
+- [`oikolab_weather`](#monash-university-weather)
+- [`pedestrian_counts`](#melbourne-pedestrian-count)
+- [`rideshare`](#hourly-summaries-of-rideshare-service)
+- [`riverflow`](#daily-flow-rate-of-the-saugeen-river)
+- [`sdtm_adverse_events`](#sdtm-formatted-adverse-event)
+- [`sdtm_concomitant_meds`](#sdtm-formatted-concomitant-medication)
+- [`sdtm_demographics`](#sdtm-formatted-demographic)
+- [`sdtm_lab_results`](#sdtm-laboratory-test-results)
+- [`sdtm_subject_visits`](#sdtm-subject-visits)
+- [`sdtm_vital_signs`](#sdtm-vital-signs)
+- [`solar`](#solar-power-production)
+- [`sunspots`](#sunspots)
+- [`tourists`](#366-monthly-time-series-used-in-the-kaggle-tourism-forecasting-competition)
+- [`us_births`](#daily-us-births)
+- [`vaccines`](#covid-19-vaccine-allocation)
 
 ## Australian electricity demand
 
@@ -63,8 +63,8 @@ academyDatasets Data
     Group variables            None           
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 state                 0             1     2     3     0        5          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 state                 0             1   2   3     0        5          0
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75   p100 hist 
@@ -98,7 +98,7 @@ academyDatasets Data
 | hashrate                 | dbl  | Bitcoin hashrate in Ehash/s                               |
 | active_addresses         | int  | Number of unique (from or to) addresses per day           |
 | google_trends            | dbl  | Google trends interest score for Bitcoin                  |
-| tweets                   | int  | Tweets per day with the tag #Bitcoin                      |
+| tweets                   | int  | Tweets per day with the tag \#Bitcoin                     |
 
     ── Data Summary ────────────────────────
                                Values 
@@ -125,12 +125,12 @@ academyDatasets Data
      5 market_cap                     561         0.878 9.15e10 1.91e11 1.70e+5 9.68e+ 8 7.72e+ 9 1.21e+11 1.19e12 ▇▁▁▁▁
      6 confirmation_time                8         0.998 1.04e 1 8.35e 0 2.08e+0 8.73e+ 0 9.54e+ 0 1.05e+ 1 3.6 e 2 ▇▁▁▁▁
      7 transactions                   261         0.943 1.52e 5 1.26e 5 1   e+0 3.16e+ 4 1.25e+ 5 2.71e+ 5 4.90e 5 ▇▂▅▃▁
-     8 median_transaction_size       1205         0.737 1.15e 0 3.04e 0 4.86e-7 4.07e- 2 1.01e- 1 6.57e- 1 3.41e 1 ▇▁▁▁▁
+     8 median_transaction_size       1205         0.737 1.15e 0 3.04e 0 4.86e-7 4.07e- 2 1.01e- 1 6.58e- 1 3.41e 1 ▇▁▁▁▁
      9 mining_profitability           561         0.878 5.94e 3 2.73e 4 6.37e-2 3.32e- 1 2.07e+ 0 2.29e+ 3 4.81e 5 ▇▁▁▁▁
     10 fee_reward                     641         0.860 3.25e 0 5.10e 0 1.48e-9 3.31e- 1 1.04e+ 0 3.83e+ 0 4.36e 1 ▇▁▁▁▁
     11 top_100_percent                 12         0.997 1.88e 1 5.95e 0 5.22e+0 1.55e+ 1 1.91e+ 1 2.08e+ 1 1   e 2 ▇▂▁▁▁
     12 median_transaction_value       561         0.878 2.71e 2 4.21e 2 2.74e-3 6.96e+ 1 1.37e+ 2 3.32e+ 2 5.42e 3 ▇▁▁▁▁
-    13 av_transaction_value           561         0.878 3.15e 4 6.97e 4 6.62e-1 1.66e+ 3 5.74e+ 3 2.71e+ 4 8.12e 5 ▇▁▁▁▁
+    13 av_transaction_value           561         0.878 3.15e 4 6.97e 4 6.62e-1 1.66e+ 3 5.75e+ 3 2.71e+ 4 8.12e 5 ▇▁▁▁▁
     14 block_size                       6         0.999 4.37e 5 3.69e 5 1.34e+2 2.48e+ 4 3.95e+ 5 8.17e+ 5 9.98e 5 ▇▂▂▃▅
     15 hashrate                         7         0.998 2.49e19 4.50e19 4.62e+5 1.18e+13 3.43e+17 3.41e+19 1.98e20 ▇▁▁▁▁
     16 active_addresses                28         0.994 3.26e 5 3.09e 5 4   e+0 2.04e+ 4 2.26e+ 5 5.84e+ 5 1.20e 6 ▇▂▃▂▁
@@ -161,16 +161,16 @@ academyDatasets Data
     Group variables            None     
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 part_num              0             1     2     5     0     2674          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 part_num              0             1   2   5     0     2674          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 date                  0             1 1998-01-01 2002-03-01 2000-02-01       51
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
-    1 qty                6122         0.955 0.508  1.28     0     0     0     1    52 ▇▁▁▁▁
+      skim_variable n_missing complete_rate  mean   sd p0 p25 p50 p75 p100 hist 
+    1 qty                6122         0.955 0.508 1.28  0   0   0   1   52 ▇▁▁▁▁
 
 ## COVID-19 US Historical Data by State
 
@@ -207,11 +207,11 @@ academyDatasets Data
     1 state              2153         0.896 FALSE         50 WA: 420, MA: 411, VA: 406, FL: 404
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable    n_missing complete_rate    mean      sd      p0   p25   p50    p75   p100 hist 
-    1 tests                    0             1 17508.  33586.  -130545 1206.  6125 19086. 473076 ▁▇▁▁▁
-    2 cases                    0             1  1384.   3024.    -7757   65    435  1335.  71734 ▇▁▁▁▁
-    3 hospitalizations         0             1    37.4   208.   -12257    0      0    36   16373 ▁▁▇▁▁
-    4 deaths                   0             1    24.8    60.2    -201    0      6    24    2559 ▇▁▁▁▁
+      skim_variable    n_missing complete_rate    mean      sd      p0   p25  p50    p75   p100 hist 
+    1 tests                    0             1 17508.  33586.  -130545 1206. 6125 19086. 473076 ▁▇▁▁▁
+    2 cases                    0             1  1384.   3024.    -7757   65   435  1335.  71734 ▇▁▁▁▁
+    3 hospitalizations         0             1    37.4   208.   -12257    0     0    36   16373 ▁▁▇▁▁
+    4 deaths                   0             1    24.8    60.2    -201    0     6    24    2559 ▇▁▁▁▁
 
 ## dmd
 
@@ -303,31 +303,31 @@ academyDatasets Data
     1 date                  0             1 1900-03-19 1997-04-30 1992-06-16     3408
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-       skim_variable n_missing complete_rate    mean     sd    p0      p25      p50     p75    p100 hist 
-     1 store                 0         1        79.7   36.3     2    53       84      110      139  ▃▅▇▇▇
-     2 custcoun              0         1      2709.  1080.      0  2058     2595     3246    83390  ▇▁▁▁▁
-     3 grocery               2         1.00  22230.  9735.      0 15526.   20242.   26939.  599697. ▇▁▁▁▁
-     4 gm                    2         1.00   3261.  2091.      0  1850.    2762.    4127.  264902  ▇▁▁▁▁
-     5 dairy                 0         1      4595.  2436.      0  3315.    4444.    5871.   60787. ▇▁▁▁▁
-     6 frozen                0         1      3498.  1862.      0  2466.    3385.    4536.   37855. ▇▁▁▁▁
-     7 meat                  0         1      5381.  3141.      0  3451.    4706.    6599.  753516  ▇▁▁▁▁
-     8 fish                  0         1       694.   908.      0   330.     541.     876.  368039  ▇▁▁▁▁
-     9 produce               0         1      5575.  2894.      0  3700.    5015.    6842.  455599. ▇▁▁▁▁
-    10 saladbar             29         1.00    360.   308.      0   169.     321.     482.    7672  ▇▁▁▁▁
-    11 floral                5         1.00    507.  1026.      0   188.     320.     552.  371059  ▇▁▁▁▁
-    12 deli                  0         1      2449.  1665.      0  1489.    2094.    2986.  412001. ▇▁▁▁▁
-    13 cheese               19         1.00    276.   295.      0    89.1    194.     358.    6512. ▇▁▁▁▁
-    14 bakery                0         1      1442.   744.      0   934.    1284.    1784.   70523  ▇▁▁▁▁
-    15 pharmacy            118         1.00    722.  1114.      0     0        0     1338.   16820. ▇▁▁▁▁
-    16 jewelry             258         0.999    11.0   94.5     0     0        0        0     8756. ▇▁▁▁▁
-    17 cosmetic             25         1.00    101.   217.      0     0        3.63    73.7   6184. ▇▁▁▁▁
-    18 haba                 18         1.00   1921.  1390.      0   966.    1618.    2666.   34308. ▇▁▁▁▁
-    19 camera              126         1.00     50.6  420.      0     0        0       71.7 178381  ▇▁▁▁▁
-    20 photofin             27         1.00    153.   148.      0    47.9    119.     213.    2072. ▇▁▁▁▁
-    21 video               424         0.998   100.   187.      0     2.99    42.9    127.   14097  ▇▁▁▁▁
-    22 beer                 58         1.00    647.   711.      0   213.     485.     881.  115267  ▇▁▁▁▁
-    23 wine                  3         1.00    422.   531.      0     0      295.     572.   11875. ▇▁▁▁▁
-    24 spirits               6         1.00    290.   340.      0     0      223.     416.   37862  ▇▁▁▁▁
+       skim_variable n_missing complete_rate    mean     sd p0      p25      p50     p75    p100 hist 
+     1 store                 0         1        79.7   36.3  2    53       84      110      139  ▃▅▇▇▇
+     2 custcoun              0         1      2709.  1080.   0  2058     2595     3246    83390  ▇▁▁▁▁
+     3 grocery               2         1.00  22230.  9735.   0 15526.   20242.   26939.  599697. ▇▁▁▁▁
+     4 gm                    2         1.00   3261.  2091.   0  1850.    2762.    4127.  264902  ▇▁▁▁▁
+     5 dairy                 0         1      4595.  2436.   0  3315.    4444.    5871.   60787. ▇▁▁▁▁
+     6 frozen                0         1      3498.  1862.   0  2466.    3385.    4536.   37855. ▇▁▁▁▁
+     7 meat                  0         1      5381.  3141.   0  3451.    4706.    6599.  753516  ▇▁▁▁▁
+     8 fish                  0         1       694.   908.   0   330.     541.     876.  368039  ▇▁▁▁▁
+     9 produce               0         1      5575.  2894.   0  3700.    5015.    6842.  455599. ▇▁▁▁▁
+    10 saladbar             29         1.00    360.   308.   0   169.     321.     482.    7672  ▇▁▁▁▁
+    11 floral                5         1.00    507.  1026.   0   188.     320.     552.  371059  ▇▁▁▁▁
+    12 deli                  0         1      2449.  1665.   0  1489.    2094.    2986.  412001. ▇▁▁▁▁
+    13 cheese               19         1.00    276.   295.   0    89.1    194.     358.    6512. ▇▁▁▁▁
+    14 bakery                0         1      1442.   744.   0   934.    1284.    1784.   70523  ▇▁▁▁▁
+    15 pharmacy            118         1.00    722.  1114.   0     0        0     1338.   16820. ▇▁▁▁▁
+    16 jewelry             258         0.999    11.0   94.5  0     0        0        0     8756. ▇▁▁▁▁
+    17 cosmetic             25         1.00    101.   217.   0     0        3.63    73.7   6184. ▇▁▁▁▁
+    18 haba                 18         1.00   1921.  1390.   0   966.    1618.    2666.   34308. ▇▁▁▁▁
+    19 camera              126         1.00     50.6  420.   0     0        0       71.7 178381  ▇▁▁▁▁
+    20 photofin             27         1.00    153.   148.   0    47.9    119.     213.    2072. ▇▁▁▁▁
+    21 video               424         0.998   100.   187.   0     2.99    42.9    127.   14097  ▇▁▁▁▁
+    22 beer                 58         1.00    647.   711.   0   213.     485.     881.  115267  ▇▁▁▁▁
+    23 wine                  3         1.00    422.   531.   0     0      295.     572.   11875. ▇▁▁▁▁
+    24 spirits               6         1.00    290.   340.   0     0      223.     416.   37862  ▇▁▁▁▁
 
 ## Dominick’s Finer Foods oatmeal sales
 
@@ -357,9 +357,9 @@ academyDatasets Data
     Group variables            None            
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 product               0             1     7    20     0       87          0
-    2 size                  0             1     4     6     0       38          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 product               0             1   7  20     0       87          0
+    2 size                  0             1   4   6     0       38          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
@@ -400,9 +400,9 @@ academyDatasets Data
     Group variables            None         
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 product               0             1    10    20     0      469          0
-    2 size                  0             1     2     6     0       66          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 product               0             1  10  20     0      469          0
+    2 size                  0             1   2   6     0       66          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
@@ -437,8 +437,8 @@ academyDatasets Data
     Group variables            None       
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
-    1 demand                0             1  4.61 0.878  2.86  3.93  4.60  5.16  9.35 ▆▇▂▁▁
+      skim_variable n_missing complete_rate mean    sd   p0  p25  p50  p75 p100 hist 
+    1 demand                0             1 4.61 0.878 2.86 3.93 4.60 5.16 9.35 ▆▇▂▁▁
 
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
@@ -468,16 +468,16 @@ academyDatasets Data
     Group variables            None              
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 client                0             1     3     5     0      321          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 client                0             1   3   5     0      321          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 date                  0             1 2012-01-01 2014-12-21 2013-06-26      156
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate    mean       sd    p0    p25   p50     p75     p100 hist 
-    1 power                 0             1 426778. 2212413.     0 47782. 96071 243288. 63075300 ▇▁▁▁▁
+      skim_variable n_missing complete_rate    mean       sd p0    p25   p50     p75     p100 hist 
+    1 power                 0             1 426778. 2212413.  0 47782. 96071 243288. 63075300 ▇▁▁▁▁
 
 ## Patient encounter
 
@@ -515,15 +515,15 @@ academyDatasets Data
     Group variables            None      
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable     n_missing complete_rate   min   max empty n_unique whitespace
-    1 id                        0         1        36    36     0    53346          0
-    2 patient                   0         1        36    36     0     1171          0
-    3 organization              0         1        36    36     0     1103          0
-    4 provider                  0         1        36    36     0     1104          0
-    5 payer                     0         1        36    36     0       10          0
-    6 encounterclass            0         1         8    10     0        6          0
-    7 description               0         1         6    70     0       50          0
-    8 reasondescription     39569         0.258     4    69     0       80          0
+      skim_variable     n_missing complete_rate min max empty n_unique whitespace
+    1 id                        0         1      36  36     0    53346          0
+    2 patient                   0         1      36  36     0     1171          0
+    3 organization              0         1      36  36     0     1103          0
+    4 provider                  0         1      36  36     0     1104          0
+    5 payer                     0         1      36  36     0       10          0
+    6 encounterclass            0         1       8  10     0        6          0
+    7 description               0         1       6  70     0       50          0
+    8 reasondescription     39569         0.258   4  69     0       80          0
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable       n_missing complete_rate    mean      sd         p0         p25         p50         p75    p100 hist 
@@ -565,9 +565,9 @@ academyDatasets Data
     1 receive_date          0             1 2004-01-01 2020-12-31 2012-10-28     5968
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
-    1 public                0             1  123.  111.     0   39    102  171    751 ▇▂▁▁▁
-    2 manufacturer          0             1 2044. 2058.     0  436.  1294 3457. 23015 ▇▁▁▁▁
+      skim_variable n_missing complete_rate  mean    sd p0  p25  p50   p75  p100 hist 
+    1 public                0             1  123.  111.  0  39   102  171    751 ▇▂▁▁▁
+    2 manufacturer          0             1 2044. 2058.  0 436. 1294 3457. 23015 ▇▁▁▁▁
 
 ## Patient and drug information for FDA drug adverse events
 
@@ -608,16 +608,16 @@ academyDatasets Data
     Group variables            None        
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 report_id             0             1     8     8     0      851          0
-    2 country               0             1     2     2     0       41          0
-    3 reporter              0             1     6    11     0        5          0
-    4 sex                   0             1     4     6     0        2          0
-    5 drug                  0             1     2    46     0      653          0
-    6 dosage_unit           0             1     1     2     0        3          0
-    7 indication            0             1     4    57     0      370          0
-    8 reaction              0             1     4    57     0     1058          0
-    9 outcome               0             1     5    23     0        6          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 report_id             0             1   8   8     0      851          0
+    2 country               0             1   2   2     0       41          0
+    3 reporter              0             1   6  11     0        5          0
+    4 sex                   0             1   4   6     0        2          0
+    5 drug                  0             1   2  46     0      653          0
+    6 dosage_unit           0             1   1   2     0        3          0
+    7 indication            0             1   4  57     0      370          0
+    8 reaction              0             1   4  57     0     1058          0
+    9 outcome               0             1   5  23     0        6          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable   n_missing complete_rate min        max        median     n_unique
@@ -631,10 +631,10 @@ academyDatasets Data
     1 serious               0             1 0.942 TRU: 5433, FAL: 332
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75   p100 hist 
-    1 age                   0             1  56.9  19.4  0     45      60    71    95  ▁▂▃▇▃
-    2 weight                0             1  68.7  20.2  0.72  56.8    64    81   200. ▁▇▃▁▁
-    3 dosage                0             1 257.  698.   0.02  15      80   300 18400  ▇▁▁▁▁
+      skim_variable n_missing complete_rate  mean    sd   p0  p25 p50 p75   p100 hist 
+    1 age                   0             1  56.9  19.4 0    45    60  71    95  ▁▂▃▇▃
+    2 weight                0             1  68.7  20.2 0.72 56.8  64  81   200. ▁▇▃▁▁
+    3 dosage                0             1 257.  698.  0.02 15    80 300 18400  ▇▁▁▁▁
 
 ## Protein Sequences of Influenza B Virus Strains
 
@@ -673,19 +673,19 @@ academyDatasets Data
     Group variables            None  
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-       skim_variable       n_missing complete_rate   min   max empty n_unique whitespace
-     1 protein                  3729         0.971     2     3     0       11          0
-     2 sequence_accession          0         1         6     8     0    96956          0
-     3 complete_genome             0         1         2     3     0        2          0
-     4 complete_sequence           0         1         8     8     0        1          0
-     5 host_species               13         1.00      5    11     0        3          0
-     6 country                    11         1.00      3    14     0       53          0
-     7 state_province          31140         0.761     4    20     0       52          0
-     8 geographic_grouping         2         1.00      4    13     0        6          0
-     9 flu_season              35537         0.728     5     5     0       29          0
-    10 strain_name                 0         1         7    39     0    15091          0
-    11 sequence                    1         1.00     99   771     0    19936          0
-    12 passage_history         56199         0.570     2    30     0     1658          0
+       skim_variable       n_missing complete_rate min max empty n_unique whitespace
+     1 protein                  3729         0.971   2   3     0       11          0
+     2 sequence_accession          0         1       6   8     0    96956          0
+     3 complete_genome             0         1       2   3     0        2          0
+     4 complete_sequence           0         1       8   8     0        1          0
+     5 host_species               13         1.00    5  11     0        3          0
+     6 country                    11         1.00    3  14     0       53          0
+     7 state_province          31140         0.761   4  20     0       52          0
+     8 geographic_grouping         2         1.00    4  13     0        6          0
+     9 flu_season              35537         0.728   5   5     0       29          0
+    10 strain_name                 0         1       7  39     0    15091          0
+    11 sequence                    1         1.00   99 771     0    19936          0
+    12 passage_history         56199         0.570   2  30     0     1658          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable   n_missing complete_rate min        max        median     n_unique
@@ -693,9 +693,9 @@ academyDatasets Data
     2 submission_date         2          1.00 1993-08-02 2020-04-29 2017-08-24      394
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable  n_missing complete_rate    mean     sd    p0   p25   p50   p75  p100 hist 
-    1 segment                0             1    5.19   2.25     1     3     6     7     8 ▃▂▅▅▇
-    2 segment_length         0             1 1628.   480.    1024  1154  1530  2181  2396 ▇▅▃▁▆
+      skim_variable  n_missing complete_rate    mean     sd   p0  p25  p50  p75 p100 hist 
+    1 segment                0             1    5.19   2.25    1    3    6    7    8 ▃▂▅▅▇
+    2 segment_length         0             1 1628.   480.   1024 1154 1530 2181 2396 ▇▅▃▁▆
 
 ## U.S. macro-economic indicators from the FRED-MD database
 
@@ -761,15 +761,15 @@ academyDatasets Data
     Group variables            None    
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 sku                   0             1     4     5     0       71          0
-    2 entity_code           0             1     3     6     0       35          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 sku                   0             1   4   5     0       71          0
+    2 entity_code           0             1   3   6     0       35          0
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable  n_missing complete_rate   mean     sd    p0     p25    p50     p75  p100 hist 
-    1 month                  0             1    6.5   3.45     1    3.75    6.5    9.25    12 ▇▅▅▅▇
-    2 year                   0             1 2003     2.00  2000 2001    2003   2005     2006 ▇▃▃▃▇
-    3 patient_counts         0             1  267.  835.       1   18      38    152    12090 ▇▁▁▁▁
+      skim_variable  n_missing complete_rate   mean     sd   p0     p25    p50     p75  p100 hist 
+    1 month                  0             1    6.5   3.45    1    3.75    6.5    9.25    12 ▇▅▅▅▇
+    2 year                   0             1 2003     2.00 2000 2001    2003   2005     2006 ▇▃▃▃▇
+    3 patient_counts         0             1  267.  835.      1   18      38    152    12090 ▇▁▁▁▁
 
 ## Modification of Diet in Renal Disease
 
@@ -837,8 +837,8 @@ academyDatasets Data
     Group variables            None             
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 sex                   0             1     1     1     0        2          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 sex                   0             1   1   1     0        2          0
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate   mean     sd    p0   p25    p50    p75   p100 hist 
@@ -881,12 +881,12 @@ academyDatasets Data
     Group variables            None       
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable     n_missing complete_rate   min   max empty n_unique whitespace
-    1 patient                   0         1        36    36     0     1107          0
-    2 payer                     0         1        36    36     0       10          0
-    3 encounter                 0         1        36    36     0    27269          0
-    4 description               0         1        15   113     0      134          0
-    5 reasondescription     11117         0.741     4    69     0       36          0
+      skim_variable     n_missing complete_rate min max empty n_unique whitespace
+    1 patient                   0         1      36  36     0     1107          0
+    2 payer                     0         1      36  36     0       10          0
+    3 encounter                 0         1      36  36     0    27269          0
+    4 description               0         1      15 113     0      134          0
+    5 reasondescription     11117         0.741   4  69     0       36          0
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable  n_missing complete_rate    mean      sd          p0        p25       p50        p75    p100 hist 
@@ -1098,12 +1098,12 @@ academyDatasets Data
     Group variables            None             
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 sensor_id             0             1     2     3     0       66          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 sensor_id             0             1   2   3     0       66          0
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
-    1 ped_count             0             1  602.  834.     0    60   242   797 15979 ▇▁▁▁▁
+      skim_variable n_missing complete_rate mean   sd p0 p25 p50 p75  p100 hist 
+    1 ped_count             0             1 602. 834.  0  60 242 797 15979 ▇▁▁▁▁
 
     ── Variable type: POSIXct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min                 max                 median              n_unique
@@ -1149,10 +1149,10 @@ academyDatasets Data
     Group variables            None     
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable    n_missing complete_rate   min   max empty n_unique whitespace
-    1 source_location          0             1     6    23     0       12          0
-    2 provider_name            0             1     4     4     0        2          0
-    3 provider_service         0             1     3    12     0       13          0
+      skim_variable    n_missing complete_rate min max empty n_unique whitespace
+    1 source_location          0             1   6  23     0       12          0
+    2 provider_name            0             1   4   4     0        2          0
+    3 provider_service         0             1   3  12     0       13          0
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
        skim_variable n_missing complete_rate     mean       sd    p0   p25    p50    p75   p100 hist 
@@ -1202,8 +1202,8 @@ academyDatasets Data
     1 date                  0             1 1915-01-01 1979-12-31 1947-07-02    23741
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
-    1 flow_rate             0             1  30.1  39.2   2.3   9.9  17.3    34   640 ▇▁▁▁▁
+      skim_variable n_missing complete_rate mean   sd  p0 p25  p50 p75 p100 hist 
+    1 flow_rate             0             1 30.1 39.2 2.3 9.9 17.3  34  640 ▇▁▁▁▁
 
 ## SDTM formatted Adverse Event
 
@@ -1240,16 +1240,16 @@ academyDatasets Data
     Group variables            None               
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 USUBJID               0             1     6     6     0      114          0
-    2 AETERM                0             1     4   227     0      286          0
-    3 AEDECOD               0             1     4    37     0      286          0
-    4 AEBODSYS              0             1    13    66     0       25          0
-    5 AESER                 0             1     1     1     0        2          0
-    6 AEONGO                0             1     1     1     0        2          0
-    7 AESEV                 0             1     4     8     0        3          0
-    8 AEREL                 0             1    11    18     0        5          0
-    9 AEOUT                 0             1     9    25     0        4          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 USUBJID               0             1   6   6     0      114          0
+    2 AETERM                0             1   4 227     0      286          0
+    3 AEDECOD               0             1   4  37     0      286          0
+    4 AEBODSYS              0             1  13  66     0       25          0
+    5 AESER                 0             1   1   1     0        2          0
+    6 AEONGO                0             1   1   1     0        2          0
+    7 AESEV                 0             1   4   8     0        3          0
+    8 AEREL                 0             1  11  18     0        5          0
+    9 AEOUT                 0             1   9  25     0        4          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
@@ -1257,10 +1257,10 @@ academyDatasets Data
     2 AEENDT                0             1 2015-03-25 2016-12-10 2016-02-29      248
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75  p100 hist 
-    1 AESEQ                 0             1   2.39   1.26     1     1     2     3     5 ▇▆▆▃▂
-    2 AESTDY                0             1 175.   103.       1    87   175   261   364 ▇▇▇▇▆
-    3 AEENDY                0             1 265.    84.1     19   203   286   337   365 ▁▂▃▅▇
+      skim_variable n_missing complete_rate   mean     sd p0 p25 p50 p75 p100 hist 
+    1 AESEQ                 0             1   2.39   1.26  1   1   2   3    5 ▇▆▆▃▂
+    2 AESTDY                0             1 175.   103.    1  87 175 261  364 ▇▇▇▇▆
+    3 AEENDY                0             1 265.    84.1  19 203 286 337  365 ▁▂▃▅▇
 
 ## SDTM formatted Concomitant Medication
 
@@ -1295,13 +1295,13 @@ academyDatasets Data
     Group variables            None                 
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 USUBJID               0             1     6     6     0      104          0
-    2 CMTRT                 0             1     3    37     0      251          0
-    3 PREFTERM              0             1     7    40     0      236          0
-    4 ATCTEXT2              0             1    11    36     0       14          0
-    5 CMONGO                0             1     1     1     0        2          0
-    6 CMROUTE               0             1     6    14     0        5          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 USUBJID               0             1   6   6     0      104          0
+    2 CMTRT                 0             1   3  37     0      251          0
+    3 PREFTERM              0             1   7  40     0      236          0
+    4 ATCTEXT2              0             1  11  36     0       14          0
+    5 CMONGO                0             1   1   1     0        2          0
+    6 CMROUTE               0             1   6  14     0        5          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
@@ -1309,11 +1309,11 @@ academyDatasets Data
     2 CMENDT                0             1 2015-01-28 2016-12-27 2016-03-16      222
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75  p100 hist 
-    1 CMSEQ                 0             1   2.26   1.18     1     1     2    3      5 ▇▆▅▃▁
-    2 CMSTDY                0             1 173.   110.       1    76   170  270.   365 ▇▆▇▆▆
-    3 CMENDY                0             1 262.    85.9      9   206   281  337    365 ▁▂▃▅▇
-    4 CMDOSE                0             1   2.92   1.45     1     2     3    4      5 ▇▇▆▆▇
+      skim_variable n_missing complete_rate   mean     sd p0 p25 p50  p75 p100 hist 
+    1 CMSEQ                 0             1   2.26   1.18  1   1   2   3     5 ▇▆▅▃▁
+    2 CMSTDY                0             1 173.   110.    1  76 170 270.  365 ▇▆▇▆▆
+    3 CMENDY                0             1 262.    85.9   9 206 281 337   365 ▁▂▃▅▇
+    4 CMDOSE                0             1   2.92   1.45  1   2   3   4     5 ▇▇▆▆▇
 
 ## SDTM formatted Demographic
 
@@ -1350,16 +1350,16 @@ academyDatasets Data
     Group variables            None             
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 USUBJID               0             1     6     6     0      150          0
-    2 SITE                  0             1    16    16     0        5          0
-    3 SITEID                0             1     2     2     0        5          0
-    4 SEX                   0             1     1     1     0        2          0
-    5 RACE                  0             1     5    11     0        4          0
-    6 ARM                   0             1     7    14     0        4          0
-    7 ARMCD                 0             1     4     8     0        4          0
-    8 SBJTSTAT              0             1     7    17     0        4          0
-    9 SAFFL                 0             1     1     1     0        2          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 USUBJID               0             1   6   6     0      150          0
+    2 SITE                  0             1  16  16     0        5          0
+    3 SITEID                0             1   2   2     0        5          0
+    4 SEX                   0             1   1   1     0        2          0
+    5 RACE                  0             1   5  11     0        4          0
+    6 ARM                   0             1   7  14     0        4          0
+    7 ARMCD                 0             1   4   8     0        4          0
+    8 SBJTSTAT              0             1   7  17     0        4          0
+    9 SAFFL                 0             1   1   1     0        2          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
@@ -1367,10 +1367,10 @@ academyDatasets Data
     2 RFENDTC               0             1 2015-01-18 2016-12-24 2015-12-30      134
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean      sd    p0   p25   p50   p75  p100 hist 
-    1 AGE                   0             1  34.7  10.9      18  25.2    35   43     55 ▇▇▆▆▅
-    2 RFENDY                0             1 202.  131.        1  91.5   211  338.   375 ▆▃▅▃▇
-    3 SAFFN                 0             1   0.9   0.301     0   1       1    1      1 ▁▁▁▁▇
+      skim_variable n_missing complete_rate  mean      sd p0  p25 p50  p75 p100 hist 
+    1 AGE                   0             1  34.7  10.9   18 25.2  35  43    55 ▇▇▆▆▅
+    2 RFENDY                0             1 202.  131.     1 91.5 211 338.  375 ▆▃▅▃▇
+    3 SAFFN                 0             1   0.9   0.301  0  1     1   1     1 ▁▁▁▁▇
 
 ## SDTM Laboratory Test Results
 
@@ -1404,24 +1404,24 @@ academyDatasets Data
     Group variables            None            
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 USUBJID               0             1     6     6     0      135          0
-    2 VISIT                 0             1     7    17     0       17          0
-    3 LBCAT                 0             1     5     5     0        3          0
-    4 LBTEST                0             1     3    33     0       23          0
-    5 LBSTRESU              0             1     3    14     0       10          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 USUBJID               0             1   6   6     0      135          0
+    2 VISIT                 0             1   7  17     0       17          0
+    3 LBCAT                 0             1   5   5     0        3          0
+    4 LBTEST                0             1   3  33     0       23          0
+    5 LBSTRESU              0             1   3  14     0       10          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 LBDT                  0             1 2015-01-06 2016-12-31 2015-10-28      375
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   mean     sd    p0   p25    p50   p75  p100 hist 
-    1 VISITNUM              0         1       2.39   2.17   0   0.175   2      4      7  ▇▂▅▁▂
-    2 LBDY                  0         1     129.   115.     1   9     109    222    375  ▇▂▃▂▂
-    3 LBSTRESN           1765         0.871  42.1   67.9    0   0.897   5.33  70.8  531. ▇▁▁▁▁
-    4 LBSTNRLO              0         1      28.4   44.4    0   0.5     3.5   61.9  150  ▇▁▂▁▁
-    5 LBSTNRHI              0         1      48.8   79.4    0.4 1.45    7.1  106    350  ▇▂▁▁▁
+      skim_variable n_missing complete_rate   mean     sd  p0   p25    p50   p75 p100 hist 
+    1 VISITNUM              0         1       2.39   2.17 0   0.175   2      4     7  ▇▂▅▁▂
+    2 LBDY                  0         1     129.   115.   1   9     109    222   375  ▇▂▃▂▂
+    3 LBSTRESN           1765         0.871  42.1   67.9  0   0.897   5.33  70.8 531. ▇▁▁▁▁
+    4 LBSTNRLO              0         1      28.4   44.4  0   0.5     3.5   61.9 150  ▇▁▂▁▁
+    5 LBSTNRHI              0         1      48.8   79.4  0.4 1.45    7.1  106   350  ▇▂▁▁▁
 
 ## SDTM Subject Visits
 
@@ -1450,19 +1450,19 @@ academyDatasets Data
     Group variables            None               
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 USUBJID               0             1     6     6     0      150          0
-    2 VISIT                 0             1     7    17     0       17          0
-    3 SVSTATUS              0             1     6    10     0        6          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 USUBJID               0             1   6   6     0      150          0
+    2 VISIT                 0             1   7  17     0       17          0
+    3 SVSTATUS              0             1   6  10     0        6          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 SVDT                  0             1 2015-01-06 2016-12-31 2016-01-04      538
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75  p100 hist 
-    1 VISITNUM              0             1   3.44   2.31     0   1     3.1   5.1     7 ▇▃▇▃▇
-    2 SVDY                  0             1 188.   124.       1  62.2 174   287     375 ▇▃▆▆▇
+      skim_variable n_missing complete_rate   mean     sd p0  p25   p50   p75 p100 hist 
+    1 VISITNUM              0             1   3.44   2.31  0  1     3.1   5.1    7 ▇▃▇▃▇
+    2 SVDY                  0             1 188.   124.    1 62.2 174   287    375 ▇▃▆▆▇
 
 ## SDTM Vital Signs
 
@@ -1496,24 +1496,24 @@ academyDatasets Data
     Group variables            None            
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 USUBJID               0             1     6     6     0      128          0
-    2 VISIT                 0             1     7    17     0       18          0
-    3 VSCAT                 0             1    11    11     0        1          0
-    4 VSTEST                0             1    10    24     0        5          0
-    5 VSSTRESU              0             1     2    14     0        4          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 USUBJID               0             1   6   6     0      128          0
+    2 VISIT                 0             1   7  17     0       18          0
+    3 VSCAT                 0             1  11  11     0        1          0
+    4 VSTEST                0             1  10  24     0        5          0
+    5 VSSTRESU              0             1   2  14     0        4          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 VSDT                  0             1 2015-01-06 2016-12-18 2015-11-06      402
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75  p100 hist 
-    1 VISITNUM              0         1       2.46   2.14   0     1     2     4      7  ▇▃▅▂▂
-    2 VSDY                  0         1     133.   113.     1    50   112   222    375  ▇▃▃▂▂
-    3 VSSTRESN            314         0.901  58.0   31.1   11.6  36.7  56.9  78.9  153. ▇▃▅▂▁
-    4 VSSTNRLO              0         1      50.5   24.6   16    36.6  50    60     90  ▃▃▇▁▃
-    5 VSSTNRHI              0         1      67.4   35.4   20    37    80    80    120  ▇▁▇▁▃
+      skim_variable n_missing complete_rate   mean     sd   p0  p25   p50   p75 p100 hist 
+    1 VISITNUM              0         1       2.46   2.14  0    1     2     4     7  ▇▃▅▂▂
+    2 VSDY                  0         1     133.   113.    1   50   112   222   375  ▇▃▃▂▂
+    3 VSSTRESN            314         0.901  58.0   31.1  11.6 36.7  56.9  78.9 153. ▇▃▅▂▁
+    4 VSSTNRLO              0         1      50.5   24.6  16   36.6  50    60    90  ▃▃▇▁▃
+    5 VSSTNRHI              0         1      67.4   35.4  20   37    80    80   120  ▇▁▇▁▃
 
 ## Solar Power Production
 
@@ -1539,16 +1539,16 @@ academyDatasets Data
     Group variables            None  
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 plant                 0             1     3     5     0      137          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 plant                 0             1   3   5     0      137          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 date                  0             1 2006-01-01 2006-12-24 2006-06-28       52
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75   p100 hist 
-    1 power                 0             1 6418. 3031.  732. 4509. 6056. 7223. 28949. ▇▅▁▁▁
+      skim_variable n_missing complete_rate  mean    sd   p0   p25   p50   p75   p100 hist 
+    1 power                 0             1 6418. 3031. 732. 4509. 6056. 7223. 28949. ▇▅▁▁▁
 
 ## sunspots
 
@@ -1576,8 +1576,8 @@ academyDatasets Data
     1 date                  0             1 1818-01-08 2020-05-31 1919-03-21    73924
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
-    1 sunspots           3240         0.956  82.7  77.3     0    21    63   127   528 ▇▃▁▁▁
+      skim_variable n_missing complete_rate mean   sd p0 p25 p50 p75 p100 hist 
+    1 sunspots           3240         0.956 82.7 77.3  0  21  63 127  528 ▇▃▁▁▁
 
 ## 366 monthly time series used in the Kaggle Tourism forecasting competition
 
@@ -1604,17 +1604,17 @@ academyDatasets Data
     Group variables            None    
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 city                  0             1     3    28     0      363          0
-    2 country               0             1     4    32     0      137          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 city                  0             1   3  28     0      363          0
+    2 country               0             1   4  32     0      137          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 month                 0             1 1979-01-01 2007-09-01 1994-11-01      345
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean     sd    p0   p25   p50   p75    p100 hist 
-    1 tourists              0             1 9969. 38147.     0   308  1287 5761. 1364825 ▇▁▁▁▁
+      skim_variable n_missing complete_rate  mean     sd p0 p25  p50   p75    p100 hist 
+    1 tourists              0             1 9969. 38147.  0 308 1287 5761. 1364825 ▇▁▁▁▁
 
 ## Daily US births
 
@@ -1642,8 +1642,8 @@ academyDatasets Data
     1 timestamp             0             1 1969-01-01 1988-12-31 1979-01-01     7305
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100 hist 
-    1 births                0             1 9649. 1127.  6675  8792  9622 10510 12851 ▂▇▇▆▁
+      skim_variable n_missing complete_rate  mean    sd   p0  p25  p50   p75  p100 hist 
+    1 births                0             1 9649. 1127. 6675 8792 9622 10510 12851 ▂▇▇▆▁
 
 ## COVID-19 Vaccine Allocation
 
@@ -1671,15 +1671,15 @@ academyDatasets Data
     Group variables            None    
 
     ── Variable type: character ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-    1 jurisdiction          0             1     4    20     0       63          0
-    2 vaccine               0             1     6     7     0        3          0
+      skim_variable n_missing complete_rate min max empty n_unique whitespace
+    1 jurisdiction          0             1   4  20     0       63          0
+    2 vaccine               0             1   6   7     0        3          0
 
     ── Variable type: Date ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
       skim_variable n_missing complete_rate min        max        median     n_unique
     1 week                  0             1 2020-12-14 2021-05-31 2021-03-15       25
 
     ── Variable type: numeric ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75   p100 hist 
-    1 first_dose            0         1     52049. 71512.     0  9600 29100 67500 672600 ▇▁▁▁▁
-    2 second_dose         504         0.860 56286. 73696.     0 11700 34200 72100 672600 ▇▁▁▁▁
+      skim_variable n_missing complete_rate   mean     sd p0   p25   p50   p75   p100 hist 
+    1 first_dose            0         1     52049. 71512.  0  9600 29100 67500 672600 ▇▁▁▁▁
+    2 second_dose         504         0.860 56286. 73696.  0 11700 34200 72100 672600 ▇▁▁▁▁
