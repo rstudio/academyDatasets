@@ -1,14 +1,11 @@
 Package: academyDatasets
 Title: Datasets for RStudio Academy
 Version: 0.4.0
-Authors@R: 
-    c(person(given = "Garrick",
-             family = "Aden-Buie",
-             role = c("aut", "cre"),
-             email = "garrick@rstudio.com",
-             comment = c(ORCID = "0000-0002-7111-0077")),
-      person(given = "RStudio",
-             role = c("cph", "fnd")))
+Authors@R: c(
+    person("Garrick", "Aden-Buie", , "garrick@rstudio.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-7111-0077")),
+    person("RStudio", role = c("cph", "fnd"))
+  )
 Description: A set of datasets for use with RStudio Academy exercises,
     tutorials, and recipes.
 License: file LICENSE
@@ -31,5 +28,6 @@ Remotes:
 Config/Needs/actions: cynkra/fledge, rmarkdown, knitr, skimr
 Encoding: UTF-8
 LazyData: true
+LazyDataCompression: xz
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1.9001
