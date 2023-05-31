@@ -1,8 +1,14 @@
-<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+<!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
+
+# academyDatasets 0.4.1
+
+- Use "QLD" instead of "QUN" as abbreviation for Queensland in `aus_electricity` (#79 @rossellhayes).
+
 
 # academyDatasets 0.4.0
 
 - `dmd` from [Vanderbilt Biostats](https://biostat.app.vumc.org/wiki/pub/Main/DataSets/dmd.html) (#78 @malcolmbarrett)
+
 
 # academyDatasets 0.3.0
 
@@ -38,6 +44,7 @@
 * Move `tsibble` to suggests
 * Use `vctrs::vec_ptype_abbr()` for type column in data dictionaries
 * Fix typo in `covid` dictionary
+
 
 # academyDatasets 0.1.0
 
