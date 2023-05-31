@@ -46,7 +46,7 @@ academyDatasets Data
 | Column | Type | Description                                                                                                           |
 |:-------|:-----|:----------------------------------------------------------------------------------------------------------------------|
 | date   | dttm | Starting date-time of demand reading                                                                                  |
-| state  | chr  | State abbreviation: Victoria (VIC), New South Wales (NSW), Queensland (QUN), Tasmania (TAS), and South Australia (SA) |
+| state  | chr  | State abbreviation: Victoria (VIC), New South Wales (NSW), Queensland (QLD), Tasmania (TAS), and South Australia (SA) |
 | demand | dbl  | Half-hourly electricity demand in MW                                                                                  |
 
     ── Data Summary ────────────────────────

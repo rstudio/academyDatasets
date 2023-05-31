@@ -31,8 +31,8 @@ May 31, 2020.
 \section{Functions}{
 \itemize{
 \item \code{sunspots_dictionary}: The \code{sunspots} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 tsibble::as_tsibble(sunspots, key = NULL, index = date)

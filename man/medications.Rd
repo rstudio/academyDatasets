@@ -41,8 +41,8 @@ patient population
 \section{Functions}{
 \itemize{
 \item \code{medications_dictionary}: The \code{medications} data dictionary
-}}
 
+}}
 \seealso{
 Other Synthea Synthetic Patient Population data: 
 \code{\link{encounters}}

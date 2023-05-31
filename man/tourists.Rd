@@ -42,8 +42,8 @@ not reflect true tourism trends for these cities.
 \section{Functions}{
 \itemize{
 \item \code{tourists_dictionary}: The \code{tourists} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(dplyr)

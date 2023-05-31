@@ -49,8 +49,8 @@ exposure and sun protective behavior.
 \section{Functions}{
 \itemize{
 \item \code{nhanes_dermatology_dictionary}: The \code{nhanes_dermatology} data dictionary
-}}
 
+}}
 \seealso{
 Other NHANES datasets: 
 \code{\link{nhanes_sleep}}

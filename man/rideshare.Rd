@@ -49,8 +49,8 @@ For a given starting location, provider and service,
 \section{Functions}{
 \itemize{
 \item \code{rideshare_dictionary}: The \code{rideshare} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(tsibble)

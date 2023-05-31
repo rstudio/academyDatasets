@@ -32,6 +32,6 @@ New York state in 2016, by county.
 \section{Functions}{
 \itemize{
 \item \code{ny_air_dictionary}: The \code{ny_air} data dictionary
-}}
 
+}}
 \keyword{datasets}

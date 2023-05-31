@@ -32,8 +32,8 @@ It was extracted from R expsmooth package.
 \section{Functions}{
 \itemize{
 \item \code{car_parts_dictionary}: The \code{car_parts} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(tsibble)

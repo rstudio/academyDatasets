@@ -49,8 +49,8 @@ Note: This is historical data and the products are not for sale.
 \section{Functions}{
 \itemize{
 \item \code{dominick_soap_dictionary}: The \code{dominick_soap} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(tsibble)

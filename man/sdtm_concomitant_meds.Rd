@@ -44,8 +44,8 @@ adverse events.
 \section{Functions}{
 \itemize{
 \item \code{sdtm_concomitant_meds_dictionary}: The \code{sdtm_concomitant_meds} data dictionary
-}}
 
+}}
 \seealso{
 Other Rho SDTM datasets: 
 \code{\link{sdtm_adverse_events}},

@@ -37,8 +37,8 @@ Monash University, Clayton, Victoria, Australia from 2010-01-01 to 2021-05-31.
 \section{Functions}{
 \itemize{
 \item \code{oikolab_weather_dictionary}: The \code{oikolab_weather} data dictionary
-}}
 
+}}
 \examples{
 # Convert to `tsibble`
 library(tsibble)
